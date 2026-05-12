@@ -74,17 +74,43 @@
   ============================================================ -->
   <section class="hero-section bg-gradient-to-br from-navy-900 to-teal-800 text-white py-20 px-4" aria-labelledby="hero-heading">
     <div class="hero-content max-w-3xl mx-auto text-center">
-      <span class="inline-block text-xs font-semibold uppercase tracking-widest bg-teal-400 bg-opacity-30 text-teal-50 px-4 py-1.5 rounded-full mb-6">
+      <span id="hero-eyebrow" class="inline-block text-xs font-semibold uppercase tracking-widest bg-teal-400 bg-opacity-30 text-teal-50 px-4 py-1.5 rounded-full mb-6">
         Federal Rights Education
       </span>
       <h1 id="hero-heading" class="hero-title text-4xl sm:text-5xl font-bold leading-tight mb-5 text-white">
         Know Your Federal Rights
       </h1>
-      <p class="hero-copy text-lg text-teal-50 mb-10 leading-relaxed max-w-2xl mx-auto">
+      <p id="hero-copy" class="hero-copy text-lg text-teal-50 mb-10 leading-relaxed max-w-2xl mx-auto">
         Plain-English guides to your rights under federal law — free and always available.
         Whether you are in reentry, on parole, on probation, or supporting a loved one,
         this is your starting point.
       </p>
+
+      <!-- Jurisdiction controls keep the same visual theme while allowing a future-growing state layer. -->
+      <div class="hero-context-controls">
+        <div class="jurisdiction-switcher" aria-label="Choose jurisdiction">
+          <button type="button" class="jurisdiction-pill is-active" data-jurisdiction="federal" aria-pressed="true">
+            <span class="jurisdiction-pill-content">
+              <img src="https://flagcdn.com/w40/us.png" alt="" class="jurisdiction-pill-flag" width="20" height="15" loading="lazy">
+              <span>Federal</span>
+            </span>
+          </button>
+          <button type="button" class="jurisdiction-pill" data-jurisdiction="state" aria-pressed="false">
+            <span class="jurisdiction-pill-content">
+              <span>State</span>
+            </span>
+          </button>
+        </div>
+        <!-- The state selector is hidden until State view is chosen. -->
+        <div id="state-selector-group" class="state-selector-group hidden">
+          <div class="state-selector-header">
+            <p id="state-selector-label" class="state-selector-label">Choose a state</p>
+            <button id="state-selector-back" type="button" class="state-selector-back hidden">Back to Selection Grid</button>
+          </div>
+          <div id="state-flag-grid" class="state-flag-grid" role="listbox" aria-label="Available states"></div>
+          <p id="state-selector-help" class="state-selector-help"></p>
+        </div>
+      </div>
 
       <!-- Topic search input; filters cards in real time -->
       <div class="site-search relative max-w-xl mx-auto" role="search">
@@ -123,315 +149,12 @@
   ============================================================ -->
   <main id="topics">
     <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-2xl font-bold text-gray-900 mb-2">Federal Rights Topics</h2>
-      <p class="text-gray-500 text-sm mb-10">Select a topic to explore your rights and find federal resources.</p>
+      <h2 id="topics-heading" class="text-2xl font-bold text-gray-900 mb-2">Federal Rights Topics</h2>
+      <p id="topics-description" class="text-gray-500 text-sm mb-10">Select a topic to explore your rights and find federal resources.</p>
 
-      <!-- Card grid updated by search filtering (aria-live for assistive tech updates) -->
-      <div id="topics-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6" aria-live="polite">
-
-        <!-- ── CARD: VOTING RIGHTS RESTORATION ── -->
-        <article id="voting" class="topic-card bg-white border border-gray-200 rounded-xl p-6 transition-all duration-200"
-                 data-keywords="voting vote rights restoration felony disenfranchisement">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-900 text-base">Voting Rights Restoration</h3>
-              <span class="text-xs text-teal-600 font-medium uppercase tracking-wide">Federal Law</span>
-            </div>
-          </div>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">
-            Federal law does not automatically restore voting rights after a felony conviction.
-            Rights depend on your state. Understanding the federal framework is the first step
-            to knowing when and how you can vote again.
-          </p>
-          <div class="border-t border-gray-100 pt-4 mb-5">
-            <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
-            <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.justice.gov/voting-rights" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>DOJ Voting Rights — U.S. Department of Justice</span>
-              </a></li>
-              <li><a href="https://www.usa.gov/restore-voting-rights" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Restore Voting Rights — USAGov</span>
-              </a></li>
-              <li><a href="https://www.brennancenter.org/issues/ensure-every-american-can-vote/voting-rights-restoration" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Voting Rights Restoration — Brennan Center for Justice</span>
-              </a></li>
-            </ul>
-          </div>
-          <a href="https://www.justice.gov/voting-rights" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-1 text-sm font-medium text-teal-600 hover:text-teal-800 transition-colors">
-            Learn More <span aria-hidden="true">&#8594;</span>
-          </a>
-        </article>
-
-
-        <!-- ── CARD: EXPUNGEMENT ── -->
-        <article id="expungement" class="topic-card bg-white border border-gray-200 rounded-xl p-6 transition-all duration-200"
-                 data-keywords="expungement record sealing federal conviction clear criminal history">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6m4-6v6"/><path d="M9 6V4h6v2"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-900 text-base">Expungement</h3>
-              <span class="text-xs text-teal-600 font-medium uppercase tracking-wide">Federal Law</span>
-            </div>
-          </div>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">
-            Federal expungement options are limited compared to state law. Understanding what
-            federal records can and cannot be cleared — and what alternatives exist — is critical
-            to protecting your future opportunities.
-          </p>
-          <div class="border-t border-gray-100 pt-4 mb-5">
-            <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
-            <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.justice.gov/pardon" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Presidential Pardon &amp; Clemency — U.S. Department of Justice</span>
-              </a></li>
-              <li><a href="https://www.ussc.gov/guidelines/2021-guidelines-manual/2021-chapter-4" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Federal Sentencing Guidelines — U.S. Sentencing Commission</span>
-              </a></li>
-              <li><a href="https://www.aclu.org/know-your-rights/what-does-it-mean-have-your-record-expunged" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>What Is Expungement? — ACLU</span>
-              </a></li>
-            </ul>
-          </div>
-          <a href="https://www.justice.gov/pardon" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-1 text-sm font-medium text-teal-600 hover:text-teal-800 transition-colors">
-            Learn More <span aria-hidden="true">&#8594;</span>
-          </a>
-        </article>
-
-
-        <!-- ── CARD: HOUSING RIGHTS ── -->
-        <article id="housing" class="topic-card bg-white border border-gray-200 rounded-xl p-6 transition-all duration-200"
-                 data-keywords="housing rights fair housing act discrimination HUD rental felony">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-900 text-base">Housing Rights</h3>
-              <span class="text-xs text-teal-600 font-medium uppercase tracking-wide">Federal Law</span>
-            </div>
-          </div>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">
-            The Fair Housing Act protects you from some forms of housing discrimination. HUD guidance
-            limits blanket bans on renting to people with criminal records. Know your rights before
-            you apply.
-          </p>
-          <div class="border-t border-gray-100 pt-4 mb-5">
-            <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
-            <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.hud.gov/program_offices/fair_housing_equal_opp/fair_housing_rights_and_obligations" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Fair Housing Rights — HUD</span>
-              </a></li>
-              <li><a href="https://www.hud.gov/sites/documents/HUD_OGCGUIDAPPFHASTANDCR.PDF" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>HUD Guidance on Criminal Records &amp; Housing — HUD PDF</span>
-              </a></li>
-              <li><a href="https://www.nlihc.org/resource/criminal-background-checks" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Criminal Background Checks &amp; Housing — NLIHC</span>
-              </a></li>
-            </ul>
-          </div>
-          <a href="https://www.hud.gov/program_offices/fair_housing_equal_opp" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-1 text-sm font-medium text-teal-600 hover:text-teal-800 transition-colors">
-            Learn More <span aria-hidden="true">&#8594;</span>
-          </a>
-        </article>
-
-
-        <!-- ── CARD: EMPLOYMENT RIGHTS ── -->
-        <article id="employment" class="topic-card bg-white border border-gray-200 rounded-xl p-6 transition-all duration-200"
-                 data-keywords="employment rights job work EEOC ban the box discrimination hiring felony">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-900 text-base">Employment Rights</h3>
-              <span class="text-xs text-teal-600 font-medium uppercase tracking-wide">Federal Law</span>
-            </div>
-          </div>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">
-            Federal law through the EEOC limits how employers can use criminal records in hiring
-            decisions. Title VII protections apply. Learn what employers can ask, when they can
-            ask it, and what your options are if you are denied a job.
-          </p>
-          <div class="border-t border-gray-100 pt-4 mb-5">
-            <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
-            <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>EEOC Guidance on Criminal Records — EEOC</span>
-              </a></li>
-              <li><a href="https://www.dol.gov/agencies/eta/reentry" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Reentry Employment Resources — U.S. Dept. of Labor</span>
-              </a></li>
-              <li><a href="https://www.opm.gov/policy-data-oversight/human-capital-management/faqs/ban-the-box-qs-and-as.pdf" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Ban the Box — Federal Hiring Policy (OPM)</span>
-              </a></li>
-            </ul>
-          </div>
-          <a href="https://www.eeoc.gov" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-1 text-sm font-medium text-teal-600 hover:text-teal-800 transition-colors">
-            Learn More <span aria-hidden="true">&#8594;</span>
-          </a>
-        </article>
-
-
-        <!-- ── CARD: POLICE INTERACTIONS ── -->
-        <article id="police" class="topic-card bg-white border border-gray-200 rounded-xl p-6 transition-all duration-200"
-                 data-keywords="police interactions fourth amendment search seizure miranda rights arrest stop">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-900 text-base">Police Interactions</h3>
-              <span class="text-xs text-teal-600 font-medium uppercase tracking-wide">Federal Law</span>
-            </div>
-          </div>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">
-            The Fourth and Fifth Amendments protect you during police interactions. You have the
-            right to remain silent. You have the right to refuse searches in certain situations.
-            Knowing these rights before an encounter can protect you.
-          </p>
-          <div class="border-t border-gray-100 pt-4 mb-5">
-            <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
-            <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.aclu.org/know-your-rights/stopped-by-police" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Stopped by Police — Your Rights (ACLU)</span>
-              </a></li>
-              <li><a href="https://www.justice.gov/crt/addressing-police-misconduct-laws-enforced-department-justice" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Police Misconduct Laws — DOJ Civil Rights Division</span>
-              </a></li>
-              <li><a href="https://constitution.congress.gov/constitution/amendment-4/" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Fourth Amendment — U.S. Constitution (Congress.gov)</span>
-              </a></li>
-            </ul>
-          </div>
-          <a href="https://www.aclu.org/know-your-rights/stopped-by-police" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-1 text-sm font-medium text-teal-600 hover:text-teal-800 transition-colors">
-            Learn More <span aria-hidden="true">&#8594;</span>
-          </a>
-        </article>
-
-
-        <!-- ── CARD: ON PAROLE ── -->
-        <article id="parole" class="topic-card bg-white border border-gray-200 rounded-xl p-6 transition-all duration-200"
-                 data-keywords="parole federal supervised release conditions search officer rights fourth amendment">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-900 text-base">On Parole</h3>
-              <span class="text-xs bg-amber-100 text-amber-700 font-medium uppercase tracking-wide text-xs px-2 py-0.5 rounded-full">Supervision-Specific</span>
-            </div>
-          </div>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">
-            Federal parole was abolished in 1987. Most federal releases are now called
-            <strong class="font-medium text-gray-800">Supervised Release</strong>. Understanding
-            your conditions, what officers can search, and what triggers a violation can help
-            you complete supervision successfully.
-          </p>
-          <div class="border-t border-gray-100 pt-4 mb-5">
-            <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
-            <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.ussc.gov/research/research-reports/overview-federal-criminal-cases" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Federal Supervised Release Overview — U.S. Sentencing Commission</span>
-              </a></li>
-              <li><a href="https://www.uscourts.gov/services-forms/probation-and-pretrial-services" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Probation &amp; Supervised Release — U.S. Courts</span>
-              </a></li>
-              <li><a href="https://www.justice.gov/uspc" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>U.S. Parole Commission — DOJ</span>
-              </a></li>
-            </ul>
-          </div>
-          <a href="https://www.uscourts.gov/services-forms/probation-and-pretrial-services" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-1 text-sm font-medium text-teal-600 hover:text-teal-800 transition-colors">
-            Learn More <span aria-hidden="true">&#8594;</span>
-          </a>
-        </article>
-
-
-        <!-- ── CARD: ON PROBATION ── -->
-        <article id="probation" class="topic-card bg-white border border-gray-200 rounded-xl p-6 transition-all duration-200"
-                 data-keywords="probation federal conditions violation search officer rights reporting">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-900 text-base">On Probation</h3>
-              <span class="text-xs bg-amber-100 text-amber-700 font-medium uppercase tracking-wide text-xs px-2 py-0.5 rounded-full">Supervision-Specific</span>
-            </div>
-          </div>
-          <p class="text-sm text-gray-600 leading-relaxed mb-5">
-            Federal probation is supervised directly by U.S. Probation Officers. Your conditions
-            are set by the court. Learn what conditions are standard, what your search rights are,
-            what employment reporting means, and what can trigger a revocation hearing.
-          </p>
-          <div class="border-t border-gray-100 pt-4 mb-5">
-            <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
-            <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.uscourts.gov/services-forms/probation-and-pretrial-services" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Federal Probation Services — U.S. Courts</span>
-              </a></li>
-              <li><a href="https://www.fd.org/sites/default/files/criminal_defense_topics/essential_topics/sentencing_resources/probation_and_supervised_release_conditions.pdf" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Probation Conditions Guide — Federal Defenders</span>
-              </a></li>
-              <li><a href="https://www.aclu.org/know-your-rights/probation-and-parole" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
-                <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
-                <span>Probation &amp; Parole Rights — ACLU</span>
-              </a></li>
-            </ul>
-          </div>
-          <a href="https://www.uscourts.gov/services-forms/probation-and-pretrial-services" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-1 text-sm font-medium text-teal-600 hover:text-teal-800 transition-colors">
-            Learn More <span aria-hidden="true">&#8594;</span>
-          </a>
-        </article>
-
-      </div><!-- /topics-grid -->
+      <!-- Topic cards are rendered from structured federal/state content in content-data.js. -->
+      <div id="topics-empty" class="topics-empty hidden" aria-live="polite"></div>
+      <div id="topics-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6" aria-live="polite"></div>
 
       <!-- Empty-state message shown when search has no matches -->
       <p id="no-results" class="hidden text-center text-gray-400 py-16 text-sm">
@@ -458,19 +181,19 @@
         <div>
           <h2 id="disclaimer-heading" class="text-base font-semibold text-amber-900 mb-2">Legal Disclaimer</h2>
           <p class="text-sm text-amber-800 leading-relaxed mb-4">
-            This website provides general educational information about federal law only.
+            This website provides general educational information about federal and state law only.
             It is <strong>not legal advice</strong> and does not create an attorney-client relationship.
             Laws and their interpretation may change. The information on this site may not reflect
             the most current legal developments.
           </p>
           <p class="text-sm text-amber-800 leading-relaxed mb-5">
-            Always consult a licensed attorney or a federal legal aid organization for advice
+            Always consult a licensed attorney or a legal aid organization for advice
             specific to your personal situation. If you cannot afford an attorney, free legal
             help may be available.
           </p>
           <a href="https://www.lawhelp.org" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 bg-amber-800 text-white text-sm font-medium px-5 py-2.5 rounded-lg hover:bg-amber-900 transition-colors">
-            Find Free Federal Legal Aid Near You
+            Find Free Legal Aid Near You
             <span aria-hidden="true">&#8594;</span>
           </a>
         </div>
@@ -498,7 +221,7 @@
           <span class="font-semibold text-white text-base">Know Your Rights</span>
         </div>
         <p class="text-sm text-gray-400 leading-relaxed mb-4">
-          Free federal rights education for justice-impacted individuals, families, and the
+          Free federal and state rights education for justice-impacted individuals, families, and the
           organizations that support them.
         </p>
         <p class="text-xs text-gray-500">Built by Joanne Liszewski</p>
@@ -536,7 +259,7 @@
     <!-- Footer legal line and ownership -->
     <div class="footer-meta max-w-6xl mx-auto mt-12 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
       <p>&copy; 2026 Know Your Rights &mdash; Joanne Liszewski</p>
-      <p>Not legal advice &nbsp;|&nbsp; Educational purposes only &nbsp;|&nbsp; Federal law</p>
+      <p>Not legal advice &nbsp;|&nbsp; Educational purposes only &nbsp;|&nbsp; Federal and state law</p>
     </div>
   </footer>
 
@@ -544,6 +267,8 @@
   <!-- ============================================================
        JS — Search / Filter
   ============================================================ -->
+  <!-- Structured content loads first so script.js can render the active jurisdiction. -->
+  <script src="content-data.js" defer></script>
   <script src="script.js" defer></script>
 
 </body>

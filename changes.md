@@ -29,6 +29,14 @@
 | 19 | `index.html` had limited structural documentation for major page regions | Directed AI to add concise, industry-style comments for major sections and key sub-sections without over-commenting | Improves maintainability and readability for future edits and handoffs |
 | 20 | Commenting style between JavaScript and CSS was not fully aligned with the updated HTML documentation approach | Added the same descriptive, best-practice comment style to `script.js` and `styles.css` without altering behavior | Creates consistent documentation standards across the codebase while preserving functionality |
 | 21 | Project branding did not yet include a linked favicon set in document metadata | Added brand-matching favicon assets and linked them in the HTML head for SVG and ICO support | Improves polish and browser tab identity across modern and legacy favicon handling |
+| 22 | Federal rights cards were hard-coded directly in `index.html` | Directed AI to refactor the site into a data-driven render model using `content-data.js` plus shared rendering logic in `script.js` | Makes federal/state expansion maintainable and keeps one consistent card system |
+| 23 | Site experience only supported a federal view | Directed AI to add a Federal/State jurisdiction toggle, dynamic hero/section copy, and conditional state-selection UI | Creates one shared experience for federal and state guidance without changing the theme |
+| 24 | Early state support only covered an initial rollout and still hid reviewed state content behind draft/review gating | Updated the state metadata so reviewed states could render publicly in the selector and card view | State content had been reviewed and was ready to be shown |
+| 25 | Expanded 50-state source data still built only the rollout subset and was missing several state content blocks | Directed AI to merge the broader dataset, patch the build logic, add the missing state records, and complete all 50 states alphabetically | Ensures the state layer is complete and the selector/render system can support all states consistently |
+| 26 | State mode kept the full selection grid visible even after a user chose a state | Directed AI to collapse the state grid after selection and add a `Back to Selection Grid` control | Keeps the state view cleaner while still making it easy to switch states |
+| 27 | Collapsed selected-state view only showed the state name as text | Added the selected state's flag beside the selected-state label | Makes the active state easier to recognize at a glance |
+| 28 | Federal selection used the same active pill styling but had no flag cue | Added the U.S. flag to the active Federal pill | Keeps the federal control visually consistent with the new state-selection cues |
+| 29 | State selector rendered as a fixed 5-column grid of large flag tiles that did not reflow or scale well on mobile screens | Directed AI to replace the tile grid with a flex-wrap pill layout matching the Federal pill style — small inline flag thumbnail beside the state name, pill-shaped border, and responsive wrapping | Improves mobile usability by allowing pills to reflow naturally at any screen width while keeping the selection UI visually consistent with the existing jurisdiction switcher |
 
 ---
 
@@ -39,8 +47,9 @@ know-your-federal-rights/
 ├── .github/
 │   └── workflows/
 │       └── pages.yml   — GitHub Pages deployment workflow
+├── content-data.js     — structured federal/state content and state metadata
 ├── index.html          — main resource page
-├── script.js           — search, scroll highlight, and mobile nav logic
+├── script.js           — jurisdiction switching, state rendering, search, scrolling, and mobile nav logic
 ├── styles.css          — all project styling and responsive layout rules
 ├── README.md           — project documentation
 └── changes.md          — this file

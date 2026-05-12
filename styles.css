@@ -243,6 +243,184 @@ svg {
   font-size: 1rem;
 }
 
+/* Jurisdiction controls inherit the same teal/white language as the rest
+   of the hero so switching between Federal and State feels native. */
+.hero-context-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+  max-width: 36rem;
+  margin: 0 auto 1.5rem;
+}
+
+.jurisdiction-switcher {
+  display: inline-flex;
+  align-self: center;
+  gap: 0.5rem;
+  padding: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.jurisdiction-pill {
+  min-width: 6rem;
+  padding: 0.625rem 1rem;
+  border-radius: 9999px;
+  color: var(--color-teal-50);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.jurisdiction-pill-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.jurisdiction-pill-flag {
+  display: none;
+  width: 1.25rem;
+  height: auto;
+  border-radius: 0.2rem;
+  flex-shrink: 0;
+}
+
+.jurisdiction-pill:hover,
+.jurisdiction-pill:focus-visible {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.jurisdiction-pill:focus-visible,
+.state-flag-tile:focus-visible {
+  outline: 3px solid rgba(29, 158, 117, 0.25);
+  outline-offset: 2px;
+}
+
+.jurisdiction-pill.is-active {
+  background-color: var(--color-white);
+  color: var(--color-teal-600);
+}
+
+.jurisdiction-pill[data-jurisdiction='federal'].is-active .jurisdiction-pill-flag {
+  display: block;
+}
+
+.state-selector-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.state-selector-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.state-selector-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-teal-50);
+}
+
+.selected-state-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.selected-state-flag {
+  width: 2rem;
+  height: auto;
+  border-radius: 0.25rem;
+  display: block;
+  flex-shrink: 0;
+}
+
+.state-selector-back {
+  align-self: flex-start;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-teal-50);
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.state-selector-back:hover,
+.state-selector-back:focus-visible {
+  background-color: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.state-flag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  width: 100%;
+}
+
+/* State pills share the same visual language as the Federal jurisdiction pill */
+.state-flag-tile {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-teal-50);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.state-flag-tile:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.state-flag-tile.is-selected {
+  background: var(--color-white);
+  color: var(--color-teal-600);
+  border-color: transparent;
+}
+
+.state-flag-img {
+  width: 1.25rem;
+  height: auto;
+  border-radius: 0.2rem;
+  display: block;
+  flex-shrink: 0;
+}
+
+.state-flag-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.state-selector-help {
+  margin: 0;
+  color: var(--color-teal-50);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.state-selector-group.is-collapsed {
+  gap: 0.75rem;
+}
+
 .site-search {
   width: 100%;
 }
@@ -265,6 +443,21 @@ svg {
 
 .footer-meta {
   text-align: center;
+}
+
+.topics-empty {
+  margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.75rem;
+  color: var(--color-gray-600);
+  background-color: var(--color-white);
+  line-height: 1.6;
+}
+
+.resource-note {
+  color: var(--color-gray-500);
+  line-height: 1.6;
 }
 
 /* ==============================
@@ -836,6 +1029,19 @@ svg {
    Responsive Breakpoints
    ============================== */
 @media (min-width: 640px) {
+  .hero-context-controls {
+    align-items: center;
+  }
+
+  .state-selector-group {
+    width: 100%;
+    max-width: 48rem;
+  }
+
+  .state-selector-back {
+    font-size: 0.8125rem;
+  }
+
   .hero-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -866,6 +1072,10 @@ svg {
 }
 
 @media (min-width: 768px) {
+  .hero-context-controls {
+    margin-bottom: 2rem;
+  }
+
   .menu-backdrop {
     display: none;
   }
