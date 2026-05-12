@@ -42,6 +42,28 @@ function scrollToTopic(id) {
   setTimeout(() => el.classList.remove('topic-card-highlight'), 2000);
 }
 
+const internalHashLinks = document.querySelectorAll('a[href^="#"]');
+
+internalHashLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    const targetHash = link.getAttribute('href') || '';
+    const targetId = targetHash.replace('#', '').trim();
+    if (!targetId) return;
+
+    const targetEl = document.getElementById(targetId);
+    if (!targetEl) return;
+
+    event.preventDefault();
+    if (targetEl.classList.contains('topic-card')) {
+      scrollToTopic(targetId);
+    } else {
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    history.replaceState(null, '', `#${targetId}`);
+  });
+});
+
 const navToggle = document.querySelector('.nav-toggle');
 const primaryMenu = document.getElementById('primary-menu');
 const menuBackdrop = document.querySelector('.menu-backdrop');
