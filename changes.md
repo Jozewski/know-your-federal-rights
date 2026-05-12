@@ -44,3 +44,17 @@ know-your-federal-rights/
 ---
 
 *Updated throughout Phase 1 development.*
+
+---
+
+## Updates Since `fix/footer-nav-anchor-jump`
+
+| # | What Was Done | Files Updated | Why It Matters |
+|---|---|---|---|
+| 17 | Refactored in-page anchor navigation so footer and header hash links use the same smooth-scroll behavior. Topic-card targets now receive highlight feedback, while non-card sections scroll normally. | `script.js` | Eliminates jumpy/inconsistent navigation behavior and centralizes internal link handling. |
+| 18 | Applied the same anchor-navigation behavior across all internal `#` links and kept URL hash state in sync after scroll. | `script.js` | Ensures predictable UX from any internal navigation entry point and preserves shareable deep links. |
+| 19 | Added descriptive, section-level comments to major layout regions and key sub-sections without over-commenting implementation details. | `index.html` | Improves maintainability and onboarding by making page structure and intent clear at a glance. |
+| 20 | Added matching best-practice comment style to JavaScript sections and CSS architecture blocks without changing runtime behavior or styles. | `script.js`, `styles.css` | Keeps code documentation consistent across layers and makes future edits safer. |
+| 21 | Added project favicon assets and linked them in the document head for browser support. | `favicon.svg`, `favicon.ico`, `index.html` | Completes brand polish and ensures tab/icon identity across modern and legacy favicon handling. |
+
+*Post-branch updates documented May 2026.*
