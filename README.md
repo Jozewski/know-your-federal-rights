@@ -1,129 +1,105 @@
-# Know Your Rights — Federal Rights Education Resource
+# Know Your Rights
 
-A free, plain-English resource for people navigating the federal legal system. Whether you are in reentry, on supervision, or supporting a loved one, this site brings together trusted federal resources on voting rights restoration, expungement, housing, employment, police interactions, parole, and probation — all in one place. No legal jargon. No paywalls. Just your rights, clearly explained.
+Know Your Rights is a static educational website that collects plain-language federal rights information in one place. It is designed for justice-impacted individuals, people on supervision, families, and anyone who needs a clearer starting point for understanding federal rights and finding reputable legal resources.
 
----
+## Current State
 
-## About This Project
+This project is currently a front-end-only site built with HTML, CSS, and vanilla JavaScript. It is ready to run locally without a build step and is configured to deploy to GitHub Pages through GitHub Actions.
 
-Know Your Rights will become a capstone project built by **Joanne Liszewski** 
+The site currently includes:
 
-This is **Phase 1** of a three-phase roadmap. The current build is a static resource link page covering federal law across seven core topics. Future phases will introduce an AI-powered Q&A assistant, user accounts, state-level content, and an organizational portal for reentry programs and case managers.
+- A responsive header with a mobile hamburger menu
+- A hero section with search and quick-jump topic buttons
+- Seven federal rights topic cards
+- Real-time topic filtering
+- Smooth scroll-to-topic navigation with highlight feedback
+- A legal disclaimer section
+- A footer with topic and federal resource links
 
----
+## Topics Covered
 
-## Live Topics
-
-| Topic | Federal Law Coverage |
-|---|---|
-| Voting Rights Restoration | Federal framework, state dependency, resources |
-| Expungement | Federal limits, clemency, record-clearing options |
-| Housing Rights | Fair Housing Act, HUD guidance on criminal records |
-| Employment Rights | EEOC Title VII, Ban the Box, DOL reentry resources |
-| Police Interactions | Fourth and Fifth Amendment rights, Miranda, search and seizure |
-| On Parole | Federal supervised release conditions and rights |
-| On Probation | Federal probation conditions, search rights, violation triggers |
-
----
+- Voting Rights Restoration
+- Expungement
+- Housing Rights
+- Employment Rights
+- Police Interactions
+- On Parole
+- On Probation
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Markup | HTML5 |
-| Styling | Tailwind CSS (CDN) |
-| Scripting | Vanilla JavaScript |
-| Accessibility | WCAG 2.1 AA |
-| Hosting | GitHub Pages (via GitHub Actions) |
-
----
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- GitHub Pages
+- GitHub Actions for deployment
 
 ## Project Structure
 
+```text
+know-your-federal-rights/
+|-- .github/
+|   `-- workflows/
+|       `-- pages.yml
+|-- changes.md
+|-- index.html
+|-- README.md
+|-- script.js
+`-- styles.css
 ```
-know-your-rights-federal/
-├── index.html      # Main resource page — all seven topic cards
-├── script.js       # Search/filter and scroll-highlight logic
-└── README.md       # You are here
-```
 
----
+## File Overview
 
-## Getting Started
+- `index.html` contains the page structure and content for the site
+- `styles.css` contains the full visual system, responsive layout rules, and mobile navigation styling
+- `script.js` handles search filtering, topic jump behavior, and mobile menu interactions
+- `changes.md` tracks AI-assisted project changes and developer decisions
+- `.github/workflows/pages.yml` deploys the site to GitHub Pages
 
-No build step required. This project runs entirely in the browser.
+## Running Locally
 
-**To run locally:**
+There is no install step and no build step.
 
-1. Clone the repository
-   ```bash
-   git clone https://github.com/your-username/know-your-rights-federal.git
-   ```
+1. Clone the repository.
+2. Open `index.html` in a browser.
 
-2. Open `index.html` in your browser
-   ```bash
-   cd know-your-rights-federal
-   open index.html
-   ```
+If you want live reload during development, you can also open the folder in VS Code and use a local static server extension, but it is not required.
 
-That is it. No dependencies to install, no server to run.
+## Deployment
 
----
+The site is configured to deploy with GitHub Pages using the workflow in `.github/workflows/pages.yml`.
 
-## Deploying to GitHub Pages
+Deployment runs when:
 
-This repository is set up to deploy the site automatically with **GitHub Actions**.
+- You push to the repository's default branch
+- You manually trigger the workflow from GitHub Actions
 
-1. Push this repository to GitHub.
-2. In **Settings -> Pages**, set **Source** to **GitHub Actions**.
-3. Push to your default branch.
+To publish the site:
 
-GitHub will publish the site from the repository root using the workflow at `.github/workflows/pages.yml`.
+1. Push the repository to GitHub.
+2. In the repository settings, enable GitHub Pages with the source set to GitHub Actions.
+3. Push changes to the default branch.
 
-If your repository is named `know-your-federal-rights`, the site URL will be:
+## Accessibility and UX Notes
 
-`https://<your-github-username>.github.io/know-your-federal-rights/`
+The current site includes:
 
----
+- Semantic HTML structure
+- Screen-reader-only labels where needed
+- Keyboard-close support for the mobile menu with `Escape`
+- A clickable backdrop for mobile navigation
+- Responsive layout behavior for smaller screens
 
-## Features
+## Project Purpose
 
-- **Live search** — filter all seven topic cards in real time by keyword
-- **Quick-jump navigation** — pill buttons in the hero scroll directly to any topic card
-- **Curated federal resource links** — every link points to a primary federal source (DOJ, EEOC, HUD, U.S. Courts, ACLU, Brennan Center)
-- **Supervision-specific callouts** — Parole and Probation cards are visually distinguished with dedicated badges
-- **Legal disclaimer** — prominent disclaimer section with a direct link to free federal legal aid
-- **Accessible** — semantic HTML, ARIA labels, keyboard navigable, screen reader compatible
-
----
-
-## Roadmap
-
-### Phase 1 — Current Build
-Static resource link page. Seven federal topics. Curated federal links. WCAG 2.1 AA compliant.
-
-### Phase 2 — AI Q&A Assistant
-Per-topic AI chat powered by Google Gemini API, grounded in Michael Peacock's knowledge base. Context-injected responses. Non-lawyer disclaimer on every answer.
-
-### Phase 3 — Full Platform
-React + TypeScript frontend. Node/Express backend. MongoDB Atlas for content storage. User accounts. State-level content starting with Arizona. Organizational portal for reentry programs.
-
----
-
-## Contributing
-
-This project is in active development. If you would like to suggest a federal resource link, report an inaccurate description, or propose a new topic, please open an issue.
-
----
+The goal of this project is to make federal rights information easier to find and easier to understand. It is intentionally simple in its current form: a fast, static, low-friction resource page that can be expanded over time.
 
 ## Legal Disclaimer
 
-This website provides general educational information about federal law only. It is **not legal advice** and does not create an attorney-client relationship. Laws and their interpretation may change. Always consult a licensed attorney or a federal legal aid organization for advice specific to your personal situation.
+This website provides general educational information about federal law only. It is not legal advice and does not create an attorney-client relationship. Laws and interpretations change over time. Anyone using this site should consult a licensed attorney or legal aid organization for advice about their specific situation.
 
-Free federal legal aid: [lawhelp.org](https://www.lawhelp.org)
+Free legal aid resource: [LawHelp.org](https://www.lawhelp.org)
 
----
+## Maintainer
 
-## Built By
-
-**Joanne Liszewski** — Full-Stack Developer
+Joanne Liszewski

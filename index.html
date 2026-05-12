@@ -4,36 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Know Your Rights | Federal Rights Education</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            teal: {
-              50:  '#E1F5EE',
-              100: '#9FE1CB',
-              400: '#1D9E75',
-              600: '#0F6E56',
-              800: '#085041',
-              900: '#04342C',
-            },
-            navy: {
-              800: '#0F172A',
-              900: '#060C18',
-            }
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .topic-card:hover { border-color: #1D9E75; box-shadow: 0 4px 16px rgba(29,158,117,0.10); }
-    .resource-link:hover { color: #0F6E56; text-decoration: underline; }
-    #search-input:focus { outline: none; box-shadow: 0 0 0 3px rgba(29,158,117,0.25); }
-    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
@@ -41,9 +12,9 @@
   <!-- ============================================================
        NAVBAR
   ============================================================ -->
-  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
+  <header class="site-header bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="site-header-inner max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="site-brand flex items-center gap-3">
         <div class="w-8 h-8 rounded-lg bg-teal-400 flex items-center justify-center">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -51,13 +22,25 @@
         </div>
         <span class="font-semibold text-gray-900 text-lg tracking-tight">Know Your Rights</span>
       </div>
-      <nav aria-label="Primary navigation">
-        <ul class="flex gap-6 text-sm text-gray-600 font-medium list-none m-0 p-0">
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-menu"
+        aria-label="Open navigation menu"
+      >
+        <span class="sr-only">Toggle navigation menu</span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+          <ul id="primary-menu" class="primary-nav-list text-sm text-gray-600 font-medium">
           <li><a href="#topics" class="hover:text-teal-600 transition-colors">Topics</a></li>
           <li><a href="#disclaimer" class="hover:text-teal-600 transition-colors">Disclaimer</a></li>
           <li>
             <a href="https://www.lawhelp.org" target="_blank" rel="noopener noreferrer"
-               class="bg-teal-400 text-white px-4 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">
+               class="primary-nav-cta bg-teal-400 text-white px-4 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">
               Find Legal Aid
             </a>
           </li>
@@ -66,26 +49,34 @@
     </div>
   </header>
 
+  <button
+    type="button"
+    class="menu-backdrop"
+    aria-label="Close navigation menu"
+    aria-hidden="true"
+    tabindex="-1"
+  ></button>
+
 
   <!-- ============================================================
        HERO
   ============================================================ -->
-  <section class="bg-gradient-to-br from-navy-900 to-teal-800 text-white py-20 px-4" aria-labelledby="hero-heading">
-    <div class="max-w-3xl mx-auto text-center">
+  <section class="hero-section bg-gradient-to-br from-navy-900 to-teal-800 text-white py-20 px-4" aria-labelledby="hero-heading">
+    <div class="hero-content max-w-3xl mx-auto text-center">
       <span class="inline-block text-xs font-semibold uppercase tracking-widest bg-teal-400 bg-opacity-30 text-teal-50 px-4 py-1.5 rounded-full mb-6">
         Federal Rights Education
       </span>
-      <h1 id="hero-heading" class="text-4xl sm:text-5xl font-bold leading-tight mb-5 text-white">
+      <h1 id="hero-heading" class="hero-title text-4xl sm:text-5xl font-bold leading-tight mb-5 text-white">
         Know Your Federal Rights
       </h1>
-      <p class="text-lg text-teal-50 mb-10 leading-relaxed max-w-2xl mx-auto">
+      <p class="hero-copy text-lg text-teal-50 mb-10 leading-relaxed max-w-2xl mx-auto">
         Plain-English guides to your rights under federal law — free and always available.
         Whether you are in reentry, on parole, on probation, or supporting a loved one,
         this is your starting point.
       </p>
 
       <!-- Search -->
-      <div class="relative max-w-xl mx-auto" role="search">
+      <div class="site-search relative max-w-xl mx-auto" role="search">
         <label for="search-input" class="sr-only">Search rights topics</label>
         <input
           id="search-input"
@@ -102,14 +93,14 @@
       </div>
 
       <!-- Quick jump pills -->
-      <div class="flex flex-wrap justify-center gap-2 mt-6" aria-label="Quick navigation">
-        <button onclick="scrollToTopic('voting')"    class="text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Voting</button>
-        <button onclick="scrollToTopic('expungement')" class="text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Expungement</button>
-        <button onclick="scrollToTopic('housing')"   class="text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Housing</button>
-        <button onclick="scrollToTopic('employment')" class="text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Employment</button>
-        <button onclick="scrollToTopic('police')"    class="text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Police</button>
-        <button onclick="scrollToTopic('parole')"    class="text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Parole</button>
-        <button onclick="scrollToTopic('probation')" class="text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Probation</button>
+      <div class="quick-links flex flex-wrap justify-center gap-2 mt-6" aria-label="Quick navigation">
+        <button onclick="scrollToTopic('voting')"    class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Voting</button>
+        <button onclick="scrollToTopic('expungement')" class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Expungement</button>
+        <button onclick="scrollToTopic('housing')"   class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Housing</button>
+        <button onclick="scrollToTopic('employment')" class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Employment</button>
+        <button onclick="scrollToTopic('police')"    class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Police</button>
+        <button onclick="scrollToTopic('parole')"    class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Parole</button>
+        <button onclick="scrollToTopic('probation')" class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Probation</button>
       </div>
     </div>
   </section>
@@ -147,15 +138,15 @@
           <div class="border-t border-gray-100 pt-4 mb-5">
             <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
             <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.justice.gov/voting-rights" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.justice.gov/voting-rights" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>DOJ Voting Rights — U.S. Department of Justice</span>
               </a></li>
-              <li><a href="https://www.usa.gov/restore-voting-rights" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.usa.gov/restore-voting-rights" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Restore Voting Rights — USAGov</span>
               </a></li>
-              <li><a href="https://www.brennancenter.org/issues/ensure-every-american-can-vote/voting-rights-restoration" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.brennancenter.org/issues/ensure-every-american-can-vote/voting-rights-restoration" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Voting Rights Restoration — Brennan Center for Justice</span>
               </a></li>
@@ -190,15 +181,15 @@
           <div class="border-t border-gray-100 pt-4 mb-5">
             <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
             <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.justice.gov/pardon" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.justice.gov/pardon" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Presidential Pardon &amp; Clemency — U.S. Department of Justice</span>
               </a></li>
-              <li><a href="https://www.ussc.gov/guidelines/2021-guidelines-manual/2021-chapter-4" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.ussc.gov/guidelines/2021-guidelines-manual/2021-chapter-4" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Federal Sentencing Guidelines — U.S. Sentencing Commission</span>
               </a></li>
-              <li><a href="https://www.aclu.org/know-your-rights/what-does-it-mean-have-your-record-expunged" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.aclu.org/know-your-rights/what-does-it-mean-have-your-record-expunged" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>What Is Expungement? — ACLU</span>
               </a></li>
@@ -233,15 +224,15 @@
           <div class="border-t border-gray-100 pt-4 mb-5">
             <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
             <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.hud.gov/program_offices/fair_housing_equal_opp/fair_housing_rights_and_obligations" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.hud.gov/program_offices/fair_housing_equal_opp/fair_housing_rights_and_obligations" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Fair Housing Rights — HUD</span>
               </a></li>
-              <li><a href="https://www.hud.gov/sites/documents/HUD_OGCGUIDAPPFHASTANDCR.PDF" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.hud.gov/sites/documents/HUD_OGCGUIDAPPFHASTANDCR.PDF" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>HUD Guidance on Criminal Records &amp; Housing — HUD PDF</span>
               </a></li>
-              <li><a href="https://www.nlihc.org/resource/criminal-background-checks" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.nlihc.org/resource/criminal-background-checks" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Criminal Background Checks &amp; Housing — NLIHC</span>
               </a></li>
@@ -276,15 +267,15 @@
           <div class="border-t border-gray-100 pt-4 mb-5">
             <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
             <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>EEOC Guidance on Criminal Records — EEOC</span>
               </a></li>
-              <li><a href="https://www.dol.gov/agencies/eta/reentry" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.dol.gov/agencies/eta/reentry" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Reentry Employment Resources — U.S. Dept. of Labor</span>
               </a></li>
-              <li><a href="https://www.opm.gov/policy-data-oversight/human-capital-management/faqs/ban-the-box-qs-and-as.pdf" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.opm.gov/policy-data-oversight/human-capital-management/faqs/ban-the-box-qs-and-as.pdf" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Ban the Box — Federal Hiring Policy (OPM)</span>
               </a></li>
@@ -319,15 +310,15 @@
           <div class="border-t border-gray-100 pt-4 mb-5">
             <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
             <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.aclu.org/know-your-rights/stopped-by-police" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.aclu.org/know-your-rights/stopped-by-police" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Stopped by Police — Your Rights (ACLU)</span>
               </a></li>
-              <li><a href="https://www.justice.gov/crt/addressing-police-misconduct-laws-enforced-department-justice" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.justice.gov/crt/addressing-police-misconduct-laws-enforced-department-justice" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Police Misconduct Laws — DOJ Civil Rights Division</span>
               </a></li>
-              <li><a href="https://constitution.congress.gov/constitution/amendment-4/" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://constitution.congress.gov/constitution/amendment-4/" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Fourth Amendment — U.S. Constitution (Congress.gov)</span>
               </a></li>
@@ -363,15 +354,15 @@
           <div class="border-t border-gray-100 pt-4 mb-5">
             <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
             <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.ussc.gov/research/research-reports/overview-federal-criminal-cases" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.ussc.gov/research/research-reports/overview-federal-criminal-cases" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Federal Supervised Release Overview — U.S. Sentencing Commission</span>
               </a></li>
-              <li><a href="https://www.uscourts.gov/services-forms/probation-and-pretrial-services" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.uscourts.gov/services-forms/probation-and-pretrial-services" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Probation &amp; Supervised Release — U.S. Courts</span>
               </a></li>
-              <li><a href="https://www.justice.gov/uspc" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.justice.gov/uspc" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>U.S. Parole Commission — DOJ</span>
               </a></li>
@@ -407,15 +398,15 @@
           <div class="border-t border-gray-100 pt-4 mb-5">
             <p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Federal Resources</p>
             <ul class="space-y-2 list-none p-0 m-0">
-              <li><a href="https://www.uscourts.gov/services-forms/probation-and-pretrial-services" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.uscourts.gov/services-forms/probation-and-pretrial-services" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Federal Probation Services — U.S. Courts</span>
               </a></li>
-              <li><a href="https://www.fd.org/sites/default/files/criminal_defense_topics/essential_topics/sentencing_resources/probation_and_supervised_release_conditions.pdf" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.fd.org/sites/default/files/criminal_defense_topics/essential_topics/sentencing_resources/probation_and_supervised_release_conditions.pdf" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Probation Conditions Guide — Federal Defenders</span>
               </a></li>
-              <li><a href="https://www.aclu.org/know-your-rights/probation-and-parole" target="_blank" rel="noopener noreferrer" class="resource-link flex items-start gap-2 text-sm text-teal-600 transition-colors">
+              <li><a href="https://www.aclu.org/know-your-rights/probation-and-parole" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors">
                 <span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span>
                 <span>Probation &amp; Parole Rights — ACLU</span>
               </a></li>
@@ -443,7 +434,7 @@
   ============================================================ -->
   <section id="disclaimer" class="bg-amber-50 border-t border-b border-amber-200 py-12 px-4" aria-labelledby="disclaimer-heading">
     <div class="max-w-3xl mx-auto">
-      <div class="flex items-start gap-4">
+      <div class="disclaimer-layout flex items-start gap-4">
         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mt-1" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#854F0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
@@ -524,7 +515,7 @@
 
     </div>
 
-    <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
+    <div class="footer-meta max-w-6xl mx-auto mt-12 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
       <p>&copy; 2026 Know Your Rights &mdash; Joanne Liszewski</p>
       <p>Not legal advice &nbsp;|&nbsp; Educational purposes only &nbsp;|&nbsp; Federal law</p>
     </div>

@@ -1,6 +1,6 @@
 # CHANGES.md — Know Your Rights
 ## AI Collaboration Change Log
-**Project:** know-your-rights-federal  
+**Project:** know-your-federal-rights  
 **Developer:** Joanne Liszewski  
 **Session:** Phase 1 — May 2026
 
@@ -16,17 +16,29 @@
 | 6 | README and HTML footer credited "Banyan Labs LLC" as the organization | Removed all Banyan Labs references from both files | This is a solo project — no organizational affiliation |
 | 7 | AI suggested five repo name options | Selected `know-your-rights-federal` | Clear, descriptive, and sets a naming convention for future state-specific repos |
 | 8 | AI drafted three repo description options | Accepted the GitHub one-liner and README intro paragraph | Both matched the tone and scope of the project |
+| 9 | Tailwind loaded from the CDN with custom config and a small inline `<style>` block inside `index.html` | Directed AI to remove the CDN dependency and move all styling into `styles.css` | Prevent production CDN warnings and keep project CSS in a dedicated stylesheet |
+| 10 | Search highlight relied on Tailwind `ring-*` utility classes in JavaScript | Replaced with a local `topic-card-highlight` class in `styles.css` | Keeps the project independent from Tailwind and centralizes styling in one file |
+| 11 | README local setup instructions used the wrong repository name and a macOS-only `open index.html` command | Rewrote the local run section to use the correct folder name and browser-based static-site instructions | Makes the documentation platform-neutral and accurate for the current repo |
+| 12 | Header navigation stayed in a desktop horizontal layout at all screen sizes | Directed AI to implement a mobile-first hamburger menu with responsive layout updates across the hero, cards, disclaimer, footer, and link wrapping | Ensures the site is truly responsive and usable on small screens |
+| 13 | Mobile nav links (`Topics`, `Disclaimer`, `Find Legal Aid`) were visible as a sticky block instead of being controlled by the hamburger button | Removed conflicting utility classes from the primary nav list and let the menu state be controlled by dedicated mobile nav CSS | Prevents duplicate-looking navigation and ensures links appear as true hamburger menu items on mobile |
+| 14 | Mobile menu opened abruptly with no overlay context | Added animated open/close behavior (slide + fade) to the mobile menu panel and introduced a dim backdrop layer behind the menu | Improves mobile UX clarity and makes menu state feel intentional and easier to follow |
+| 15 | Mobile menu could only be closed from the toggle button, nav links, or Escape key | Added backdrop click handling in `script.js` and synchronized backdrop visibility with menu open/close state | Gives users a standard tap-outside-to-close behavior on mobile |
+| 16 | `README.md` still reflected older setup details and stale stack notes | Rewrote README to match current project state: static HTML/CSS/JS build, current feature set, accurate structure, and GitHub Pages workflow deployment | Keeps onboarding and deployment documentation aligned with the real codebase |
 
 ---
 
 ## File Structure
 
 ```
-know-your-rights-federal/
-├── index.html    — main resource page
-├── script.js     — search filter and scroll highlight logic
-├── README.md     — project documentation
-└── CHANGES.md    — this file
+know-your-federal-rights/
+├── .github/
+│   └── workflows/
+│       └── pages.yml   — GitHub Pages deployment workflow
+├── index.html          — main resource page
+├── script.js           — search, scroll highlight, and mobile nav logic
+├── styles.css          — all project styling and responsive layout rules
+├── README.md           — project documentation
+└── CHANGES.md          — this file
 ```
 
 ---
