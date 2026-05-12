@@ -3,6 +3,10 @@
 //  Handles topic search/filter and smooth scroll with highlight
 // ============================================================
 
+// ----------------------------
+// Topic Discovery Interactions
+// ----------------------------
+
 /**
  * filterTopics
  * Filters topic cards in real time based on the search input value.
@@ -42,6 +46,12 @@ function scrollToTopic(id) {
   setTimeout(() => el.classList.remove('topic-card-highlight'), 2000);
 }
 
+// ---------------------------------
+// Global Internal Anchor Navigation
+// ---------------------------------
+// Applies consistent smooth scrolling for all in-page hash links.
+// Topic cards receive highlight treatment; non-card targets do not.
+
 const internalHashLinks = document.querySelectorAll('a[href^="#"]');
 
 internalHashLinks.forEach(link => {
@@ -64,6 +74,10 @@ internalHashLinks.forEach(link => {
   });
 });
 
+// ----------------------
+// Mobile Menu Management
+// ----------------------
+
 const navToggle = document.querySelector('.nav-toggle');
 const primaryMenu = document.getElementById('primary-menu');
 const menuBackdrop = document.querySelector('.menu-backdrop');
@@ -78,6 +92,7 @@ function setMobileMenuState(isOpen) {
   document.body.classList.toggle('menu-open', isOpen);
 }
 
+// Wire toggle, backdrop, keyboard, and viewport handlers.
 if (navToggle && primaryMenu) {
   navToggle.addEventListener('click', () => {
     const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
