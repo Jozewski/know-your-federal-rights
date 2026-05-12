@@ -24,6 +24,11 @@
 | 14 | Mobile menu opened abruptly with no overlay context | Added animated open/close behavior (slide + fade) to the mobile menu panel and introduced a dim backdrop layer behind the menu | Improves mobile UX clarity and makes menu state feel intentional and easier to follow |
 | 15 | Mobile menu could only be closed from the toggle button, nav links, or Escape key | Added backdrop click handling in `script.js` and synchronized backdrop visibility with menu open/close state | Gives users a standard tap-outside-to-close behavior on mobile |
 | 16 | `README.md` still reflected older setup details and stale stack notes | Rewrote README to match current project state: static HTML/CSS/JS build, current feature set, accurate structure, and GitHub Pages workflow deployment | Keeps onboarding and deployment documentation aligned with the real codebase |
+| 17 | Footer/internal hash links still used mixed behavior and could jump inconsistently across sections | Directed AI to unify in-page anchor handling so header and footer links both use smooth scroll with consistent routing logic | Removes inconsistent navigation behavior and improves UX predictability |
+| 18 | Topic card links and non-card section links were not handled through one shared internal-link flow | Applied the same global hash-link behavior across all internal `#` links and kept URL hash updates after navigation | Ensures consistent deep-link behavior and supports reliable section sharing/bookmarking |
+| 19 | `index.html` had limited structural documentation for major page regions | Directed AI to add concise, industry-style comments for major sections and key sub-sections without over-commenting | Improves maintainability and readability for future edits and handoffs |
+| 20 | Commenting style between JavaScript and CSS was not fully aligned with the updated HTML documentation approach | Added the same descriptive, best-practice comment style to `script.js` and `styles.css` without altering behavior | Creates consistent documentation standards across the codebase while preserving functionality |
+| 21 | Project branding did not yet include a linked favicon set in document metadata | Added brand-matching favicon assets and linked them in the HTML head for SVG and ICO support | Improves polish and browser tab identity across modern and legacy favicon handling |
 
 ---
 
@@ -38,23 +43,9 @@ know-your-federal-rights/
 ├── script.js           — search, scroll highlight, and mobile nav logic
 ├── styles.css          — all project styling and responsive layout rules
 ├── README.md           — project documentation
-└── CHANGES.md          — this file
+└── changes.md          — this file
 ```
 
 ---
 
 *Updated throughout Phase 1 development.*
-
----
-
-## Updates Since `fix/footer-nav-anchor-jump`
-
-| # | What Was Done | Files Updated | Why It Matters |
-|---|---|---|---|
-| 17 | Refactored in-page anchor navigation so footer and header hash links use the same smooth-scroll behavior. Topic-card targets now receive highlight feedback, while non-card sections scroll normally. | `script.js` | Eliminates jumpy/inconsistent navigation behavior and centralizes internal link handling. |
-| 18 | Applied the same anchor-navigation behavior across all internal `#` links and kept URL hash state in sync after scroll. | `script.js` | Ensures predictable UX from any internal navigation entry point and preserves shareable deep links. |
-| 19 | Added descriptive, section-level comments to major layout regions and key sub-sections without over-commenting implementation details. | `index.html` | Improves maintainability and onboarding by making page structure and intent clear at a glance. |
-| 20 | Added matching best-practice comment style to JavaScript sections and CSS architecture blocks without changing runtime behavior or styles. | `script.js`, `styles.css` | Keeps code documentation consistent across layers and makes future edits safer. |
-| 21 | Added project favicon assets and linked them in the document head for browser support. | `favicon.svg`, `favicon.ico`, `index.html` | Completes brand polish and ensures tab/icon identity across modern and legacy favicon handling. |
-
-*Post-branch updates documented May 2026.*
