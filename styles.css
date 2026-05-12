@@ -1,5 +1,8 @@
 
 
+/* ==============================
+  Design Tokens
+  ============================== */
 :root {
   --color-white: #ffffff;
   --color-gray-50: #f9fafb;
@@ -24,6 +27,9 @@
   --color-amber-900: #78350f;
 }
 
+/* ==============================
+   Base / Reset
+   ============================== */
 *,
 *::before,
 *::after {
@@ -62,6 +68,9 @@ svg {
   display: block;
 }
 
+/* ==============================
+   Core Components
+   ============================== */
 .topic-card:hover {
   border-color: var(--color-teal-400);
   box-shadow: 0 4px 16px rgba(29, 158, 117, 0.1);
@@ -258,6 +267,10 @@ svg {
   text-align: center;
 }
 
+/* ==============================
+   Utility Classes
+   Hand-authored utility set used by index.html
+   ============================== */
 .hidden {
   display: none !important;
 }
@@ -819,6 +832,9 @@ svg {
   border-color: var(--color-teal-400);
 }
 
+/* ==============================
+   Responsive Breakpoints
+   ============================== */
 @media (min-width: 640px) {
   .hero-section {
     padding-top: 5rem;
