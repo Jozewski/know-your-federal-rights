@@ -32,6 +32,13 @@ const stateSelectorBackButton = document.getElementById('state-selector-back');
 const stateFlagGrid = document.getElementById('state-flag-grid');
 const stateSelectorHelp = document.getElementById('state-selector-help');
 const jurisdictionButtons = document.querySelectorAll('[data-jurisdiction]');
+const mainContent = document.getElementById('topics');
+const heroSection = document.querySelector('.hero-section');
+const disclaimerSection = document.getElementById('disclaimer');
+const footer = document.querySelector('footer');
+const newTabScreenReaderText = '<span class="sr-only"> (opens in a new tab)</span>';
+const menuManagedRegions = [heroSection, mainContent, disclaimerSection, footer].filter(Boolean);
+let lastFocusedElementBeforeMenu = null;
 
 function getPublicStates() {
   return siteContent.states.filter(state => state.enabled && state.reviewStatus === 'reviewed');
@@ -124,7 +131,7 @@ function renderStateSelector() {
   stateFlagGrid.innerHTML = publicStates.map(state => {
     const isSelected = state.code === appState.stateCode;
     const flagCode = 'us-' + state.code.toLowerCase();
-    return '<button type="button" class="state-flag-tile' + (isSelected ? ' is-selected' : '') + '" data-state-code="' + state.code + '" role="option" aria-selected="' + isSelected + '" aria-label="' + state.name + '">' +
+    return '<button type="button" class="state-flag-tile' + (isSelected ? ' is-selected' : '') + '" data-state-code="' + state.code + '" aria-pressed="' + isSelected + '" aria-label="' + state.name + '">' +
       '<img src="https://flagcdn.com/w40/' + flagCode + '.png" alt="" class="state-flag-img" width="20" height="14" loading="lazy">' +
       '<span class="state-flag-name">' + state.name + '</span>' +
       '</button>';
@@ -180,7 +187,7 @@ function getBadgeClass(topicId) {
 
 function renderResourceItem(resource) {
   if (resource.url) {
-    return '<li><a href="' + resource.url + '" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors"><span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span><span>' + resource.label + '</span></a></li>';
+    return '<li><a href="' + resource.url + '" target="_blank" rel="noopener noreferrer" class="resource-link resource-item flex items-start gap-2 text-sm text-teal-600 transition-colors"><span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x1F517;</span><span>' + resource.label + newTabScreenReaderText + '</span></a></li>';
   }
 
   return '<li><span class="resource-note resource-item flex items-start gap-2 text-sm text-gray-500"><span class="mt-0.5 flex-shrink-0" aria-hidden="true">&#x23F3;</span><span>' + resource.label + '</span></span></li>';
@@ -192,16 +199,16 @@ function renderTopicCard(entry) {
   const topic = siteContent.topicDefinitions[entry.topicId];
   const resourcesHeading = isStateView() ? 'Reviewed Resources' : 'Federal Resources';
   const learnMoreLink = entry.learnMoreUrl
-    ? '<a href="' + entry.learnMoreUrl + '" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-teal-600 hover:text-teal-800 transition-colors">Learn More <span aria-hidden="true">&#8594;</span></a>'
+    ? '<a href="' + entry.learnMoreUrl + '" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-teal-600 hover:text-teal-800 transition-colors">Learn More' + newTabScreenReaderText + ' <span aria-hidden="true">&#8594;</span></a>'
     : '<p class="resource-note text-sm">State-specific source links will appear here after subject matter expert review.</p>';
 
-  return '<article id="' + entry.topicId + '" class="topic-card bg-white border border-gray-200 rounded-xl p-6 transition-all duration-200" data-keywords="' + entry.keywords + '">' +
+  return '<article id="' + entry.topicId + '" class="topic-card bg-white border border-gray-200 rounded-xl p-6 transition-all duration-200" data-keywords="' + entry.keywords + '" tabindex="-1">' +
     '<div class="flex items-start gap-4 mb-4">' +
       '<div class="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0" aria-hidden="true">' + topic.icon + '</div>' +
       '<div><h3 class="font-semibold text-gray-900 text-base">' + topic.title + '</h3><span class="' + getBadgeClass(entry.topicId) + '">' + entry.label + '</span></div>' +
     '</div>' +
     '<p class="text-sm text-gray-600 leading-relaxed mb-5">' + entry.summary + '</p>' +
-    '<div class="border-t border-gray-100 pt-4 mb-5"><p class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">' + resourcesHeading + '</p><ul class="space-y-2 list-none p-0 m-0">' +
+    '<div class="border-t border-gray-100 pt-4 mb-5"><p class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-3">' + resourcesHeading + '</p><ul class="space-y-2 list-none p-0 m-0">' +
       entry.resources.map(renderResourceItem).join('') +
     '</ul></div>' +
     learnMoreLink +
@@ -243,6 +250,14 @@ function renderApp() {
   renderTopics();
 }
 
+function focusTarget(target) {
+  if (!target || typeof target.focus !== 'function') {
+    return;
+  }
+
+  target.focus({ preventScroll: true });
+}
+
 function setJurisdiction(jurisdiction) {
   appState.jurisdiction = jurisdiction;
   if (jurisdiction === 'federal') {
@@ -281,6 +296,7 @@ function scrollToTopic(id) {
   if (!el) return;
 
   el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  focusTarget(el);
   el.classList.add('topic-card-highlight');
   setTimeout(() => el.classList.remove('topic-card-highlight'), 2000);
 }
@@ -331,6 +347,7 @@ internalHashLinks.forEach(link => {
       scrollToTopic(targetId);
     } else {
       targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      focusTarget(targetEl);
     }
 
     history.replaceState(null, '', '#' + targetId);
@@ -345,25 +362,63 @@ const navToggle = document.querySelector('.nav-toggle');
 const primaryMenu = document.getElementById('primary-menu');
 const menuBackdrop = document.querySelector('.menu-backdrop');
 
-function setMobileMenuState(isOpen) {
+function setManagedRegionsInert(isInert) {
+  menuManagedRegions.forEach(region => {
+    region.inert = isInert;
+    region.setAttribute('aria-hidden', String(isInert));
+  });
+}
+
+function getMenuFocusableElements() {
+  if (!navToggle || !primaryMenu) {
+    return [];
+  }
+
+  return [navToggle].concat(Array.from(primaryMenu.querySelectorAll('a')));
+}
+
+function setMobileMenuState(isOpen, options) {
   if (!navToggle || !primaryMenu) return;
+  const settings = options || {};
+
+  if (isOpen) {
+    lastFocusedElementBeforeMenu = document.activeElement;
+  }
 
   navToggle.setAttribute('aria-expanded', String(isOpen));
   navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
   primaryMenu.classList.toggle('is-open', isOpen);
+  primaryMenu.setAttribute('aria-hidden', String(!isOpen));
   menuBackdrop?.classList.toggle('is-visible', isOpen);
+  menuBackdrop?.setAttribute('aria-hidden', String(!isOpen));
   document.body.classList.toggle('menu-open', isOpen);
+  setManagedRegionsInert(isOpen);
+
+  if (isOpen && settings.moveFocus !== false) {
+    const focusableMenuItems = getMenuFocusableElements();
+    focusTarget(focusableMenuItems[1] || focusableMenuItems[0] || navToggle);
+  }
+
+  if (!isOpen && settings.restoreFocus !== false) {
+    if (lastFocusedElementBeforeMenu && document.contains(lastFocusedElementBeforeMenu)) {
+      focusTarget(lastFocusedElementBeforeMenu);
+    } else {
+      focusTarget(navToggle);
+    }
+  }
 }
 
 // Wire toggle, backdrop, keyboard, and viewport handlers.
 if (navToggle && primaryMenu) {
+  primaryMenu.setAttribute('aria-hidden', 'true');
+
   navToggle.addEventListener('click', () => {
     const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
     setMobileMenuState(!isOpen);
   });
 
   primaryMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => setMobileMenuState(false));
+    link.addEventListener('click', () => setMobileMenuState(false, { restoreFocus: false, moveFocus: false }));
   });
 
   menuBackdrop?.addEventListener('click', () => {
@@ -371,14 +426,36 @@ if (navToggle && primaryMenu) {
   });
 
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+
+    if (event.key === 'Escape' && isOpen) {
+      event.preventDefault();
       setMobileMenuState(false);
+      return;
+    }
+
+    if (event.key === 'Tab' && isOpen) {
+      const focusableMenuItems = getMenuFocusableElements();
+      if (!focusableMenuItems.length) {
+        return;
+      }
+
+      const firstItem = focusableMenuItems[0];
+      const lastItem = focusableMenuItems[focusableMenuItems.length - 1];
+
+      if (event.shiftKey && document.activeElement === firstItem) {
+        event.preventDefault();
+        focusTarget(lastItem);
+      } else if (!event.shiftKey && document.activeElement === lastItem) {
+        event.preventDefault();
+        focusTarget(firstItem);
+      }
     }
   });
 
   window.addEventListener('resize', () => {
     if (window.innerWidth >= 768) {
-      setMobileMenuState(false);
+      setMobileMenuState(false, { restoreFocus: false, moveFocus: false });
     }
   });
 }

@@ -47,6 +47,10 @@ body {
   background-color: var(--color-gray-50);
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 body,
 button,
 input {
@@ -62,6 +66,23 @@ button {
   border: 0;
   cursor: pointer;
   background: transparent;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+  transform: translateY(-140%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 svg {
@@ -91,6 +112,14 @@ svg {
 .resource-link:hover {
   color: var(--color-teal-600);
   text-decoration: underline;
+}
+
+a:focus-visible,
+.quick-link:focus-visible,
+.primary-nav-cta:focus-visible,
+.resource-link:focus-visible {
+  outline: 3px solid rgba(29, 158, 117, 0.3);
+  outline-offset: 3px;
 }
 
 #search-input:focus {

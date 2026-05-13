@@ -1,105 +1,178 @@
 # Know Your Rights
 
-Know Your Rights is a static educational website that collects plain-language federal rights information in one place. It is designed for justice-impacted individuals, people on supervision, families, and anyone who needs a clearer starting point for understanding federal rights and finding reputable legal resources.
+**Plain-English federal and state rights education for justice-impacted individuals, families, and the organizations that support them.**
 
-## Current State
+[![Deploy to GitHub Pages](https://github.com/Jozewski/know-your-federal-rights/actions/workflows/pages.yml/badge.svg)](https://github.com/Jozewski/know-your-federal-rights/actions/workflows/pages.yml)
 
-This project is currently a front-end-only site built with HTML, CSS, and vanilla JavaScript. It is ready to run locally without a build step and is configured to deploy to GitHub Pages through GitHub Actions.
+---
 
-The site currently includes:
+## Table of Contents
 
-- A responsive header with a mobile hamburger menu
-- A hero section with search and quick-jump topic buttons
-- Seven federal rights topic cards
-- Real-time topic filtering
-- Smooth scroll-to-topic navigation with highlight feedback
-- A legal disclaimer section
-- A footer with topic and federal resource links
+- [Overview](#overview)
+- [Live Site](#live-site)
+- [Features](#features)
+- [Topics Covered](#topics-covered)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Local Development](#local-development)
+- [Deployment](#deployment)
+- [Accessibility](#accessibility)
+- [Legal Disclaimer](#legal-disclaimer)
+- [Maintainer](#maintainer)
+
+---
+
+## Overview
+
+Know Your Rights is a free, static educational website that surfaces plain-language rights information in one place. It is built for people in reentry, on parole, on probation, or otherwise navigating the legal system — as well as for the families and legal aid organizations that support them.
+
+The site covers all seven core rights topics at the federal level and provides state-specific versions of those same topics for all 50 states. All content is structured, data-driven, and designed to be expanded without changing the underlying experience.
+
+---
+
+## Live Site
+
+[https://jozewski.github.io/know-your-federal-rights](https://jozewski.github.io/know-your-federal-rights)
+
+---
+
+## Features
+
+- **Federal / State jurisdiction toggle** — switch between a federal view and a state-specific view from the hero section
+- **50-state flag selector** — alphabetical grid of all 50 state flags; select any state to load its specific content
+- **Seven rights topic cards** — consistent card layout for both federal and state content, rendered from a structured data model
+- **Real-time search** — filters topic cards as you type with keyword matching
+- **Quick-jump topic pills** — one-click shortcuts to any topic card with smooth scroll and highlight feedback
+- **Responsive layout** — mobile-first design with a hamburger navigation menu and reflowing content at all screen sizes
+- **Data-driven content layer** — all federal and state content lives in `content-data.js`, keeping structure and presentation cleanly separated
+- **No build step** — runs directly in any browser with no dependencies or tooling required
+
+---
 
 ## Topics Covered
 
-- Voting Rights Restoration
-- Expungement
-- Housing Rights
-- Employment Rights
-- Police Interactions
-- On Parole
-- On Probation
+| Topic | Description |
+|---|---|
+| Voting Rights Restoration | How and when voting rights are restored after a conviction |
+| Expungement | Eligibility and process for clearing or sealing a criminal record |
+| Housing Rights | Fair chance housing protections and tenant rights |
+| Employment Rights | Ban-the-box laws, background check rules, and hiring protections |
+| Police Interactions | Rights during stops, searches, and arrests |
+| Parole | Conditions, supervision rules, and violation procedures |
+| Probation | Conditions, supervision rules, and violation procedures |
+
+Each topic is covered at the federal level and with a state-specific version for all 50 states.
+
+---
 
 ## Tech Stack
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- GitHub Pages
-- GitHub Actions for deployment
+| Layer | Technology |
+|---|---|
+| Markup | HTML5 |
+| Styling | CSS3 (custom properties, responsive grid, flexbox) |
+| Behavior | Vanilla JavaScript (ES6+) |
+| Content | Structured data module (`content-data.js`) |
+| Hosting | GitHub Pages |
+| CI/CD | GitHub Actions |
+
+No frameworks. No dependencies. No build step.
+
+---
 
 ## Project Structure
 
-```text
+```
 know-your-federal-rights/
-|-- .github/
-|   `-- workflows/
-|       `-- pages.yml
-|-- changes.md
-|-- index.html
-|-- README.md
-|-- script.js
-`-- styles.css
+├── .github/
+│   └── workflows/
+│       └── pages.yml       — GitHub Pages deployment workflow
+├── content-data.js         — all federal and state content, topic definitions, and state metadata
+├── index.html              — single-page application shell and semantic structure
+├── script.js               — jurisdiction switching, state rendering, search, scroll, and navigation logic
+├── styles.css              — complete visual system, responsive layout, and component styles
+├── favicon.svg             — brand favicon (SVG)
+├── favicon.ico             — legacy favicon (ICO)
+├── changes.md              — AI collaboration log and development decision record
+└── README.md               — this file
 ```
 
-## File Overview
+---
 
-- `index.html` contains the page structure and content for the site
-- `styles.css` contains the full visual system, responsive layout rules, and mobile navigation styling
-- `script.js` handles search filtering, topic jump behavior, and mobile menu interactions
-- `changes.md` tracks AI-assisted project changes and developer decisions
-- `.github/workflows/pages.yml` deploys the site to GitHub Pages
+## Local Development
 
-## Running Locally
+No installation or build step is required.
 
-There is no install step and no build step.
+**Option 1 — Open directly in a browser:**
 
-1. Clone the repository.
-2. Open `index.html` in a browser.
+```bash
+git clone https://github.com/Jozewski/know-your-federal-rights.git
+cd know-your-federal-rights
+# Open index.html in your browser
+```
 
-If you want live reload during development, you can also open the folder in VS Code and use a local static server extension, but it is not required.
+**Option 2 — Live reload with a local server (recommended for active development):**
+
+If you have [VS Code](https://code.visualstudio.com) with the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension:
+
+1. Open the project folder in VS Code
+2. Right-click `index.html` and select **Open with Live Server**
+
+Or with Node.js:
+
+```bash
+npx serve .
+```
+
+The site will be available at `http://localhost:3000` (or the port your server assigns).
+
+---
 
 ## Deployment
 
-The site is configured to deploy with GitHub Pages using the workflow in `.github/workflows/pages.yml`.
+The site deploys automatically to GitHub Pages via the workflow in `.github/workflows/pages.yml`.
 
-Deployment runs when:
+**Automatic deployment** triggers on every push to the `main` branch.
 
-- You push to the repository's default branch
-- You manually trigger the workflow from GitHub Actions
+**Manual deployment** can be triggered from the Actions tab in the GitHub repository.
 
-To publish the site:
+**First-time setup:**
 
-1. Push the repository to GitHub.
-2. In the repository settings, enable GitHub Pages with the source set to GitHub Actions.
-3. Push changes to the default branch.
+1. Push the repository to GitHub
+2. Go to **Settings → Pages**
+3. Set the source to **GitHub Actions**
+4. Push to `main` — the workflow handles the rest
 
-## Accessibility and UX Notes
+The live URL will be `https://<your-github-username>.github.io/know-your-federal-rights/`.
 
-The current site includes:
+---
 
-- Semantic HTML structure
-- Screen-reader-only labels where needed
-- Keyboard-close support for the mobile menu with `Escape`
-- A clickable backdrop for mobile navigation
-- Responsive layout behavior for smaller screens
+## Accessibility
 
-## Project Purpose
+This project is built with accessibility as a baseline requirement, not an afterthought.
 
-The goal of this project is to make federal rights information easier to find and easier to understand. It is intentionally simple in its current form: a fast, static, low-friction resource page that can be expanded over time.
+- Semantic HTML5 landmarks and heading hierarchy throughout
+- Screen-reader-only labels (`sr-only`) on interactive controls that lack visible text
+- `aria-label`, `aria-pressed`, `aria-live`, and `role` attributes on dynamic regions and controls
+- Keyboard navigation support — the mobile menu closes on `Escape`
+- Tap-outside-to-close behavior on the mobile navigation overlay
+- Focus-visible outlines on all interactive elements
+- Sufficient color contrast across all text and background combinations
+
+---
 
 ## Legal Disclaimer
 
-This website provides general educational information about federal law only. It is not legal advice and does not create an attorney-client relationship. Laws and interpretations change over time. Anyone using this site should consult a licensed attorney or legal aid organization for advice about their specific situation.
+This website provides general educational information about federal and state law only. It is **not legal advice** and does not create an attorney-client relationship. Laws and their interpretation may change. The information on this site may not reflect the most current legal developments.
+
+For advice about your specific situation, consult a licensed attorney or a free legal aid organization in your area.
 
 Free legal aid resource: [LawHelp.org](https://www.lawhelp.org)
 
+---
+
 ## Maintainer
 
-Joanne Liszewski
+**Joanne Liszewski**
+
+&copy; 2026 Know Your Rights

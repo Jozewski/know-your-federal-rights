@@ -11,6 +11,7 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
+  <a class="skip-link" href="#topics">Skip to main content</a>
 
   <!-- ============================================================
        SITE HEADER + PRIMARY NAVIGATION
@@ -49,8 +50,8 @@
           <li><a href="#disclaimer" class="hover:text-teal-600 transition-colors">Disclaimer</a></li>
           <li>
             <a href="https://www.lawhelp.org" target="_blank" rel="noopener noreferrer"
-               class="primary-nav-cta bg-teal-400 text-white px-4 py-1.5 rounded-full hover:bg-teal-600 transition-colors text-sm">
-              Find Legal Aid
+               class="primary-nav-cta bg-teal-600 text-white px-4 py-1.5 rounded-full hover:bg-teal-800 transition-colors text-sm">
+              Find Legal Aid<span class="sr-only"> (opens in a new tab)</span>
             </a>
           </li>
         </ul>
@@ -88,7 +89,7 @@
 
       <!-- Jurisdiction controls keep the same visual theme while allowing a future-growing state layer. -->
       <div class="hero-context-controls">
-        <div class="jurisdiction-switcher" aria-label="Choose jurisdiction">
+        <div class="jurisdiction-switcher" role="group" aria-label="Choose jurisdiction">
           <button type="button" class="jurisdiction-pill is-active" data-jurisdiction="federal" aria-pressed="true">
             <span class="jurisdiction-pill-content">
               <img src="https://flagcdn.com/w40/us.png" alt="" class="jurisdiction-pill-flag" width="20" height="15" loading="lazy">
@@ -107,7 +108,7 @@
             <p id="state-selector-label" class="state-selector-label">Choose a state</p>
             <button id="state-selector-back" type="button" class="state-selector-back hidden">Back to Selection Grid</button>
           </div>
-          <div id="state-flag-grid" class="state-flag-grid" role="listbox" aria-label="Available states"></div>
+          <div id="state-flag-grid" class="state-flag-grid" role="group" aria-labelledby="state-selector-label" aria-describedby="state-selector-help"></div>
           <p id="state-selector-help" class="state-selector-help"></p>
         </div>
       </div>
@@ -130,7 +131,7 @@
       </div>
 
       <!-- Quick-jump controls wired to scrollToTopic() in script.js -->
-      <div class="quick-links flex flex-wrap justify-center gap-2 mt-6" aria-label="Quick navigation">
+      <nav class="quick-links flex flex-wrap justify-center gap-2 mt-6" aria-label="Quick navigation">
         <button onclick="scrollToTopic('voting')"    class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Voting</button>
         <button onclick="scrollToTopic('expungement')" class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Expungement</button>
         <button onclick="scrollToTopic('housing')"   class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Housing</button>
@@ -138,7 +139,7 @@
         <button onclick="scrollToTopic('police')"    class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Police</button>
         <button onclick="scrollToTopic('parole')"    class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Parole</button>
         <button onclick="scrollToTopic('probation')" class="quick-link text-xs bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-3 py-1.5 rounded-full transition-colors">Probation</button>
-      </div>
+      </nav>
     </div>
   </section>
 
@@ -147,7 +148,7 @@
        TOPICS SECTION
        - Searchable federal-rights reference cards
   ============================================================ -->
-  <main id="topics">
+  <main id="topics" tabindex="-1" aria-labelledby="topics-heading">
     <div class="max-w-6xl mx-auto px-4 py-16">
       <h2 id="topics-heading" class="text-2xl font-bold text-gray-900 mb-2">Federal Rights Topics</h2>
       <p id="topics-description" class="text-gray-500 text-sm mb-10">Select a topic to explore your rights and find federal resources.</p>
@@ -157,7 +158,7 @@
       <div id="topics-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6" aria-live="polite"></div>
 
       <!-- Empty-state message shown when search has no matches -->
-      <p id="no-results" class="hidden text-center text-gray-400 py-16 text-sm">
+      <p id="no-results" class="hidden text-center text-gray-500 py-16 text-sm">
         No topics matched your search. Try a different keyword.
       </p>
 
@@ -193,7 +194,7 @@
           </p>
           <a href="https://www.lawhelp.org" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 bg-amber-800 text-white text-sm font-medium px-5 py-2.5 rounded-lg hover:bg-amber-900 transition-colors">
-            Find Free Legal Aid Near You
+            Find Free Legal Aid Near You<span class="sr-only"> (opens in a new tab)</span>
             <span aria-hidden="true">&#8594;</span>
           </a>
         </div>
@@ -224,7 +225,7 @@
           Free federal and state rights education for justice-impacted individuals, families, and the
           organizations that support them.
         </p>
-        <p class="text-xs text-gray-500">Built by Joanne Liszewski</p>
+        <p class="text-xs text-gray-400">Built by Joanne Liszewski</p>
       </div>
 
       <!-- In-page topic links for quick navigation back to card content -->
@@ -245,19 +246,19 @@
       <nav aria-label="Federal resources navigation">
         <h3 class="text-sm font-semibold text-white uppercase tracking-widest mb-4">Federal Resources</h3>
         <ul class="space-y-2 list-none p-0 m-0 text-sm">
-          <li><a href="https://www.lawhelp.org"     target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">LawHelp.org — Free Legal Aid</a></li>
-          <li><a href="https://www.justice.gov"     target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">U.S. Department of Justice</a></li>
-          <li><a href="https://www.eeoc.gov"        target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">EEOC</a></li>
-          <li><a href="https://www.hud.gov"         target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">HUD — Housing</a></li>
-          <li><a href="https://www.aclu.org"        target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">ACLU</a></li>
-          <li><a href="https://www.uscourts.gov"    target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">U.S. Courts</a></li>
+          <li><a href="https://www.lawhelp.org"     target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">LawHelp.org — Free Legal Aid<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.justice.gov"     target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">U.S. Department of Justice<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.eeoc.gov"        target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">EEOC<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.hud.gov"         target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">HUD — Housing<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.aclu.org"        target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">ACLU<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.uscourts.gov"    target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-teal-400 transition-colors">U.S. Courts<span class="sr-only"> (opens in a new tab)</span></a></li>
         </ul>
       </nav>
 
     </div>
 
     <!-- Footer legal line and ownership -->
-    <div class="footer-meta max-w-6xl mx-auto mt-12 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
+    <div class="footer-meta max-w-6xl mx-auto mt-12 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-400">
       <p>&copy; 2026 Know Your Rights &mdash; Joanne Liszewski</p>
       <p>Not legal advice &nbsp;|&nbsp; Educational purposes only &nbsp;|&nbsp; Federal and state law</p>
     </div>
