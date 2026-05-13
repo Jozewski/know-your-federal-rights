@@ -55,8 +55,8 @@
           url: "https://www.justice.gov/voting-rights",
         },
         {
-          label: "Restore Voting Rights — USAGov",
-          url: "https://www.usa.gov/restore-voting-rights",
+          label: "Voting Rights — USAGov",
+          url: "https://www.usa.gov/voting-rights",
         },
         {
           label: "Voting Rights Restoration — Brennan Center for Justice",
@@ -81,11 +81,11 @@
         },
         {
           label: "Federal Sentencing Guidelines — U.S. Sentencing Commission",
-          url: "https://www.ussc.gov/guidelines/2021-guidelines-manual/2021-chapter-4",
+          url: "https://www.ussc.gov/guidelines/2025-guidelines-manual",
         },
         {
-          label: "What Is Expungement? — ACLU",
-          url: "https://www.aclu.org/know-your-rights/what-does-it-mean-have-your-record-expunged",
+          label: "Clemency and Pardons — ACLU",
+          url: "https://www.aclu.org/issues/smart-justice/parole-and-release/clemency-and-pardons",
         },
       ],
       learnMoreUrl: "https://www.justice.gov/pardon",
@@ -105,16 +105,16 @@
           url: "https://www.hud.gov/program_offices/fair_housing_equal_opp/fair_housing_rights_and_obligations",
         },
         {
-          label: "HUD Guidance on Criminal Records & Housing — HUD PDF",
-          url: "https://www.hud.gov/sites/documents/HUD_OGCGUIDAPPFHASTANDCR.PDF",
+          label: "HUD removes Fair Housing Guidance Documents — NLIHC",
+          url: "https://nlihc.org/resource/hud-publishes-notice-removing-fair-housing-guidance-documents",
         },
         {
-          label: "Criminal Background Checks & Housing — NLIHC",
-          url: "https://www.nlihc.org/resource/criminal-background-checks",
+          label: "Ensure Fair Screening Practices for Tenants with Conviction Histories — NLIHC",
+          url: "https://nlihc.org/resource/ensure-fair-screening-practices-tenants-conviction-histories",
         },
       ],
       learnMoreUrl:
-        "https://www.hud.gov/program_offices/fair_housing_equal_opp",
+        "https://www.wallacelaw.com/blog/hud-criminal-screening-update/",
       reviewStatus: "reviewed",
     },
     {
@@ -135,8 +135,8 @@
           url: "https://www.dol.gov/agencies/eta/reentry",
         },
         {
-          label: "Ban the Box — Federal Hiring Policy (OPM)",
-          url: "https://www.opm.gov/policy-data-oversight/human-capital-management/faqs/ban-the-box-qs-and-as.pdf",
+          label: "Ban the Box and Fair Chance Laws — ADP Research Institute",
+          url: "https://sbshrs.adpinfo.com/blog/top-faqs-on-criminal-history-inquiries-ban-the-box-and-fair-chance-laws",
         },
       ],
       learnMoreUrl: "https://www.eeoc.gov",
@@ -178,12 +178,12 @@
       resources: [
         {
           label:
-            "Federal Supervised Release Overview — U.S. Sentencing Commission",
-          url: "https://www.ussc.gov/research/research-reports/overview-federal-criminal-cases",
+            "Federal Supervised Release Toolkit — U.S. Sentencing Commission",
+          url: "https://www.ussc.gov/education/supervised-release-toolkit",
         },
         {
-          label: "Probation & Supervised Release — U.S. Courts",
-          url: "https://www.uscourts.gov/services-forms/probation-and-pretrial-services",
+          label: "Supervised Release Conditions — Federal Defenders",
+          url: "https://www.ussc.gov/topic/supervised-release"
         },
         {
           label: "U.S. Parole Commission — DOJ",
@@ -208,8 +208,8 @@
           url: "https://www.uscourts.gov/services-forms/probation-and-pretrial-services",
         },
         {
-          label: "Probation Conditions Guide — Federal Defenders",
-          url: "https://www.fd.org/sites/default/files/criminal_defense_topics/essential_topics/sentencing_resources/probation_and_supervised_release_conditions.pdf",
+          label: "Probation Conditions — Federal Probation Officers Association",
+          url: "https://www.law.cornell.edu/uscode/text/18/3563",
         },
         {
           label: "Probation & Parole Rights — ACLU",
