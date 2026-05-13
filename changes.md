@@ -53,6 +53,20 @@
 
 ---
 
+## Phase 3 — Polishing and fixing
+
+| What AI Generated | What I Modified / Directed | Why I Changed It |
+|---|---|---|
+| Accessibility remediation introduced a functional but visually rough skip link and a darker header CTA update. | Polished the skip link styling so it stayed accessible without looking bolted on, and restored the missing `Find Legal Aid` pill styling after the utility-class mismatch removed its visible background. | Accessibility fixes still needed to look intentional in the final UI, and the primary CTA had to remain both visible and compliant. |
+| The mobile header layout still let the hamburger sit too close to the site title on small screens. | Moved the hamburger control to the top-right on mobile and added spacing protection around the branding block. | Prevents the header from feeling cramped and keeps the menu control easier to find on smaller devices. |
+| Initial scroll and search behavior created UX bugs: the page could load mid-page on mobile, and early search logic immediately jumped on every keystroke. | Reset the initial mobile load position to the top, then changed search so typing no longer jumps automatically and explicit submit behavior controls when navigation happens. | Preserves context on first load and makes search feel deliberate instead of disruptive. |
+| Search/filter behavior hid cards from the page and created follow-on navigation problems after a result had been found. | Reworked search into a jump-only flow: all cards remain visible, pressing Enter or clicking the search button clears the search, focuses the selected card, and navigates to it using the same path as topic links. | Keeping the full card set visible removes the filtered-state bugs and makes search behave like guided navigation rather than a destructive filter. |
+| Topic highlight feedback was too subtle and timed poorly, so the selected card did not clearly stand out after navigation. | Strengthened the selected-card border, focus state, shadow, and pop/lift animation, and adjusted the highlight logic so it persists while visible and triggers when the card actually arrives in view. | The selected destination needs to read instantly to users without relying on hover state or guessing where the page landed. |
+| AI-generated link/navigation behavior after search could leave topic links in a broken or inconsistent state. | Corrected the post-search topic-link flow so navigation continues to work reliably, and fixed broken links that had been generated incorrectly by AI myself where needed. | Link reliability is non-negotiable for a reference site; users need every card and navigation path to work consistently after interaction changes. |
+| Several external resource links supplied in the AI-generated content were outdated, broken, or no longer pointed to the best current source. | Manually reviewed and replaced those external links myself with current working destinations and more accurate source pages. | Legal/resource links have to be dependable and current, because outdated or broken references reduce trust and can misdirect users looking for real help. |
+
+---
+
 ## File Structure
 
 ```
@@ -70,4 +84,4 @@ know-your-federal-rights/
 
 ---
 
-*Updated throughout Phase 1 development.*
+*Updated throughout development.*
