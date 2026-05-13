@@ -509,6 +509,28 @@ a:focus-visible,
   width: 100%;
 }
 
+.site-search-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  color: var(--color-gray-400);
+  background-color: transparent;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.site-search-submit:hover {
+  color: var(--color-teal-600);
+  background-color: rgba(29, 158, 117, 0.08);
+}
+
+.site-search-submit:focus-visible {
+  outline: 3px solid rgba(29, 158, 117, 0.25);
+  outline-offset: 2px;
+}
+
 .quick-links {
   justify-content: flex-start;
   flex-wrap: nowrap;

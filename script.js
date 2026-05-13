@@ -32,6 +32,8 @@ const stateSelectorBackButton = document.getElementById('state-selector-back');
 const stateFlagGrid = document.getElementById('state-flag-grid');
 const stateSelectorHelp = document.getElementById('state-selector-help');
 const jurisdictionButtons = document.querySelectorAll('[data-jurisdiction]');
+const searchInput = document.getElementById('search-input');
+const searchSubmitButton = document.getElementById('search-submit');
 const mainContent = document.getElementById('topics');
 const heroSection = document.querySelector('.hero-section');
 const disclaimerSection = document.getElementById('disclaimer');
@@ -376,8 +378,10 @@ function setJurisdiction(jurisdiction) {
 function filterTopics(query) {
   appState.searchQuery = query;
   renderTopics();
+}
 
-  const trimmedQuery = query.trim();
+function submitTopicSearch() {
+  const trimmedQuery = appState.searchQuery.trim();
   if (!trimmedQuery) {
     return;
   }
@@ -428,6 +432,19 @@ stateFlagGrid?.addEventListener('click', event => {
 stateSelectorBackButton?.addEventListener('click', () => {
   appState.isSelectingState = true;
   renderApp();
+});
+
+searchInput?.addEventListener('keydown', event => {
+  if (event.key !== 'Enter') {
+    return;
+  }
+
+  event.preventDefault();
+  submitTopicSearch();
+});
+
+searchSubmitButton?.addEventListener('click', () => {
+  submitTopicSearch();
 });
 
 renderApp();
