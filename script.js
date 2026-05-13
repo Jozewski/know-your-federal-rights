@@ -170,9 +170,9 @@ function getActiveEntries() {
   );
 }
 
-function filterEntries(entries) {
-  const query = appState.searchQuery.toLowerCase().trim();
-  if (!query) {
+function getEntriesMatchingQuery(entries, query) {
+  const normalizedQuery = query.toLowerCase().trim();
+  if (!normalizedQuery) {
     return entries;
   }
 
@@ -180,8 +180,17 @@ function filterEntries(entries) {
     const title = siteContent.topicDefinitions[entry.topicId].title.toLowerCase();
     const summary = entry.summary.toLowerCase();
     const keywords = entry.keywords.toLowerCase();
-    return title.includes(query) || summary.includes(query) || keywords.includes(query);
+    return title.includes(normalizedQuery) || summary.includes(normalizedQuery) || keywords.includes(normalizedQuery);
   });
+}
+
+function filterEntries(entries) {
+  const query = appState.searchQuery.toLowerCase().trim();
+  if (!query) {
+    return entries;
+  }
+
+  return getEntriesMatchingQuery(entries, query);
 }
 
 function getBadgeClass(topicId) {
@@ -222,7 +231,6 @@ function renderTopicCard(entry) {
 
 function renderTopics() {
   const activeEntries = getActiveEntries();
-  const filteredEntries = filterEntries(activeEntries);
 
   clearTopicCardHighlight();
   topicsEmpty.classList.add('hidden');
@@ -240,14 +248,7 @@ function renderTopics() {
     return;
   }
 
-  if (filteredEntries.length === 0) {
-    topicsGrid.innerHTML = '';
-    noResults.textContent = isStateView() ? siteContent.noResultsCopy.state : siteContent.noResultsCopy.federal;
-    noResults.classList.remove('hidden');
-    return;
-  }
-
-  topicsGrid.innerHTML = filteredEntries.map(renderTopicCard).join('');
+  topicsGrid.innerHTML = activeEntries.map(renderTopicCard).join('');
 }
 
 function renderApp() {
@@ -377,7 +378,6 @@ function setJurisdiction(jurisdiction) {
  */
 function filterTopics(query) {
   appState.searchQuery = query;
-  renderTopics();
 }
 
 function submitTopicSearch() {
@@ -386,16 +386,15 @@ function submitTopicSearch() {
     return;
   }
 
-  scrollMainContentIntoView();
-
-  const firstVisibleTopicCard = getFirstVisibleTopicCard();
-  if (!firstVisibleTopicCard) {
+  const matchingEntries = getEntriesMatchingQuery(getActiveEntries(), trimmedQuery);
+  const firstMatchingEntry = matchingEntries[0];
+  if (!firstMatchingEntry) {
     focusTarget(mainContent);
     return;
   }
 
-  focusTarget(firstVisibleTopicCard);
-  highlightTopicCard(firstVisibleTopicCard);
+  clearTopicSearch();
+  scrollToTopic(firstMatchingEntry.topicId);
 }
 
 function clearTopicSearch() {
