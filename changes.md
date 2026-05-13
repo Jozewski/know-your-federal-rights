@@ -40,6 +40,19 @@
 
 ---
 
+## Phase 2 — Before / After Accessibility Audit
+
+| What AI Generated | What I Modified / Directed | Why I Changed It |
+|---|---|---|
+| Color contrast | Low-contrast text remained in key places, including resource subheadings, footer legal/meta text, and the teal CTA button styling. | Updated those styles to accessible contrast values so the site now passes the automated WCAG AA contrast check. |
+| State selector semantics | The state picker used `role="listbox"` / `role="option"` even though it behaved like a set of clickable pills, not a true listbox widget. | Reworked it to a grouped button-based pattern with pressed-state semantics that matches the actual interaction model. |
+| Skip navigation and focus movement | There was no skip link, and quick jumps / internal anchor links only scrolled visually without moving keyboard focus to the destination. | Added a skip link to main content and moved focus to the target section or topic card after in-page navigation. |
+| Mobile menu accessibility | The mobile menu opened visually, but focus was not moved into it, not contained while open, and not restored when the menu closed; background content also stayed interactive. | Added focus entry, focus containment, focus restoration, background inertness, and scroll locking so the mobile menu behaves like an accessible modal-style navigation panel. |
+| External link context | Links opening in a new tab gave no screen-reader warning, creating an unexpected context change. | Added screen-reader-only text announcing when key external links open in a new tab. |
+| Focus visibility support | Some interactive elements had inconsistent or limited visible focus treatment outside the existing button styles. | Added clearer `:focus-visible` outlines for links and quick-action controls to strengthen keyboard usability across the interface. |
+
+---
+
 ## File Structure
 
 ```
