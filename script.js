@@ -398,18 +398,34 @@ function submitTopicSearch() {
   highlightTopicCard(firstVisibleTopicCard);
 }
 
+function clearTopicSearch() {
+  appState.searchQuery = '';
+  if (searchInput) {
+    searchInput.value = '';
+  }
+  renderTopics();
+}
+
 /**
  * scrollToTopic
  * Smoothly scrolls to a topic card by id and keeps it highlighted while visible.
  * @param {string} id - The id attribute of the target article element
  */
 function scrollToTopic(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
+  let el = document.getElementById(id);
+  if (!el && appState.searchQuery.trim()) {
+    clearTopicSearch();
+    el = document.getElementById(id);
+  }
+
+  if (!el) {
+    return false;
+  }
 
   el.scrollIntoView({ behavior: 'smooth', block: 'center' });
   focusTarget(el);
   highlightTopicCard(el);
+  return true;
 }
 
 jurisdictionButtons.forEach(button => {
@@ -470,16 +486,20 @@ internalHashLinks.forEach(link => {
     const targetId = targetHash.replace('#', '').trim();
     if (!targetId) return;
 
+    if (siteContent.topicDefinitions[targetId]) {
+      event.preventDefault();
+      if (scrollToTopic(targetId)) {
+        history.replaceState(null, '', '#' + targetId);
+      }
+      return;
+    }
+
     const targetEl = document.getElementById(targetId);
     if (!targetEl) return;
 
     event.preventDefault();
-    if (targetEl.classList.contains('topic-card')) {
-      scrollToTopic(targetId);
-    } else {
-      targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      focusTarget(targetEl);
-    }
+    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    focusTarget(targetEl);
 
     history.replaceState(null, '', '#' + targetId);
   });
