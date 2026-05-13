@@ -36,8 +36,7 @@
 | 26 | State mode kept the full selection grid visible even after a user chose a state | Directed AI to collapse the state grid after selection and add a `Back to Selection Grid` control | Keeps the state view cleaner while still making it easy to switch states |
 | 27 | Collapsed selected-state view only showed the state name as text | Added the selected state's flag beside the selected-state label | Makes the active state easier to recognize at a glance |
 | 28 | Federal selection used the same active pill styling but had no flag cue | Added the U.S. flag to the active Federal pill | Keeps the federal control visually consistent with the new state-selection cues |
-| 29 | State selector rendered as a fixed 5-column grid of large flag tiles that did not scale well | Directed AI to replace the tile grid with a flex-wrap pill layout matching the Federal pill style | Improves mobile usability by allowing pills to reflow naturally at any scr
-een width while keeping the selection UI visually consistent with the existing jurisdiction switcher |
+| 29 | State selector rendered as a fixed 5-column grid of large flag tiles that did not scale well | Directed AI to replace the tile grid with a flex-wrap pill layout matching the Federal pill style | Improves mobile usability by allowing pills to reflow naturally at any screen|
 
 ---
 
