@@ -69,20 +69,41 @@ button {
 }
 
 .skip-link {
-  position: absolute;
-  top: 0.75rem;
-  left: 1rem;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
   z-index: 100;
-  padding: 0.75rem 1rem;
-  border-radius: 0.75rem;
-  background-color: var(--color-gray-900);
-  color: var(--color-white);
-  transform: translateY(-140%);
-  transition: transform 0.2s ease;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid rgba(15, 110, 86, 0.2);
+  border-radius: 9999px;
+  background-color: var(--color-white);
+  color: var(--color-teal-800);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 10px 24px rgba(6, 12, 24, 0.14);
+  text-decoration: none;
+  transform: translate(-50%, -180%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
 }
 
-.skip-link:focus {
-  transform: translateY(0);
+.skip-link:hover {
+  box-shadow: 0 14px 28px rgba(6, 12, 24, 0.18);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+  outline: 3px solid rgba(29, 158, 117, 0.28);
+  outline-offset: 3px;
+}
+
+.skip-link:active {
+  transform: translate(-50%, 0.125rem);
 }
 
 svg {
@@ -143,11 +164,14 @@ a:focus-visible,
 
 .site-header-inner {
   position: relative;
+  min-height: 4.25rem;
   gap: 1rem;
 }
 
 .site-brand {
   min-width: 0;
+  padding-right: 4rem;
+  max-width: 100%;
 }
 
 .site-brand span {
@@ -175,6 +199,10 @@ a:focus-visible,
 
 .nav-toggle {
   display: inline-flex;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 70;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -185,6 +213,7 @@ a:focus-visible,
   border-radius: 0.75rem;
   color: var(--color-gray-900);
   background-color: var(--color-white);
+  transform: translateY(-50%);
 }
 
 .nav-toggle:focus-visible {
@@ -855,6 +884,10 @@ a:focus-visible,
   background-color: var(--color-teal-400);
 }
 
+.bg-teal-600 {
+  background-color: var(--color-teal-600);
+}
+
 .bg-amber-50 {
   background-color: var(--color-amber-50);
 }
@@ -1034,6 +1067,10 @@ a:focus-visible,
   background-color: var(--color-teal-600);
 }
 
+.hover\:bg-teal-800:hover {
+  background-color: var(--color-teal-800);
+}
+
 .hover\:bg-amber-900:hover {
   background-color: var(--color-amber-900);
 }
@@ -1101,6 +1138,14 @@ a:focus-visible,
 }
 
 @media (min-width: 768px) {
+  .site-header-inner {
+    min-height: auto;
+  }
+
+  .site-brand {
+    padding-right: 0;
+  }
+
   .hero-context-controls {
     margin-bottom: 2rem;
   }
