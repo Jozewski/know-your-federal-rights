@@ -39,6 +39,9 @@ const footer = document.querySelector('footer');
 const newTabScreenReaderText = '<span class="sr-only"> (opens in a new tab)</span>';
 const menuManagedRegions = [heroSection, mainContent, disclaimerSection, footer].filter(Boolean);
 let lastFocusedElementBeforeMenu = null;
+let activeHighlightedTopicCard = null;
+let topicHighlightObserver = null;
+let hasHighlightedTopicCardBeenVisible = false;
 
 function getPublicStates() {
   return siteContent.states.filter(state => state.enabled && state.reviewStatus === 'reviewed');
@@ -219,6 +222,7 @@ function renderTopics() {
   const activeEntries = getActiveEntries();
   const filteredEntries = filterEntries(activeEntries);
 
+  clearTopicCardHighlight();
   topicsEmpty.classList.add('hidden');
   topicsEmpty.textContent = '';
   noResults.classList.add('hidden');
@@ -250,12 +254,100 @@ function renderApp() {
   renderTopics();
 }
 
+function clearTopicCardHighlight() {
+  if (topicHighlightObserver) {
+    topicHighlightObserver.disconnect();
+    topicHighlightObserver = null;
+  }
+
+  if (activeHighlightedTopicCard) {
+    activeHighlightedTopicCard.classList.remove('topic-card-highlight-pop');
+    activeHighlightedTopicCard.classList.remove('topic-card-highlight');
+    activeHighlightedTopicCard = null;
+  }
+
+  hasHighlightedTopicCardBeenVisible = false;
+}
+
+function triggerTopicCardPop(target) {
+  if (!target) {
+    return;
+  }
+
+  target.classList.remove('topic-card-highlight-pop');
+  void target.offsetWidth;
+  target.classList.add('topic-card-highlight-pop');
+}
+
+function observeHighlightedTopicCard(target) {
+  if (!('IntersectionObserver' in window)) {
+    hasHighlightedTopicCardBeenVisible = true;
+    triggerTopicCardPop(target);
+    return;
+  }
+
+  topicHighlightObserver = new IntersectionObserver(entries => {
+    const entry = entries[0];
+    if (!entry) {
+      return;
+    }
+
+    if (entry.intersectionRatio >= 0.65 && entry.target === activeHighlightedTopicCard) {
+      hasHighlightedTopicCardBeenVisible = true;
+    }
+
+    if (entry.intersectionRatio >= 0.65 && entry.target === activeHighlightedTopicCard && !entry.target.classList.contains('topic-card-highlight-pop')) {
+      triggerTopicCardPop(entry.target);
+    }
+
+    if (hasHighlightedTopicCardBeenVisible && entry.intersectionRatio < 0.35) {
+      clearTopicCardHighlight();
+    }
+  }, {
+    threshold: [0, 0.35, 0.65, 1]
+  });
+
+  topicHighlightObserver.observe(target);
+}
+
+function highlightTopicCard(target) {
+  if (!target) {
+    return;
+  }
+
+  clearTopicCardHighlight();
+  activeHighlightedTopicCard = target;
+  target.classList.add('topic-card-highlight');
+  focusTarget(target);
+  observeHighlightedTopicCard(target);
+}
+
 function focusTarget(target) {
   if (!target || typeof target.focus !== 'function') {
     return;
   }
 
   target.focus({ preventScroll: true });
+}
+
+function scrollMainContentIntoView() {
+  if (!mainContent) {
+    return;
+  }
+
+  mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function getFirstVisibleTopicCard() {
+  return topicsGrid.querySelector('.topic-card');
+}
+
+function resetInitialScrollPosition() {
+  if (window.location.hash) {
+    return;
+  }
+
+  window.scrollTo(0, 0);
 }
 
 function setJurisdiction(jurisdiction) {
@@ -284,11 +376,27 @@ function setJurisdiction(jurisdiction) {
 function filterTopics(query) {
   appState.searchQuery = query;
   renderTopics();
+
+  const trimmedQuery = query.trim();
+  if (!trimmedQuery) {
+    return;
+  }
+
+  scrollMainContentIntoView();
+
+  const firstVisibleTopicCard = getFirstVisibleTopicCard();
+  if (!firstVisibleTopicCard) {
+    focusTarget(mainContent);
+    return;
+  }
+
+  focusTarget(firstVisibleTopicCard);
+  highlightTopicCard(firstVisibleTopicCard);
 }
 
 /**
  * scrollToTopic
- * Smoothly scrolls to a topic card by id and briefly highlights it.
+ * Smoothly scrolls to a topic card by id and keeps it highlighted while visible.
  * @param {string} id - The id attribute of the target article element
  */
 function scrollToTopic(id) {
@@ -297,8 +405,7 @@ function scrollToTopic(id) {
 
   el.scrollIntoView({ behavior: 'smooth', block: 'center' });
   focusTarget(el);
-  el.classList.add('topic-card-highlight');
-  setTimeout(() => el.classList.remove('topic-card-highlight'), 2000);
+  highlightTopicCard(el);
 }
 
 jurisdictionButtons.forEach(button => {
@@ -324,6 +431,13 @@ stateSelectorBackButton?.addEventListener('click', () => {
 });
 
 renderApp();
+
+if ('scrollRestoration' in window.history) {
+  window.history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('load', resetInitialScrollPosition);
+window.addEventListener('pageshow', resetInitialScrollPosition);
 
 // ---------------------------------
 // Global Internal Anchor Navigation
