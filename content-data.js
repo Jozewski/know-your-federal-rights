@@ -5,6 +5,8 @@
   //  State metadata and entries are enabled for the public selector/render flow.
   // ─────────────────────────────────────────────────────────────────────────
 
+  // Shared topic metadata keeps the rendering layer simple: each entry only
+  // needs content, while titles/icons/order stay centralized here.
   const topicDefinitions = {
     voting: {
       title: "Voting Rights Restoration",
@@ -6416,6 +6418,8 @@
     { code: "WY", name: "Wyoming" },
   ];
 
+  // Use one canonical topic order so federal and state cards always render
+  // with the same structure and sequence.
   const topicOrder = [
     "voting",
     "expungement",
@@ -6432,6 +6436,8 @@
       : "State Law";
   }
 
+  // Build each state's seven entries from the shared topic order so the UI
+  // can switch jurisdictions without changing the card template.
   function buildStateEntries(state) {
     const content = stateContent[state.code];
     return topicOrder.map(function (topicId) {
@@ -6461,6 +6467,8 @@
   // ─────────────────────────────────────────────────────────────────────────
   //  SITE CONTENT EXPORT
   // ─────────────────────────────────────────────────────────────────────────
+  // Export one structured object for the UI layer. script.js reads from this
+  // instead of hard-coding content or maintaining separate datasets.
   window.siteContent = {
     topicOrder: topicOrder,
     topicDefinitions: topicDefinitions,
