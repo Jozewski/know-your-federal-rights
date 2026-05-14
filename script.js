@@ -18,6 +18,8 @@ const appState = {
   isSelectingState: false
 };
 
+// Cache frequently used DOM nodes once so the rest of the file can focus on
+// state changes and rendering instead of repeated document queries.
 const heroEyebrow = document.getElementById('hero-eyebrow');
 const heroHeading = document.getElementById('hero-heading');
 const heroCopy = document.getElementById('hero-copy');
@@ -45,6 +47,7 @@ let activeHighlightedTopicCard = null;
 let topicHighlightObserver = null;
 let hasHighlightedTopicCardBeenVisible = false;
 
+// Only reviewed states are shown publicly in the selector.
 function getPublicStates() {
   return siteContent.states.filter(state => state.enabled && state.reviewStatus === 'reviewed');
 }
@@ -105,6 +108,8 @@ function renderContextCopy() {
   topicsDescription.textContent = sectionContext.description;
 }
 
+// The selector supports two states: full grid view or a collapsed summary
+// after a user has already chosen a state.
 function renderStateSelector() {
   if (!isStateView()) {
     stateSelectorGroup.classList.add('hidden');
@@ -153,6 +158,8 @@ function renderStateSelector() {
   }
 }
 
+// All topic lookup and navigation works from the currently active dataset:
+// federal entries or one selected state's reviewed entries.
 function getActiveEntries() {
   if (!isStateView()) {
     return siteContent.entries.filter(entry => entry.jurisdiction === 'federal');
@@ -184,15 +191,6 @@ function getEntriesMatchingQuery(entries, query) {
   });
 }
 
-function filterEntries(entries) {
-  const query = appState.searchQuery.toLowerCase().trim();
-  if (!query) {
-    return entries;
-  }
-
-  return getEntriesMatchingQuery(entries, query);
-}
-
 function getBadgeClass(topicId) {
   return siteContent.topicDefinitions[topicId].badgeVariant === 'supervision'
     ? 'text-xs bg-amber-100 text-amber-700 font-medium uppercase tracking-wide px-2 py-0.5 rounded-full'
@@ -209,6 +207,8 @@ function renderResourceItem(resource) {
 
 // Cards are rendered from shared content data so federal and state views
 // stay visually consistent while switching the underlying dataset.
+// Render the card shell from structured data so all topic cards stay
+// consistent even as federal/state content changes.
 function renderTopicCard(entry) {
   const topic = siteContent.topicDefinitions[entry.topicId];
   const resourcesHeading = isStateView() ? 'Reviewed Resources' : 'Federal Resources';
@@ -229,6 +229,8 @@ function renderTopicCard(entry) {
   '</article>';
 }
 
+// Topic cards are always rendered from the active dataset. Search now acts as
+// a jump tool instead of hiding the rest of the content.
 function renderTopics() {
   const activeEntries = getActiveEntries();
 
@@ -257,6 +259,8 @@ function renderApp() {
   renderTopics();
 }
 
+// Remove both the persistent selected-card state and the one-shot pop class
+// before a new navigation target is highlighted.
 function clearTopicCardHighlight() {
   if (topicHighlightObserver) {
     topicHighlightObserver.disconnect();
@@ -272,6 +276,8 @@ function clearTopicCardHighlight() {
   hasHighlightedTopicCardBeenVisible = false;
 }
 
+// Reflow the element before re-adding the class so the pop animation can be
+// replayed every time the user jumps to a card.
 function triggerTopicCardPop(target) {
   if (!target) {
     return;
@@ -282,6 +288,8 @@ function triggerTopicCardPop(target) {
   target.classList.add('topic-card-highlight-pop');
 }
 
+// Delay the pop until the card is meaningfully in view, then keep the
+// highlight active until the card has been seen and later scrolls away.
 function observeHighlightedTopicCard(target) {
   if (!('IntersectionObserver' in window)) {
     hasHighlightedTopicCardBeenVisible = true;
@@ -380,6 +388,8 @@ function filterTopics(query) {
   appState.searchQuery = query;
 }
 
+// Search is explicit-submit only: typing stores the query, submit finds the
+// first match, clears the box, then navigates like any other topic jump.
 function submitTopicSearch() {
   const trimmedQuery = appState.searchQuery.trim();
   if (!trimmedQuery) {
@@ -464,6 +474,7 @@ searchSubmitButton?.addEventListener('click', () => {
 
 renderApp();
 
+// Reset initial load position unless the user intentionally arrived via hash.
 if ('scrollRestoration' in window.history) {
   window.history.scrollRestoration = 'manual';
 }
@@ -527,6 +538,8 @@ function getMenuFocusableElements() {
   return [navToggle].concat(Array.from(primaryMenu.querySelectorAll('a')));
 }
 
+// The mobile menu behaves like a lightweight dialog: move focus inside when it
+// opens, restore focus on close, and make the rest of the page inert.
 function setMobileMenuState(isOpen, options) {
   if (!navToggle || !primaryMenu) return;
   const settings = options || {};
