@@ -78,8 +78,8 @@
         "Federal expungement options are limited compared to state law. Understanding what federal records can and cannot be cleared — and what alternatives exist — is critical to protecting your future opportunities.",
       resources: [
         {
-          label: "Presidential Pardon & Clemency — U.S. Department of Justice",
-          url: "https://www.justice.gov/pardon",
+          label: "Federal Expungement & Record Sealing — CCRC",
+          url: "https://ccresourcecenter.org/state-restoration-profiles/federalrestoration-of-rights-pardon-expungement-sealing/",
         },
         {
           label: "Federal Sentencing Guidelines — U.S. Sentencing Commission",
@@ -111,12 +111,12 @@
           url: "https://nlihc.org/resource/hud-publishes-notice-removing-fair-housing-guidance-documents",
         },
         {
-          label: "Ensure Fair Screening Practices for Tenants with Conviction Histories — NLIHC",
+          label:
+            "Ensure Fair Screening Practices for Tenants with Conviction Histories — NLIHC",
           url: "https://nlihc.org/resource/ensure-fair-screening-practices-tenants-conviction-histories",
         },
       ],
-      learnMoreUrl:
-        "https://www.wallacelaw.com/blog/hud-criminal-screening-update/",
+      learnMoreUrl: "https://www.hud.gov/hud-partners#FairHousing",
       reviewStatus: "reviewed",
     },
     {
@@ -185,7 +185,7 @@
         },
         {
           label: "Supervised Release Conditions — Federal Defenders",
-          url: "https://www.ussc.gov/topic/supervised-release"
+          url: "https://www.ussc.gov/topic/supervised-release",
         },
         {
           label: "U.S. Parole Commission — DOJ",
@@ -210,7 +210,8 @@
           url: "https://www.uscourts.gov/services-forms/probation-and-pretrial-services",
         },
         {
-          label: "Probation Conditions — Federal Probation Officers Association",
+          label:
+            "Probation Conditions — Federal Probation Officers Association",
           url: "https://www.law.cornell.edu/uscode/text/18/3563",
         },
         {
@@ -231,209 +232,258 @@
     // ── ALABAMA ─────────────────────────────────────────────────────────────
     AL: {
       voting: {
-        summary: 'Alabama disenfranchises people convicted of "infamous crimes" — a broad category. Rights are not automatically restored. Most people must apply to the Board of Pardons and Paroles for a Certificate of Eligibility to Register to Vote. This process can take time.',
+        summary:
+          'Alabama disenfranchises people convicted of "infamous crimes." Rights are not automatically restored in many cases. Most people must apply for a Certificate of Eligibility to Register to Vote through the Alabama Board of Pardons and Paroles.',
         resources: [
-          { label: 'Voting Rights Restoration — Alabama Board of Pardons and Paroles', url: 'https://www.pardons.alabama.gov/voting-rights' },
-          { label: 'Alabama Voting Rights — US Vote Foundation', url: 'https://www.usvotefoundation.org/voting-rights-restoration/alabama' },
-          { label: 'Alabama Voting Rights — Alabama Civil Rights Union', url: 'https://www.alabamalegalhelp.org' }
+          {
+            label:
+              "Voting Rights Restoration — Alabama Board of Pardons and Paroles",
+            url: "https://paroles.alabama.gov/about-us/pardons-restoration-of-voting-rights/",
+          },
+          {
+            label: "Alabama Voting Rights — US Vote Foundation",
+            url: "https://www.usvotefoundation.org/voting-rights-restoration/alabama",
+          },
+          {
+            label: "Alabama Legal Help",
+            url: "https://www.alabamalegalhelp.org/",
+          },
         ],
-        learnMoreUrl: 'https://www.pardons.alabama.gov/voting-rights'
+        learnMoreUrl:
+          "https://paroles.alabama.gov/about-us/pardons-restoration-of-voting-rights/",
       },
       expungement: {
-        summary: 'Alabama does not allow expungement of most felony convictions. Expungement is available for acquittals, dismissed charges, and cases not resulting in conviction. Limited set-aside relief exists for some probation sentences. Contact Alabama legal aid for guidance on your specific case.',
+        summary:
+          "Alabama allows expungement for certain non-convictions and limited misdemeanor and felony cases under state law.",
         resources: [
-          { label: 'Alabama Expungement Guide — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/alabama-restoration-of-rights-pardon-expungement-sealing/' },
-          { label: 'Alabama Expungement Law § 15-27-1', url: 'https://law.justia.com/codes/alabama/title-15/chapter-27/' },
-          { label: 'Record Relief Help — Alabama Legal Help', url: 'https://www.alabamalegalhelp.org' }
+          {
+            label: "Alabama Restoration of Rights & Expungement — CCRC",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/alabama-restoration-rights-expungement-sealing/",
+          },
+          {
+            label: "Alabama Expungement Statutes",
+            url: "https://law.justia.com/codes/alabama/2024/title-15/chapter-27/",
+          },
+          {
+            label: "Alabama Legal Help",
+            url: "https://www.alabamalegalhelp.org/",
+          },
         ],
-        learnMoreUrl: 'https://ccresourcecenter.org/state-restoration-profiles/alabama-restoration-of-rights-pardon-expungement-sealing/'
+        learnMoreUrl:
+          "https://ccresourcecenter.org/state-restoration-profiles/alabama-restoration-of-rights-pardon-expungement-sealing/",
       },
       housing: {
-        summary: 'Alabama has no statewide fair chance housing law. Federal Fair Housing Act protections apply. The Alabama Housing Finance Authority and HUD regional offices can assist with housing discrimination complaints involving criminal records.',
+        summary:
+          "Federal Fair Housing protections apply in Alabama. HUD and Alabama housing agencies provide discrimination complaint resources.",
         resources: [
-          { label: 'Alabama Housing Finance Authority', url: 'https://ahfa.com' },
-          { label: 'Fair Housing — HUD Alabama', url: 'https://www.hud.gov/states/alabama/renting' },
-          { label: 'Housing Help — Alabama Legal Help', url: 'https://www.alabamalegalhelp.org' }
+          {
+            label: "Alabama Housing Finance Authority",
+            url: "https://www.ahfa.com/",
+          },
+          {
+            label: "HUD Alabama Housing Resources",
+            url: "https://www.hud.gov/states/alabama",
+          },
+          {
+            label: "Alabama Legal Help",
+            url: "https://www.alabamalegalhelp.org/",
+          },
         ],
-        learnMoreUrl: 'https://www.hud.gov/states/alabama/renting'
+        learnMoreUrl: "https://www.hud.gov/states/alabama",
       },
       employment: {
-        summary: 'Alabama has no statewide ban-the-box law for private employers. Federal EEOC protections against discriminatory use of criminal records apply. The Alabama Department of Labor provides workforce services and reentry employment resources.',
+        summary:
+          "Alabama has no statewide private-employer ban-the-box law. Federal EEOC protections still apply.",
         resources: [
-          { label: 'Alabama Department of Labor — Job Seekers', url: 'https://labor.alabama.gov/wf_jobseeker.aspx' },
-          { label: 'EEOC — Birmingham Area Office', url: 'https://www.eeoc.gov/field/birmingham' },
-          { label: 'Employment Rights — Alabama Legal Help', url: 'https://www.alabamalegalhelp.org' }
+          {
+            label: "Alabama Department of Labor",
+            url: "https://labor.alabama.gov/",
+          },
+          {
+            label: "EEOC Birmingham Office",
+            url: "https://www.eeoc.gov/field-office/birmingham/location",
+          },
+          {
+            label: "Alabama Legal Help",
+            url: "https://www.alabamalegalhelp.org/",
+          },
         ],
-        learnMoreUrl: 'https://labor.alabama.gov/wf_jobseeker.aspx'
+        learnMoreUrl: "https://labor.alabama.gov/",
       },
       police: {
-        summary: 'Alabama residents have full federal constitutional protections during police interactions. The ACLU of Alabama provides know-your-rights resources. You have the right to remain silent, refuse consent to searches, and request an attorney after arrest.',
+        summary:
+          "Residents have constitutional protections during police encounters including the right to remain silent and request an attorney.",
         resources: [
-          { label: 'Know Your Rights — ACLU of Alabama', url: 'https://www.aclualabama.org' },
-          { label: 'Alabama Attorney General — Civil Rights', url: 'https://www.alabamaag.gov' },
-          { label: 'Police Misconduct Complaint — DOJ', url: 'https://www.justice.gov/crt/how-file-complaint' }
+          { label: "ACLU of Alabama", url: "https://www.aclualabama.org/" },
+          {
+            label: "Alabama Attorney General",
+            url: "https://www.alabamaag.gov/",
+          },
+          {
+            label: "DOJ Civil Rights Complaint",
+            url: "https://www.justice.gov/crt/how-file-complaint",
+          },
         ],
-        learnMoreUrl: 'https://www.aclualabama.org'
+        learnMoreUrl: "https://www.aclualabama.org/",
       },
-      parole: {
-        summary: 'Alabama parole is administered by the Alabama Board of Pardons and Paroles. Conditions include regular reporting, travel restrictions, and other requirements set at release. The Board has authority to modify or revoke parole. The DOC provides reentry programming.',
-        resources: [
-          { label: 'Alabama Board of Pardons and Paroles', url: 'https://www.pardons.alabama.gov' },
-          { label: 'Alabama DOC — Reentry Programs', url: 'https://doc.alabama.gov/reentry' },
-          { label: 'Parole Rights Help — Alabama Legal Help', url: 'https://www.alabamalegalhelp.org' }
-        ],
-        learnMoreUrl: 'https://www.pardons.alabama.gov'
-      },
-      probation: {
-        summary: 'Alabama probation is supervised by probation officers through the Department of Corrections. Conditions are court-ordered and may include reporting, substance testing, and community service. Revocation hearings are held in the sentencing court.',
-        resources: [
-          { label: 'Alabama DOC — Community Corrections', url: 'https://doc.alabama.gov/division/community-corrections' },
-          { label: 'Probation Rights — Alabama Legal Help', url: 'https://www.alabamalegalhelp.org' },
-          { label: 'ACLU — Probation and Parole Rights', url: 'https://www.aclu.org/know-your-rights/probation-and-parole' }
-        ],
-        learnMoreUrl: 'https://doc.alabama.gov/division/community-corrections'
-      }
+    },
+    parole: {
+      summary:
+        "Alabama parole is supervised by the Alabama Board of Pardons and Paroles. Conditions include reporting requirements, travel restrictions, and compliance with release terms.",
+      resources: [
+        {
+          label: "Alabama Board of Pardons and Paroles",
+          url: "https://paroles.alabama.gov/",
+        },
+        {
+          label: "Alabama DOC Reentry Services",
+          url: "https://doc.alabama.gov/RehabReentryLanding.aspx",
+        },
+        {
+          label: "Alabama Legal Help",
+          url: "https://www.alabamalegalhelp.org/",
+        },
+      ],
+      learnMoreUrl: "https://paroles.alabama.gov/",
+    },
+    probation: {
+      summary:
+        "Probation supervision in Alabama is managed through the Department of Corrections and local courts.",
+      resources: [
+        {
+          label: "Alabama DOC Probation & Parole",
+          url: "https://doc.alabama.gov/CommCorrections.aspx",
+        },
+        {
+          label: "Alabama Legal Help",
+          url: "https://www.alabamalegalhelp.org/",
+        },
+
+        {
+          label: "ACLU Know Your Rights",
+          url: "https://www.aclu.org/know-your-rights",
+        },
+      ],
+      learnMoreUrl:
+        "https://johntottenlaw.com/know-your-rights-while-out-on-probation-in-alabama/",
     },
     // ── ALASKA ───────────────────────────────────────────────────────────────
     AK: {
       voting: {
         summary:
-          "In Alaska, voting rights are suspended for the full sentence including parole and probation. Rights are automatically restored after completing your entire sentence. You must re-register to vote afterward. Misdemeanor convictions and pretrial detention do not affect voting rights.",
+          "Voting rights are restored automatically after completion of incarceration, parole, and probation.",
         resources: [
           {
-            label: "Alaska Voting Rights — Division of Elections",
-            url: "https://www.elections.alaska.gov/Core/votingwithafelonyconviction.php",
+            label: "Alaska Voting Rights — Alaska Division of Elections",
+            url: "https://www.elections.alaska.gov/voter-information/#Reg",
           },
           {
-            label: "Alaska Voting Rights — US Vote Foundation",
-            url: "https://www.usvotefoundation.org/voting-rights-restoration/alaska",
+            label:
+              "List of Felonies Involving Moral Turpitude — Alaska Division of Elections",
+            url: "https://www.elections.alaska.gov/wp-content/uploads/2024/07/20240717_List-of-Felonies-Involving-Moral-Turpitude.pdf",
           },
           {
-            label: "Legal Help — Alaska Legal Services Corporation",
-            url: "https://alaskalegalservices.org",
+            label: "Alaska Legal Services Corporation",
+            url: "https://alaskalawhelp.org/",
           },
         ],
         learnMoreUrl:
-          "https://www.elections.alaska.gov/Core/votingwithafelonyconviction.php",
+          "https://www.usvotefoundation.org/voting-rights-restoration/alaska",
       },
       expungement: {
         summary:
-          "Alaska has very limited expungement options. Non-conviction records such as acquittals and dismissed charges may be sealed. Conviction records have almost no expungement pathway for adults. Contact Alaska Legal Services for guidance on your specific situation.",
+          "Alaska has limited sealing and expungement relief for non-convictions and some juvenile matters.",
         resources: [
           {
-            label:
-              "Alaska Expungement Guide — Collateral Consequences Resource Center",
-            url: "https://ccresourcecenter.org/state-restoration-profiles/alaska-restoration-of-rights-pardon-expungement-sealing/",
+            label: "Alaska Restoration of Rights & Expungement — CCRC",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/alaska-expungment-pardon-sealing/",
           },
+          { label: "Alaska Court System", url: "https://courts.alaska.gov/" },
           {
-            label: "Alaska Court System — Criminal Records",
-            url: "https://courts.alaska.gov/coc/index.htm",
-          },
-          {
-            label: "Legal Help — Alaska Legal Services Corporation",
-            url: "https://alaskalegalservices.org",
+            label: "Alaska Legal Services Corporation",
+            url: "https://alaskalawhelp.org/",
           },
         ],
         learnMoreUrl:
-          "https://ccresourcecenter.org/state-restoration-profiles/alaska-restoration-of-rights-pardon-expungement-sealing/",
+          "https://ccresourcecenter.org/state-restoration-profiles/alaska-expungment-pardon-sealing/",
       },
       housing: {
-        summary:
-          "Alaska has no statewide fair chance housing law. Federal Fair Housing Act and HUD guidance protecting against blanket criminal record bans apply to all Alaska landlords. The Alaska Housing Finance Corporation provides renter resources.",
+        summary: "Federal Fair Housing protections apply throughout Alaska.",
         resources: [
           {
-            label: "Alaska Housing Finance Corporation — Rental Housing",
-            url: "https://www.ahfc.us/rental",
+            label: "Alaska Housing Finance Corporation",
+            url: "https://www.ahfc.us/",
           },
-          {
-            label: "Fair Housing — HUD Alaska",
-            url: "https://www.hud.gov/states/alaska/renting",
-          },
-          {
-            label: "Housing Help — Alaska Legal Services",
-            url: "https://alaskalegalservices.org",
-          },
+          { label: "HUD Alaska", url: "https://www.hud.gov/states/alaska" },
+          { label: "Alaska Legal Services", url: "https://alaskalawhelp.org/" },
         ],
-        learnMoreUrl: "https://www.hud.gov/states/alaska/renting",
+        learnMoreUrl: "https://www.hud.gov/states/alaska",
       },
       employment: {
         summary:
-          "Alaska has no statewide ban-the-box law. Federal EEOC protections against discriminatory use of criminal records apply. The Alaska Department of Labor provides workforce services and reentry employment support programs.",
+          "Alaska has no statewide ban-the-box law for private employers.",
         resources: [
           {
-            label: "Alaska DOL — Employment Services",
-            url: "https://labor.alaska.gov/employment-services/",
+            label: "Alaska Department of Labor",
+            url: "https://labor.alaska.gov/",
           },
           {
-            label: "EEOC — Seattle Field Office (covers Alaska)",
-            url: "https://www.eeoc.gov/field/seattle",
+            label: "EEOC Seattle Office",
+            url: "https://www.eeoc.gov/field-office/seattle/location",
           },
-          {
-            label: "Employment Help — Alaska Legal Services",
-            url: "https://alaskalegalservices.org",
-          },
+          { label: "Alaska Legal Services", url: "https://alaskalawhelp.org/" },
         ],
-        learnMoreUrl: "https://labor.alaska.gov/employment-services/",
+        learnMoreUrl: "https://labor.alaska.gov/",
       },
       police: {
         summary:
-          "Alaska residents have full Fourth and Fifth Amendment protections during police interactions. The ACLU of Alaska monitors civil rights issues statewide. You have the right to remain silent, refuse consent to a search, and request an attorney.",
+          "Residents have federal constitutional protections during police interactions.",
         resources: [
+          { label: "ACLU of Alaska", url: "https://www.acluak.org/" },
+          { label: "Alaska Department of Law", url: "https://law.alaska.gov/" },
           {
-            label: "Know Your Rights — ACLU of Alaska",
-            url: "https://www.aclualaska.org",
-          },
-          {
-            label: "Alaska Attorney General — Civil Rights",
-            url: "https://law.alaska.gov",
-          },
-          {
-            label: "Police Misconduct Complaint — DOJ",
+            label: "DOJ Civil Rights Complaint",
             url: "https://www.justice.gov/crt/how-file-complaint",
           },
         ],
-        learnMoreUrl: "https://www.aclualaska.org",
-      },
-      parole: {
-        summary:
-          "Alaska parole is administered by the Alaska Board of Parole. Conditions include regular reporting, travel restrictions, and other requirements set at release. The Department of Corrections provides reentry planning and transition services.",
-        resources: [
-          {
-            label: "Alaska Board of Parole",
-            url: "https://www.correct.state.ak.us/parole/",
-          },
-          {
-            label: "Alaska DOC — Reentry Programs",
-            url: "https://www.correct.state.ak.us/reentry/",
-          },
-          {
-            label: "Parole Rights — Alaska Legal Services",
-            url: "https://alaskalegalservices.org",
-          },
-        ],
-        learnMoreUrl: "https://www.correct.state.ak.us/parole/",
-      },
-      probation: {
-        summary:
-          "Alaska probation is supervised by the Alaska Department of Corrections through probation officers. Conditions are set by the court. Violations trigger a formal revocation hearing. The DOC provides substance abuse and employment programming for people on supervision.",
-        resources: [
-          {
-            label: "Alaska DOC — Probation and Parole",
-            url: "https://www.correct.state.ak.us/probparole/",
-          },
-          {
-            label: "Alaska DOC — Reentry Services",
-            url: "https://www.correct.state.ak.us/reentry/",
-          },
-          {
-            label: "ACLU — Probation and Parole Rights",
-            url: "https://www.aclu.org/know-your-rights/probation-and-parole",
-          },
-        ],
-        learnMoreUrl: "https://www.correct.state.ak.us/probparole/",
+        learnMoreUrl: "https://www.acluak.org/",
       },
     },
-
+    parole: {
+      summary:
+        "Alaska parole is administered by the Alaska Board of Parole and Department of Corrections.",
+      resources: [
+        {
+          label: "Alaska Board of Parole",
+          url: "https://doc.alaska.gov/parole-board/",
+        },
+        {
+          label: "Alaska DOC Reentry",
+          url: "https://doc.alaska.gov/reentry-programs/",
+        },
+        { label: "Alaska Legal Services", url: "https://alaskalawhelp.org/" },
+      ],
+      learnMoreUrl: "https://doc.alaska.gov/parole-board/",
+    },
+    probation: {
+      summary:
+        "Alaska probation supervision is managed through the Alaska Department of Corrections.",
+      resources: [
+        {
+          label: "Alaska DOC Probation & Parole",
+          url: "https://doc.alaska.gov/probation-parole/",
+        },
+        {
+          label: "Alaska DOC Reentry Services",
+          url: "https://doc.alaska.gov/reentry-programs/",
+        },
+        {
+          label: "ACLU Probation & Parole Rights",
+          url: "https://www.aclu.org/know-your-rights/probation-parole-and-pardon",
+        },
+      ],
+      learnMoreUrl: "https://doc.alaska.gov/probation-parole/",
+    },
     // ── ARIZONA ──────────────────────────────────────────────────────────────
     AZ: {
       voting: {
@@ -575,68 +625,144 @@
     // ── ARKANSAS ────────────────────────────────────────────────────────────
     AR: {
       voting: {
-        summary: 'In Arkansas, voting rights are automatically restored after completing your full sentence, including parole and probation. No petition or waiting period is required after sentence completion. You must re-register to vote. Fines and fees must also be paid.',
+        summary:
+          "In Arkansas, voting rights are automatically restored after completing your full sentence, including parole and probation. No petition or waiting period is required after sentence completion. You must re-register to vote. Fines and fees must also be paid.",
         resources: [
-          { label: 'Arkansas Voting Rights Restoration — Arkansas Secretary of State', url: 'https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information/' },
-          { label: 'Arkansas Voting Rights — US Vote Foundation', url: 'https://www.usvotefoundation.org/voting-rights-restoration/arkansas' },
-          { label: 'DOJ Guide to Arkansas Voting Rules', url: 'https://www.justice.gov/crt/media/1332106/dl' }
+          {
+            label:
+              "Arkansas Voting Rights Restoration — Arkansas Secretary of State",
+            url: "https://www.sos.arkansas.gov/elections/voter-information/voter-registration-information/",
+          },
+          {
+            label: "Arkansas Voting Rights — US Vote Foundation",
+            url: "https://www.usvotefoundation.org/voting-rights-restoration/arkansas",
+          },
+          {
+            label: "DOJ Guide to Arkansas Voting Rules",
+            url: "https://www.justice.gov/crt/media/1332106/dl",
+          },
         ],
-        learnMoreUrl: 'https://www.usvotefoundation.org/voting-rights-restoration/arkansas'
+        learnMoreUrl:
+          "https://www.usvotefoundation.org/voting-rights-restoration/arkansas",
       },
       expungement: {
-        summary: 'Arkansas has broad record sealing laws (Arkansas Code § 16-90-1401). Misdemeanors and many felonies can be sealed after a five-year waiting period. Sealed records are deemed never to have occurred by law. Automatic sealing applies to most pardoned convictions.',
+        summary:
+          "Arkansas has broad record sealing laws (Arkansas Code § 16-90-1401). Misdemeanors and many felonies can be sealed after a five-year waiting period. Sealed records are deemed never to have occurred by law. Automatic sealing applies to most pardoned convictions.",
         resources: [
-          { label: 'Arkansas Record Sealing — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/arkansas-restoration-of-rights-pardon-expungement-sealing/' },
-          { label: 'Arkansas Code § 16-90-1401 — Sealing of Records', url: 'https://law.justia.com/codes/arkansas/subtitle-6/chapter-90/subchapter-14/' },
-          { label: 'Record Sealing Help — Arkansas Legal Services Partnership', url: 'https://www.arlegalservices.org' }
+          {
+            label:
+              "Arkansas Record Sealing — Collateral Consequences Resource Center",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/arkansas-restoration-of-rights-pardon-expungement-sealing/",
+          },
+          {
+            label: "Arkansas Code § 16-90-1401 — Sealing of Records",
+            url: "https://law.justia.com/codes/arkansas/subtitle-6/chapter-90/subchapter-14/",
+          },
+          {
+            label: "Record Sealing Help — Arkansas Legal Services Partnership",
+            url: "https://www.arlegalservices.org",
+          },
         ],
-        learnMoreUrl: 'https://ccresourcecenter.org/state-restoration-profiles/arkansas-restoration-of-rights-pardon-expungement-sealing/'
+        learnMoreUrl:
+          "https://ccresourcecenter.org/state-restoration-profiles/arkansas-restoration-of-rights-pardon-expungement-sealing/",
       },
       housing: {
-        summary: 'Arkansas has no statewide fair chance housing statute, but federal Fair Housing Act protections and HUD guidance on criminal records apply. The Arkansas Fair Housing Commission enforces state and federal fair housing laws.',
+        summary:
+          "Arkansas has no statewide fair chance housing statute, but federal Fair Housing Act protections and HUD guidance on criminal records apply. The Arkansas Fair Housing Commission enforces state and federal fair housing laws.",
         resources: [
-          { label: 'Arkansas Fair Housing Commission', url: 'https://www.arkansas.gov/arfhc/' },
-          { label: 'Fair Housing Help — HUD Arkansas', url: 'https://www.hud.gov/states/arkansas/renting' },
-          { label: 'Housing Rights — Arkansas Legal Services Partnership', url: 'https://www.arlegalservices.org' }
+          {
+            label: "Arkansas Fair Housing Commission",
+            url: "https://www.arkansas.gov/arfhc/",
+          },
+          {
+            label: "Fair Housing Help — HUD Arkansas",
+            url: "https://www.hud.gov/states/arkansas/renting",
+          },
+          {
+            label: "Housing Rights — Arkansas Legal Services Partnership",
+            url: "https://www.arlegalservices.org",
+          },
         ],
-        learnMoreUrl: 'https://www.arkansas.gov/arfhc/'
+        learnMoreUrl: "https://www.arkansas.gov/arfhc/",
       },
       employment: {
-        summary: 'Arkansas enacted a fair chance hiring law for public employment. Private employers are not covered by statewide ban-the-box rules, but federal EEOC protections apply. The Arkansas Division of Workforce Services provides employment assistance for people in reentry.',
+        summary:
+          "Arkansas enacted a fair chance hiring law for public employment. Private employers are not covered by statewide ban-the-box rules, but federal EEOC protections apply. The Arkansas Division of Workforce Services provides employment assistance for people in reentry.",
         resources: [
-          { label: 'Arkansas Division of Workforce Services', url: 'https://www.dws.arkansas.gov' },
-          { label: 'EEOC — Little Rock Area Office', url: 'https://www.eeoc.gov/field/little-rock' },
-          { label: 'Employment Help After a Conviction — Arkansas Legal Services', url: 'https://www.arlegalservices.org' }
+          {
+            label: "Arkansas Division of Workforce Services",
+            url: "https://www.dws.arkansas.gov",
+          },
+          {
+            label: "EEOC — Little Rock Area Office",
+            url: "https://www.eeoc.gov/field/little-rock",
+          },
+          {
+            label:
+              "Employment Help After a Conviction — Arkansas Legal Services",
+            url: "https://www.arlegalservices.org",
+          },
         ],
-        learnMoreUrl: 'https://www.dws.arkansas.gov'
+        learnMoreUrl: "https://www.dws.arkansas.gov",
       },
       police: {
-        summary: 'Arkansas residents have full Fourth and Fifth Amendment protections during police interactions. The ACLU of Arkansas provides know-your-rights guides. You may refuse consent to a search, remain silent, and request an attorney at any point after arrest.',
+        summary:
+          "Arkansas residents have full Fourth and Fifth Amendment protections during police interactions. The ACLU of Arkansas provides know-your-rights guides. You may refuse consent to a search, remain silent, and request an attorney at any point after arrest.",
         resources: [
-          { label: 'Know Your Rights — ACLU of Arkansas', url: 'https://www.acluarkansas.org' },
-          { label: 'Filing a Civil Rights Complaint — Arkansas Attorney General', url: 'https://arkansasag.gov/consumer-protection/civil-rights/' },
-          { label: 'Police Misconduct — DOJ Civil Rights Division', url: 'https://www.justice.gov/crt/how-file-complaint' }
+          {
+            label: "Know Your Rights — ACLU of Arkansas",
+            url: "https://www.acluarkansas.org",
+          },
+          {
+            label:
+              "Filing a Civil Rights Complaint — Arkansas Attorney General",
+            url: "https://arkansasag.gov/consumer-protection/civil-rights/",
+          },
+          {
+            label: "Police Misconduct — DOJ Civil Rights Division",
+            url: "https://www.justice.gov/crt/how-file-complaint",
+          },
         ],
-        learnMoreUrl: 'https://www.acluarkansas.org'
+        learnMoreUrl: "https://www.acluarkansas.org",
       },
       parole: {
-        summary: 'Arkansas parole is administered by the Arkansas Post-Prison Transfer Board. Conditions are set at release and vary by case. Parole officers are assigned through the Division of Community Correction. Violations are reviewed through a formal hearing process.',
+        summary:
+          "Arkansas parole is administered by the Arkansas Post-Prison Transfer Board. Conditions are set at release and vary by case. Parole officers are assigned through the Division of Community Correction. Violations are reviewed through a formal hearing process.",
         resources: [
-          { label: 'Arkansas Post-Prison Transfer Board', url: 'https://doc.arkansas.gov/reentry-resources/post-prison-transfer-board/' },
-          { label: 'Arkansas DOC — Division of Community Correction', url: 'https://doc.arkansas.gov/community-correction/' },
-          { label: 'Parole Rights Help — Arkansas Legal Services', url: 'https://www.arlegalservices.org' }
+          {
+            label: "Arkansas Post-Prison Transfer Board",
+            url: "https://doc.arkansas.gov/reentry-resources/post-prison-transfer-board/",
+          },
+          {
+            label: "Arkansas DOC — Division of Community Correction",
+            url: "https://doc.arkansas.gov/community-correction/",
+          },
+          {
+            label: "Parole Rights Help — Arkansas Legal Services",
+            url: "https://www.arlegalservices.org",
+          },
         ],
-        learnMoreUrl: 'https://doc.arkansas.gov/community-correction/'
+        learnMoreUrl: "https://doc.arkansas.gov/community-correction/",
       },
       probation: {
-        summary: 'Arkansas probation is supervised by the Division of Community Correction. Conditions are set by the court and may include regular reporting, substance testing, and community service. The Division provides reentry services including housing and employment referrals.',
+        summary:
+          "Arkansas probation is supervised by the Division of Community Correction. Conditions are set by the court and may include regular reporting, substance testing, and community service. The Division provides reentry services including housing and employment referrals.",
         resources: [
-          { label: 'Arkansas Division of Community Correction', url: 'https://doc.arkansas.gov/community-correction/' },
-          { label: 'Probation and Parole — Arkansas DOC', url: 'https://doc.arkansas.gov/reentry-resources/' },
-          { label: 'ACLU — Probation and Parole Rights', url: 'https://www.aclu.org/know-your-rights/probation-and-parole' }
+          {
+            label: "Arkansas Division of Community Correction",
+            url: "https://doc.arkansas.gov/community-correction/",
+          },
+          {
+            label: "Probation and Parole — Arkansas DOC",
+            url: "https://doc.arkansas.gov/reentry-resources/",
+          },
+          {
+            label: "ACLU — Probation and Parole Rights",
+            url: "https://www.aclu.org/know-your-rights/probation-and-parole",
+          },
         ],
-        learnMoreUrl: 'https://doc.arkansas.gov/community-correction/'
-      }
+        learnMoreUrl: "https://doc.arkansas.gov/community-correction/",
+      },
     },
 
     // ── CALIFORNIA ───────────────────────────────────────────────────────────
@@ -1336,68 +1462,140 @@
     // ── GEORGIA ─────────────────────────────────────────────────────────────
     GA: {
       voting: {
-        summary: 'In Georgia, voting rights are automatically restored after completing your full sentence, including probation and parole. No petition is required. You must re-register to vote. Georgia has one of the higher rates of disenfranchisement due to the size of its supervised population.',
+        summary:
+          "In Georgia, voting rights are automatically restored after completing your full sentence, including probation and parole. No petition is required. You must re-register to vote. Georgia has one of the higher rates of disenfranchisement due to the size of its supervised population.",
         resources: [
-          { label: 'Georgia Voting Rights — Secretary of State', url: 'https://sos.ga.gov/page/registering-vote' },
-          { label: 'Georgia Voting Rights — US Vote Foundation', url: 'https://www.usvotefoundation.org/voting-rights-restoration/georgia' },
-          { label: 'Georgia Voting Rights — Georgia Legal Aid', url: 'https://www.georgialegalaid.org' }
+          {
+            label: "Georgia Voting Rights — Secretary of State",
+            url: "https://sos.ga.gov/page/registering-vote",
+          },
+          {
+            label: "Georgia Voting Rights — US Vote Foundation",
+            url: "https://www.usvotefoundation.org/voting-rights-restoration/georgia",
+          },
+          {
+            label: "Georgia Voting Rights — Georgia Legal Aid",
+            url: "https://www.georgialegalaid.org",
+          },
         ],
-        learnMoreUrl: 'https://sos.ga.gov/page/registering-vote'
+        learnMoreUrl: "https://sos.ga.gov/page/registering-vote",
       },
       expungement: {
-        summary: 'Georgia uses a "record restriction" system rather than full expungement. Restricted records are hidden from public background checks but not destroyed. First-offender exonerations, acquittals, and certain dismissed charges are eligible. Contact Georgia legal aid for your specific options.',
+        summary:
+          'Georgia uses a "record restriction" system rather than full expungement. Restricted records are hidden from public background checks but not destroyed. First-offender exonerations, acquittals, and certain dismissed charges are eligible. Contact Georgia legal aid for your specific options.',
         resources: [
-          { label: 'Georgia Record Restriction Guide — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/georgia-restoration-of-rights-pardon-expungement-sealing/' },
-          { label: 'Georgia Bureau of Investigation — Record Restriction', url: 'https://gbi.georgia.gov/criminal-history-record-information/record-restriction' },
-          { label: 'Record Restriction Help — Georgia Legal Aid', url: 'https://www.georgialegalaid.org' }
+          {
+            label:
+              "Georgia Record Restriction Guide — Collateral Consequences Resource Center",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/georgia-restoration-of-rights-pardon-expungement-sealing/",
+          },
+          {
+            label: "Georgia Bureau of Investigation — Record Restriction",
+            url: "https://gbi.georgia.gov/criminal-history-record-information/record-restriction",
+          },
+          {
+            label: "Record Restriction Help — Georgia Legal Aid",
+            url: "https://www.georgialegalaid.org",
+          },
         ],
-        learnMoreUrl: 'https://gbi.georgia.gov/criminal-history-record-information/record-restriction'
+        learnMoreUrl:
+          "https://gbi.georgia.gov/criminal-history-record-information/record-restriction",
       },
       housing: {
-        summary: 'Georgia has no statewide fair chance housing law. Federal Fair Housing Act protections apply. The Georgia Equal Opportunity Office handles housing discrimination complaints. Georgia Legal Aid can assist renters facing housing denials based on criminal history.',
+        summary:
+          "Georgia has no statewide fair chance housing law. Federal Fair Housing Act protections apply. The Georgia Equal Opportunity Office handles housing discrimination complaints. Georgia Legal Aid can assist renters facing housing denials based on criminal history.",
         resources: [
-          { label: 'Georgia Equal Opportunity Office — Fair Housing', url: 'https://dca.ga.gov/housing/fair-housing' },
-          { label: 'Fair Housing — HUD Atlanta Field Office', url: 'https://www.hud.gov/states/georgia/renting' },
-          { label: 'Housing Rights — Georgia Legal Aid', url: 'https://www.georgialegalaid.org' }
+          {
+            label: "Georgia Equal Opportunity Office — Fair Housing",
+            url: "https://dca.ga.gov/housing/fair-housing",
+          },
+          {
+            label: "Fair Housing — HUD Atlanta Field Office",
+            url: "https://www.hud.gov/states/georgia/renting",
+          },
+          {
+            label: "Housing Rights — Georgia Legal Aid",
+            url: "https://www.georgialegalaid.org",
+          },
         ],
-        learnMoreUrl: 'https://dca.ga.gov/housing/fair-housing'
+        learnMoreUrl: "https://dca.ga.gov/housing/fair-housing",
       },
       employment: {
-        summary: 'Georgia enacted a fair chance hiring law for state agencies. The state also has occupational licensing reforms that limit the use of criminal records. Federal EEOC protections apply statewide. The Georgia Department of Labor provides workforce services for people in reentry.',
+        summary:
+          "Georgia enacted a fair chance hiring law for state agencies. The state also has occupational licensing reforms that limit the use of criminal records. Federal EEOC protections apply statewide. The Georgia Department of Labor provides workforce services for people in reentry.",
         resources: [
-          { label: 'Georgia Department of Labor — Job Seekers', url: 'https://dol.georgia.gov/individuals' },
-          { label: 'EEOC — Atlanta District Office', url: 'https://www.eeoc.gov/field/atlanta' },
-          { label: 'Employment Rights — Georgia Legal Aid', url: 'https://www.georgialegalaid.org' }
+          {
+            label: "Georgia Department of Labor — Job Seekers",
+            url: "https://dol.georgia.gov/individuals",
+          },
+          {
+            label: "EEOC — Atlanta District Office",
+            url: "https://www.eeoc.gov/field/atlanta",
+          },
+          {
+            label: "Employment Rights — Georgia Legal Aid",
+            url: "https://www.georgialegalaid.org",
+          },
         ],
-        learnMoreUrl: 'https://dol.georgia.gov/individuals'
+        learnMoreUrl: "https://dol.georgia.gov/individuals",
       },
       police: {
-        summary: 'Georgia residents are protected by the Fourth and Fifth Amendments. The ACLU of Georgia provides know-your-rights resources for police interactions. You have the right to remain silent and to refuse consent to a search. Georgia passed police reform legislation in 2021.',
+        summary:
+          "Georgia residents are protected by the Fourth and Fifth Amendments. The ACLU of Georgia provides know-your-rights resources for police interactions. You have the right to remain silent and to refuse consent to a search. Georgia passed police reform legislation in 2021.",
         resources: [
-          { label: 'Know Your Rights — ACLU of Georgia', url: 'https://www.acluga.org' },
-          { label: 'Georgia Attorney General — Civil Rights Unit', url: 'https://law.georgia.gov' },
-          { label: 'Police Misconduct Complaint — DOJ', url: 'https://www.justice.gov/crt/how-file-complaint' }
+          {
+            label: "Know Your Rights — ACLU of Georgia",
+            url: "https://www.acluga.org",
+          },
+          {
+            label: "Georgia Attorney General — Civil Rights Unit",
+            url: "https://law.georgia.gov",
+          },
+          {
+            label: "Police Misconduct Complaint — DOJ",
+            url: "https://www.justice.gov/crt/how-file-complaint",
+          },
         ],
-        learnMoreUrl: 'https://www.acluga.org'
+        learnMoreUrl: "https://www.acluga.org",
       },
       parole: {
-        summary: 'Georgia parole is administered by the State Board of Pardons and Paroles. Conditions include regular reporting, travel restrictions, and other requirements. The GDC provides reentry planning. Violations are reviewed by the Parole Board and can result in revocation.',
+        summary:
+          "Georgia parole is administered by the State Board of Pardons and Paroles. Conditions include regular reporting, travel restrictions, and other requirements. The GDC provides reentry planning. Violations are reviewed by the Parole Board and can result in revocation.",
         resources: [
-          { label: 'Georgia State Board of Pardons and Paroles', url: 'https://pap.georgia.gov' },
-          { label: 'Georgia DOC — Reentry Programs', url: 'https://gdc.georgia.gov/programs-and-services/reentry' },
-          { label: 'Parole Rights — Georgia Legal Aid', url: 'https://www.georgialegalaid.org' }
+          {
+            label: "Georgia State Board of Pardons and Paroles",
+            url: "https://pap.georgia.gov",
+          },
+          {
+            label: "Georgia DOC — Reentry Programs",
+            url: "https://gdc.georgia.gov/programs-and-services/reentry",
+          },
+          {
+            label: "Parole Rights — Georgia Legal Aid",
+            url: "https://www.georgialegalaid.org",
+          },
         ],
-        learnMoreUrl: 'https://pap.georgia.gov'
+        learnMoreUrl: "https://pap.georgia.gov",
       },
       probation: {
-        summary: 'Georgia probation is supervised by the Georgia Department of Community Supervision, one of the largest probation supervision systems in the country. Conditions are court-ordered. Georgia has active reentry courts and programs focused on successful probation completion.',
+        summary:
+          "Georgia probation is supervised by the Georgia Department of Community Supervision, one of the largest probation supervision systems in the country. Conditions are court-ordered. Georgia has active reentry courts and programs focused on successful probation completion.",
         resources: [
-          { label: 'Georgia Department of Community Supervision', url: 'https://dcs.georgia.gov' },
-          { label: 'Georgia Reentry Courts — Council of Superior Court Judges', url: 'https://cscj.georgiacourts.gov' },
-          { label: 'ACLU — Probation and Parole Rights', url: 'https://www.aclu.org/know-your-rights/probation-and-parole' }
+          {
+            label: "Georgia Department of Community Supervision",
+            url: "https://dcs.georgia.gov",
+          },
+          {
+            label: "Georgia Reentry Courts — Council of Superior Court Judges",
+            url: "https://cscj.georgiacourts.gov",
+          },
+          {
+            label: "ACLU — Probation and Parole Rights",
+            url: "https://www.aclu.org/know-your-rights/probation-and-parole",
+          },
         ],
-        learnMoreUrl: 'https://dcs.georgia.gov'
-      }
+        learnMoreUrl: "https://dcs.georgia.gov",
+      },
     },
 
     // ── HAWAII ───────────────────────────────────────────────────────────────
@@ -2230,134 +2428,284 @@
     // ── KENTUCKY ────────────────────────────────────────────────────────────
     KY: {
       voting: {
-        summary: 'Kentucky Governor Beshear\'s Executive Order (EO 2019-003) automatically restores voting rights for most people convicted of non-violent felonies after completing their sentence. Violent offenders and those convicted of bribery or election crimes must apply separately to the Governor.',
+        summary:
+          "Kentucky Governor Beshear's Executive Order (EO 2019-003) automatically restores voting rights for most people convicted of non-violent felonies after completing their sentence. Violent offenders and those convicted of bribery or election crimes must apply separately to the Governor.",
         resources: [
-          { label: 'Kentucky Voting Rights Restoration — Secretary of State', url: 'https://elect.ky.gov/Resources/Pages/Felony-Voting-Rights.aspx' },
-          { label: 'Kentucky Voting Rights — US Vote Foundation', url: 'https://www.usvotefoundation.org/voting-rights-restoration/kentucky' },
-          { label: 'DOJ Guide to Kentucky Voting Rules', url: 'https://www.justice.gov/crt/media/1332106/dl' }
+          {
+            label: "Kentucky Voting Rights Restoration — Secretary of State",
+            url: "https://elect.ky.gov/Resources/Pages/Felony-Voting-Rights.aspx",
+          },
+          {
+            label: "Kentucky Voting Rights — US Vote Foundation",
+            url: "https://www.usvotefoundation.org/voting-rights-restoration/kentucky",
+          },
+          {
+            label: "DOJ Guide to Kentucky Voting Rules",
+            url: "https://www.justice.gov/crt/media/1332106/dl",
+          },
         ],
-        learnMoreUrl: 'https://elect.ky.gov/Resources/Pages/Felony-Voting-Rights.aspx'
+        learnMoreUrl:
+          "https://elect.ky.gov/Resources/Pages/Felony-Voting-Rights.aspx",
       },
       expungement: {
-        summary: 'Kentucky allows expungement of misdemeanors and some Class D felony convictions after a five-year waiting period. Petitions are filed with the court. Eligible felonies are limited. The Kentucky expungement law was expanded in 2016 to include more qualifying felony offenses.',
+        summary:
+          "Kentucky allows expungement of misdemeanors and some Class D felony convictions after a five-year waiting period. Petitions are filed with the court. Eligible felonies are limited. The Kentucky expungement law was expanded in 2016 to include more qualifying felony offenses.",
         resources: [
-          { label: 'Kentucky Expungement Guide — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/kentucky-restoration-of-rights-pardon-expungement-sealing/' },
-          { label: 'Kentucky Expungement Information — KY Courts', url: 'https://courts.ky.gov/legal-self-help/expungement' },
-          { label: 'Legal Help — Kentucky Legal Aid', url: 'https://www.kyjustice.org' }
+          {
+            label:
+              "Kentucky Expungement Guide — Collateral Consequences Resource Center",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/kentucky-restoration-of-rights-pardon-expungement-sealing/",
+          },
+          {
+            label: "Kentucky Expungement Information — KY Courts",
+            url: "https://courts.ky.gov/legal-self-help/expungement",
+          },
+          {
+            label: "Legal Help — Kentucky Legal Aid",
+            url: "https://www.kyjustice.org",
+          },
         ],
-        learnMoreUrl: 'https://courts.ky.gov/legal-self-help/expungement'
+        learnMoreUrl: "https://courts.ky.gov/legal-self-help/expungement",
       },
       housing: {
-        summary: 'Kentucky has no statewide fair chance housing law. Federal Fair Housing Act and HUD guidance on criminal records apply. The Kentucky Housing Corporation and local legal aid organizations provide assistance with housing discrimination for people in reentry.',
+        summary:
+          "Kentucky has no statewide fair chance housing law. Federal Fair Housing Act and HUD guidance on criminal records apply. The Kentucky Housing Corporation and local legal aid organizations provide assistance with housing discrimination for people in reentry.",
         resources: [
-          { label: 'Kentucky Housing Corporation — Renter Resources', url: 'https://www.kyhousing.org' },
-          { label: 'Fair Housing — HUD Louisville Field Office', url: 'https://www.hud.gov/states/kentucky/renting' },
-          { label: 'Housing Rights — Kentucky Legal Aid', url: 'https://www.kyjustice.org' }
+          {
+            label: "Kentucky Housing Corporation — Renter Resources",
+            url: "https://www.kyhousing.org",
+          },
+          {
+            label: "Fair Housing — HUD Louisville Field Office",
+            url: "https://www.hud.gov/states/kentucky/renting",
+          },
+          {
+            label: "Housing Rights — Kentucky Legal Aid",
+            url: "https://www.kyjustice.org",
+          },
         ],
-        learnMoreUrl: 'https://www.hud.gov/states/kentucky/renting'
+        learnMoreUrl: "https://www.hud.gov/states/kentucky/renting",
       },
       employment: {
-        summary: 'Kentucky enacted a ban-the-box law for state government positions. Federal EEOC protections apply to private employers statewide. The Kentucky Career Center provides employment services including reentry-specific support programs.',
+        summary:
+          "Kentucky enacted a ban-the-box law for state government positions. Federal EEOC protections apply to private employers statewide. The Kentucky Career Center provides employment services including reentry-specific support programs.",
         resources: [
-          { label: 'Kentucky Career Center — Job Seekers', url: 'https://kcc.ky.gov/career/Pages/default.aspx' },
-          { label: 'EEOC — Louisville Area Office', url: 'https://www.eeoc.gov/field/louisville' },
-          { label: 'Employment Rights — Kentucky Legal Aid', url: 'https://www.kyjustice.org' }
+          {
+            label: "Kentucky Career Center — Job Seekers",
+            url: "https://kcc.ky.gov/career/Pages/default.aspx",
+          },
+          {
+            label: "EEOC — Louisville Area Office",
+            url: "https://www.eeoc.gov/field/louisville",
+          },
+          {
+            label: "Employment Rights — Kentucky Legal Aid",
+            url: "https://www.kyjustice.org",
+          },
         ],
-        learnMoreUrl: 'https://kcc.ky.gov/career/Pages/default.aspx'
+        learnMoreUrl: "https://kcc.ky.gov/career/Pages/default.aspx",
       },
       police: {
-        summary: 'Kentucky residents have full Fourth and Fifth Amendment protections during police encounters. The ACLU of Kentucky documents civil rights issues and provides know-your-rights resources. You have the right to remain silent and the right to refuse a search without a warrant.',
+        summary:
+          "Kentucky residents have full Fourth and Fifth Amendment protections during police encounters. The ACLU of Kentucky documents civil rights issues and provides know-your-rights resources. You have the right to remain silent and the right to refuse a search without a warrant.",
         resources: [
-          { label: 'Know Your Rights — ACLU of Kentucky', url: 'https://www.aclu-ky.org' },
-          { label: 'Kentucky Attorney General — Civil Rights', url: 'https://www.ag.ky.gov' },
-          { label: 'Police Misconduct Complaint — DOJ', url: 'https://www.justice.gov/crt/how-file-complaint' }
+          {
+            label: "Know Your Rights — ACLU of Kentucky",
+            url: "https://www.aclu-ky.org",
+          },
+          {
+            label: "Kentucky Attorney General — Civil Rights",
+            url: "https://www.ag.ky.gov",
+          },
+          {
+            label: "Police Misconduct Complaint — DOJ",
+            url: "https://www.justice.gov/crt/how-file-complaint",
+          },
         ],
-        learnMoreUrl: 'https://www.aclu-ky.org'
+        learnMoreUrl: "https://www.aclu-ky.org",
       },
       parole: {
-        summary: 'Kentucky parole is administered by the Kentucky Parole Board. Conditions are set at release and vary by case. The Department of Corrections supervises parolees through parole officers. Violations can result in revocation and return to state custody.',
+        summary:
+          "Kentucky parole is administered by the Kentucky Parole Board. Conditions are set at release and vary by case. The Department of Corrections supervises parolees through parole officers. Violations can result in revocation and return to state custody.",
         resources: [
-          { label: 'Kentucky Parole Board', url: 'https://corrections.ky.gov/KPB/Pages/default.aspx' },
-          { label: 'Kentucky DOC — Reentry Services', url: 'https://corrections.ky.gov/reentry/Pages/default.aspx' },
-          { label: 'Parole Rights — Kentucky Legal Aid', url: 'https://www.kyjustice.org' }
+          {
+            label: "Kentucky Parole Board",
+            url: "https://corrections.ky.gov/KPB/Pages/default.aspx",
+          },
+          {
+            label: "Kentucky DOC — Reentry Services",
+            url: "https://corrections.ky.gov/reentry/Pages/default.aspx",
+          },
+          {
+            label: "Parole Rights — Kentucky Legal Aid",
+            url: "https://www.kyjustice.org",
+          },
         ],
-        learnMoreUrl: 'https://corrections.ky.gov/KPB/Pages/default.aspx'
+        learnMoreUrl: "https://corrections.ky.gov/KPB/Pages/default.aspx",
       },
       probation: {
-        summary: 'Kentucky probation is supervised by the Department of Corrections through Division of Probation and Parole. Conditions include regular reporting, substance testing, and employment requirements. The DOC provides reentry case management and transitional support.',
+        summary:
+          "Kentucky probation is supervised by the Department of Corrections through Division of Probation and Parole. Conditions include regular reporting, substance testing, and employment requirements. The DOC provides reentry case management and transitional support.",
         resources: [
-          { label: 'Kentucky DOC — Probation and Parole Division', url: 'https://corrections.ky.gov/supervision/Pages/default.aspx' },
-          { label: 'Kentucky Reentry Resources — DOC', url: 'https://corrections.ky.gov/reentry/Pages/default.aspx' },
-          { label: 'ACLU — Probation and Parole Rights', url: 'https://www.aclu.org/know-your-rights/probation-and-parole' }
+          {
+            label: "Kentucky DOC — Probation and Parole Division",
+            url: "https://corrections.ky.gov/supervision/Pages/default.aspx",
+          },
+          {
+            label: "Kentucky Reentry Resources — DOC",
+            url: "https://corrections.ky.gov/reentry/Pages/default.aspx",
+          },
+          {
+            label: "ACLU — Probation and Parole Rights",
+            url: "https://www.aclu.org/know-your-rights/probation-and-parole",
+          },
         ],
-        learnMoreUrl: 'https://corrections.ky.gov/supervision/Pages/default.aspx'
-      }
+        learnMoreUrl:
+          "https://corrections.ky.gov/supervision/Pages/default.aspx",
+      },
     },
     // ── LOUISIANA ───────────────────────────────────────────────────────────
     LA: {
       voting: {
-        summary: 'In Louisiana, voting rights are suspended while you are incarcerated, on probation, or on parole. Your rights are automatically restored after completing your full sentence, or after five years on parole or probation — whichever comes first. You must re-register to vote after restoration.',
+        summary:
+          "In Louisiana, voting rights are suspended while you are incarcerated, on probation, or on parole. Your rights are automatically restored after completing your full sentence, or after five years on parole or probation — whichever comes first. You must re-register to vote after restoration.",
         resources: [
-          { label: 'Voting After a Conviction — Louisiana Law Help', url: 'https://louisianalawhelp.org/resource/voting-with-a-criminal-conviction' },
-          { label: 'Register to Vote — Louisiana Secretary of State', url: 'https://www.sos.la.gov/ElectionsAndVoting/RegisterToVote/Pages/default.aspx' },
-          { label: 'Voting Rights After a Felony — US Vote Foundation (Louisiana)', url: 'https://www.usvotefoundation.org/voting-rights-restoration/louisiana' }
+          {
+            label: "Voting After a Conviction — Louisiana Law Help",
+            url: "https://louisianalawhelp.org/resource/voting-with-a-criminal-conviction",
+          },
+          {
+            label: "Register to Vote — Louisiana Secretary of State",
+            url: "https://www.sos.la.gov/ElectionsAndVoting/RegisterToVote/Pages/default.aspx",
+          },
+          {
+            label:
+              "Voting Rights After a Felony — US Vote Foundation (Louisiana)",
+            url: "https://www.usvotefoundation.org/voting-rights-restoration/louisiana",
+          },
         ],
-        learnMoreUrl: 'https://louisianalawhelp.org/resource/voting-with-a-criminal-conviction'
+        learnMoreUrl:
+          "https://louisianalawhelp.org/resource/voting-with-a-criminal-conviction",
       },
       expungement: {
-        summary: 'Louisiana allows expungement of qualifying misdemeanor and felony convictions. A five-year waiting period applies to most felonies after sentence completion. There is a $150 filing fee. The petition is filed in the court of conviction. Expunged records are still accessible to law enforcement.',
+        summary:
+          "Louisiana allows expungement of qualifying misdemeanor and felony convictions. A five-year waiting period applies to most felonies after sentence completion. There is a $150 filing fee. The petition is filed in the court of conviction. Expunged records are still accessible to law enforcement.",
         resources: [
-          { label: 'Expungement in Louisiana — Louisiana Law Help', url: 'https://louisianalawhelp.org/resource/expungements-in-louisiana' },
-          { label: 'Louisiana Expungement Guide — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/louisiana-restoration-of-rights-pardon-expungement-sealing/' },
-          { label: 'Louisiana Revised Statutes § 44:9 — Expungement Process', url: 'https://www.legis.la.gov/legis/Law.aspx?d=113879' }
+          {
+            label: "Expungement in Louisiana — Louisiana Law Help",
+            url: "https://louisianalawhelp.org/resource/expungements-in-louisiana",
+          },
+          {
+            label:
+              "Louisiana Expungement Guide — Collateral Consequences Resource Center",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/louisiana-restoration-of-rights-pardon-expungement-sealing/",
+          },
+          {
+            label: "Louisiana Revised Statutes § 44:9 — Expungement Process",
+            url: "https://www.legis.la.gov/legis/Law.aspx?d=113879",
+          },
         ],
-        learnMoreUrl: 'https://louisianalawhelp.org/resource/expungements-in-louisiana'
+        learnMoreUrl:
+          "https://louisianalawhelp.org/resource/expungements-in-louisiana",
       },
       housing: {
-        summary: 'Louisiana does not have a statewide ban-the-box law for private housing. The federal Fair Housing Act still applies, and HUD guidance prohibits blanket criminal record bans by landlords. The Louisiana Fair Housing Action Center can assist with housing discrimination complaints.',
+        summary:
+          "Louisiana does not have a statewide ban-the-box law for private housing. The federal Fair Housing Act still applies, and HUD guidance prohibits blanket criminal record bans by landlords. The Louisiana Fair Housing Action Center can assist with housing discrimination complaints.",
         resources: [
-          { label: 'Fair Housing Rights — HUD Louisiana Field Office', url: 'https://www.hud.gov/states/louisiana/renting' },
-          { label: 'Louisiana Fair Housing Action Center', url: 'https://www.lafairhousing.org' },
-          { label: 'Know Your Renter Rights — Louisiana Law Help', url: 'https://louisianalawhelp.org/resource/housing' }
+          {
+            label: "Fair Housing Rights — HUD Louisiana Field Office",
+            url: "https://www.hud.gov/states/louisiana/renting",
+          },
+          {
+            label: "Louisiana Fair Housing Action Center",
+            url: "https://www.lafairhousing.org",
+          },
+          {
+            label: "Know Your Renter Rights — Louisiana Law Help",
+            url: "https://louisianalawhelp.org/resource/housing",
+          },
         ],
-        learnMoreUrl: 'https://www.lafairhousing.org'
+        learnMoreUrl: "https://www.lafairhousing.org",
       },
       employment: {
-        summary: 'Louisiana has a fair chance hiring law for state government jobs that delays criminal background checks until after a conditional offer. Federal EEOC protections apply statewide to private employers. The Louisiana Workforce Commission can provide reentry employment resources.',
+        summary:
+          "Louisiana has a fair chance hiring law for state government jobs that delays criminal background checks until after a conditional offer. Federal EEOC protections apply statewide to private employers. The Louisiana Workforce Commission can provide reentry employment resources.",
         resources: [
-          { label: 'Reentry Employment — Louisiana Workforce Commission', url: 'https://www.laworks.net/WorkforceDev/LWC_ReentryEmployment.asp' },
-          { label: 'EEOC Charge Information — Louisiana', url: 'https://www.eeoc.gov/field/new-orleans' },
-          { label: 'Employment Rights After a Conviction — Louisiana Law Help', url: 'https://louisianalawhelp.org/resource/employment' }
+          {
+            label: "Reentry Employment — Louisiana Workforce Commission",
+            url: "https://www.laworks.net/WorkforceDev/LWC_ReentryEmployment.asp",
+          },
+          {
+            label: "EEOC Charge Information — Louisiana",
+            url: "https://www.eeoc.gov/field/new-orleans",
+          },
+          {
+            label: "Employment Rights After a Conviction — Louisiana Law Help",
+            url: "https://louisianalawhelp.org/resource/employment",
+          },
         ],
-        learnMoreUrl: 'https://www.laworks.net/WorkforceDev/LWC_ReentryEmployment.asp'
+        learnMoreUrl:
+          "https://www.laworks.net/WorkforceDev/LWC_ReentryEmployment.asp",
       },
       police: {
-        summary: 'Louisiana residents have the same Fourth and Fifth Amendment protections as all Americans during police encounters. Louisiana law also provides additional protections around use of force. The ACLU of Louisiana documents ongoing civil rights issues and offers know-your-rights guidance.',
+        summary:
+          "Louisiana residents have the same Fourth and Fifth Amendment protections as all Americans during police encounters. Louisiana law also provides additional protections around use of force. The ACLU of Louisiana documents ongoing civil rights issues and offers know-your-rights guidance.",
         resources: [
-          { label: 'Know Your Rights — ACLU of Louisiana', url: 'https://www.laaclu.org/en/know-your-rights' },
-          { label: 'Louisiana Attorney General — Civil Rights Division', url: 'https://www.ag.state.la.us/Section/CivilRights' },
-          { label: 'Filing a Police Misconduct Complaint — DOJ', url: 'https://www.justice.gov/crt/how-file-complaint' }
+          {
+            label: "Know Your Rights — ACLU of Louisiana",
+            url: "https://www.laaclu.org/en/know-your-rights",
+          },
+          {
+            label: "Louisiana Attorney General — Civil Rights Division",
+            url: "https://www.ag.state.la.us/Section/CivilRights",
+          },
+          {
+            label: "Filing a Police Misconduct Complaint — DOJ",
+            url: "https://www.justice.gov/crt/how-file-complaint",
+          },
         ],
-        learnMoreUrl: 'https://www.laaclu.org/en/know-your-rights'
+        learnMoreUrl: "https://www.laaclu.org/en/know-your-rights",
       },
       parole: {
-        summary: 'Louisiana parole is administered by the Louisiana Board of Pardons and Parole. Conditions are set at release and may include reporting, travel restrictions, and curfews. Violations can result in revocation. The Department of Corrections provides transition services for people leaving state custody.',
+        summary:
+          "Louisiana parole is administered by the Louisiana Board of Pardons and Parole. Conditions are set at release and may include reporting, travel restrictions, and curfews. Violations can result in revocation. The Department of Corrections provides transition services for people leaving state custody.",
         resources: [
-          { label: 'Louisiana Board of Pardons and Parole', url: 'https://doc.louisiana.gov/imprisoned-person-programs-re-entry/pardons-parole/' },
-          { label: 'Louisiana DOC Reentry Resources', url: 'https://doc.louisiana.gov/imprisoned-person-programs-re-entry/' },
-          { label: 'Parole and Probation Rights — ACLU of Louisiana', url: 'https://www.laaclu.org/en/know-your-rights' }
+          {
+            label: "Louisiana Board of Pardons and Parole",
+            url: "https://doc.louisiana.gov/imprisoned-person-programs-re-entry/pardons-parole/",
+          },
+          {
+            label: "Louisiana DOC Reentry Resources",
+            url: "https://doc.louisiana.gov/imprisoned-person-programs-re-entry/",
+          },
+          {
+            label: "Parole and Probation Rights — ACLU of Louisiana",
+            url: "https://www.laaclu.org/en/know-your-rights",
+          },
         ],
-        learnMoreUrl: 'https://doc.louisiana.gov/imprisoned-person-programs-re-entry/pardons-parole/'
+        learnMoreUrl:
+          "https://doc.louisiana.gov/imprisoned-person-programs-re-entry/pardons-parole/",
       },
       probation: {
-        summary: 'Louisiana probation is supervised by the Division of Probation and Parole within the Department of Corrections. Conditions are set by the court and may include reporting, substance testing, and employment requirements. Violations are reviewed at a formal revocation hearing.',
+        summary:
+          "Louisiana probation is supervised by the Division of Probation and Parole within the Department of Corrections. Conditions are set by the court and may include reporting, substance testing, and employment requirements. Violations are reviewed at a formal revocation hearing.",
         resources: [
-          { label: 'Louisiana Probation and Parole Division — DOC', url: 'https://doc.louisiana.gov/division-of-probation-and-parole/' },
-          { label: 'Probation Conditions and Rights — Louisiana Law Help', url: 'https://louisianalawhelp.org/resource/probation-and-parole' },
-          { label: 'Reentry Support — Louisiana DOC', url: 'https://doc.louisiana.gov/imprisoned-person-programs-re-entry/' }
+          {
+            label: "Louisiana Probation and Parole Division — DOC",
+            url: "https://doc.louisiana.gov/division-of-probation-and-parole/",
+          },
+          {
+            label: "Probation Conditions and Rights — Louisiana Law Help",
+            url: "https://louisianalawhelp.org/resource/probation-and-parole",
+          },
+          {
+            label: "Reentry Support — Louisiana DOC",
+            url: "https://doc.louisiana.gov/imprisoned-person-programs-re-entry/",
+          },
         ],
-        learnMoreUrl: 'https://doc.louisiana.gov/division-of-probation-and-parole/'
-      }
+        learnMoreUrl:
+          "https://doc.louisiana.gov/division-of-probation-and-parole/",
+      },
     },
 
     // ── MAINE ────────────────────────────────────────────────────────────────
@@ -3061,68 +3409,142 @@
     // ── MISSISSIPPI ─────────────────────────────────────────────────────────
     MS: {
       voting: {
-        summary: 'Mississippi permanently disenfranchises people convicted of 23 specific barred crimes including murder, rape, bribery, theft, and forgery. For those convictions, rights can only be restored by the Governor or by a bill passed by both houses of the legislature. Other felony convictions do not affect voting rights.',
+        summary:
+          "Mississippi permanently disenfranchises people convicted of 23 specific barred crimes including murder, rape, bribery, theft, and forgery. For those convictions, rights can only be restored by the Governor or by a bill passed by both houses of the legislature. Other felony convictions do not affect voting rights.",
         resources: [
-          { label: 'Voting Rights in Mississippi — US Vote Foundation', url: 'https://www.usvotefoundation.org/voting-rights-restoration/mississippi' },
-          { label: 'Mississippi Secretary of State — Voter Registration', url: 'https://www.sos.ms.gov/elections-voting/voter-registration' },
-          { label: 'Mississippi Voting Rights — Mississippi Center for Justice', url: 'https://mscenterforjustice.org' }
+          {
+            label: "Voting Rights in Mississippi — US Vote Foundation",
+            url: "https://www.usvotefoundation.org/voting-rights-restoration/mississippi",
+          },
+          {
+            label: "Mississippi Secretary of State — Voter Registration",
+            url: "https://www.sos.ms.gov/elections-voting/voter-registration",
+          },
+          {
+            label: "Mississippi Voting Rights — Mississippi Center for Justice",
+            url: "https://mscenterforjustice.org",
+          },
         ],
-        learnMoreUrl: 'https://www.usvotefoundation.org/voting-rights-restoration/mississippi'
+        learnMoreUrl:
+          "https://www.usvotefoundation.org/voting-rights-restoration/mississippi",
       },
       expungement: {
-        summary: 'Mississippi allows expungement of qualifying first-offense misdemeanors and certain felony convictions. Only one felony expungement is available in a lifetime. A five-year waiting period applies after completing the sentence. Expunged records remain accessible to law enforcement. Employers may still ask about expunged records.',
+        summary:
+          "Mississippi allows expungement of qualifying first-offense misdemeanors and certain felony convictions. Only one felony expungement is available in a lifetime. A five-year waiting period applies after completing the sentence. Expunged records remain accessible to law enforcement. Employers may still ask about expunged records.",
         resources: [
-          { label: 'Mississippi Expungement Guide — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/mississippi-restoration-of-rights-pardon-expungement-sealing-2/' },
-          { label: 'Mississippi Code § 99-19-71 — Expungement Statute', url: 'https://law.justia.com/codes/mississippi/section-99-19-71/' },
-          { label: 'Record Clearing Help — Mississippi Legal Services', url: 'https://www.mslegalservices.org' }
+          {
+            label:
+              "Mississippi Expungement Guide — Collateral Consequences Resource Center",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/mississippi-restoration-of-rights-pardon-expungement-sealing-2/",
+          },
+          {
+            label: "Mississippi Code § 99-19-71 — Expungement Statute",
+            url: "https://law.justia.com/codes/mississippi/section-99-19-71/",
+          },
+          {
+            label: "Record Clearing Help — Mississippi Legal Services",
+            url: "https://www.mslegalservices.org",
+          },
         ],
-        learnMoreUrl: 'https://ccresourcecenter.org/state-restoration-profiles/mississippi-restoration-of-rights-pardon-expungement-sealing-2/'
+        learnMoreUrl:
+          "https://ccresourcecenter.org/state-restoration-profiles/mississippi-restoration-of-rights-pardon-expungement-sealing-2/",
       },
       housing: {
-        summary: 'Mississippi has no statewide fair chance housing law, but federal Fair Housing Act and HUD guidance protecting against blanket criminal record bans apply. The Mississippi Home Corporation and legal aid organizations can assist renters facing housing discrimination.',
+        summary:
+          "Mississippi has no statewide fair chance housing law, but federal Fair Housing Act and HUD guidance protecting against blanket criminal record bans apply. The Mississippi Home Corporation and legal aid organizations can assist renters facing housing discrimination.",
         resources: [
-          { label: 'Mississippi Home Corporation — Renter Resources', url: 'https://www.mshomecorp.com' },
-          { label: 'Fair Housing Assistance — HUD Mississippi', url: 'https://www.hud.gov/states/mississippi/renting' },
-          { label: 'Housing Help — Mississippi Legal Services', url: 'https://www.mslegalservices.org' }
+          {
+            label: "Mississippi Home Corporation — Renter Resources",
+            url: "https://www.mshomecorp.com",
+          },
+          {
+            label: "Fair Housing Assistance — HUD Mississippi",
+            url: "https://www.hud.gov/states/mississippi/renting",
+          },
+          {
+            label: "Housing Help — Mississippi Legal Services",
+            url: "https://www.mslegalservices.org",
+          },
         ],
-        learnMoreUrl: 'https://www.hud.gov/states/mississippi/renting'
+        learnMoreUrl: "https://www.hud.gov/states/mississippi/renting",
       },
       employment: {
-        summary: 'Mississippi has no statewide ban-the-box law for private employers. Federal EEOC protections against discriminatory use of criminal records apply statewide. The Mississippi Department of Employment Security provides job placement assistance for people leaving the justice system.',
+        summary:
+          "Mississippi has no statewide ban-the-box law for private employers. Federal EEOC protections against discriminatory use of criminal records apply statewide. The Mississippi Department of Employment Security provides job placement assistance for people leaving the justice system.",
         resources: [
-          { label: 'Mississippi Dept. of Employment Security — Job Seekers', url: 'https://mdes.ms.gov/jobs-and-training/find-a-job/' },
-          { label: 'EEOC — Mississippi Charge Filing', url: 'https://www.eeoc.gov/field/jackson' },
-          { label: 'Reentry Employment Resources — Mississippi Legal Services', url: 'https://www.mslegalservices.org' }
+          {
+            label: "Mississippi Dept. of Employment Security — Job Seekers",
+            url: "https://mdes.ms.gov/jobs-and-training/find-a-job/",
+          },
+          {
+            label: "EEOC — Mississippi Charge Filing",
+            url: "https://www.eeoc.gov/field/jackson",
+          },
+          {
+            label: "Reentry Employment Resources — Mississippi Legal Services",
+            url: "https://www.mslegalservices.org",
+          },
         ],
-        learnMoreUrl: 'https://mdes.ms.gov/jobs-and-training/find-a-job/'
+        learnMoreUrl: "https://mdes.ms.gov/jobs-and-training/find-a-job/",
       },
       police: {
-        summary: 'Mississippi residents are protected by the Fourth and Fifth Amendments during all police interactions. The ACLU of Mississippi monitors civil rights violations and provides know-your-rights guidance. You have the right to remain silent and to request an attorney.',
+        summary:
+          "Mississippi residents are protected by the Fourth and Fifth Amendments during all police interactions. The ACLU of Mississippi monitors civil rights violations and provides know-your-rights guidance. You have the right to remain silent and to request an attorney.",
         resources: [
-          { label: 'Know Your Rights — ACLU of Mississippi', url: 'https://www.aclu-ms.org' },
-          { label: 'Filing a Complaint — Mississippi Attorney General', url: 'https://www.ago.state.ms.us' },
-          { label: 'Police Misconduct — DOJ Civil Rights Division', url: 'https://www.justice.gov/crt/addressing-police-misconduct-laws-enforced-department-justice' }
+          {
+            label: "Know Your Rights — ACLU of Mississippi",
+            url: "https://www.aclu-ms.org",
+          },
+          {
+            label: "Filing a Complaint — Mississippi Attorney General",
+            url: "https://www.ago.state.ms.us",
+          },
+          {
+            label: "Police Misconduct — DOJ Civil Rights Division",
+            url: "https://www.justice.gov/crt/addressing-police-misconduct-laws-enforced-department-justice",
+          },
         ],
-        learnMoreUrl: 'https://www.aclu-ms.org'
+        learnMoreUrl: "https://www.aclu-ms.org",
       },
       parole: {
-        summary: 'Mississippi parole is administered by the Mississippi Parole Board. Conditions may include regular reporting, curfews, travel restrictions, and substance testing. Violations may result in revocation and return to custody. The MDOC provides reentry planning services.',
+        summary:
+          "Mississippi parole is administered by the Mississippi Parole Board. Conditions may include regular reporting, curfews, travel restrictions, and substance testing. Violations may result in revocation and return to custody. The MDOC provides reentry planning services.",
         resources: [
-          { label: 'Mississippi Parole Board', url: 'https://www.ms.gov/mdoc/Parole_Board' },
-          { label: 'Mississippi Department of Corrections — Reentry', url: 'https://www.mdoc.ms.gov/Reentry/Pages/default.aspx' },
-          { label: 'Parole Conditions Guide — Mississippi Legal Services', url: 'https://www.mslegalservices.org' }
+          {
+            label: "Mississippi Parole Board",
+            url: "https://www.ms.gov/mdoc/Parole_Board",
+          },
+          {
+            label: "Mississippi Department of Corrections — Reentry",
+            url: "https://www.mdoc.ms.gov/Reentry/Pages/default.aspx",
+          },
+          {
+            label: "Parole Conditions Guide — Mississippi Legal Services",
+            url: "https://www.mslegalservices.org",
+          },
         ],
-        learnMoreUrl: 'https://www.mdoc.ms.gov/Reentry/Pages/default.aspx'
+        learnMoreUrl: "https://www.mdoc.ms.gov/Reentry/Pages/default.aspx",
       },
       probation: {
-        summary: 'Mississippi probation is supervised by probation officers under the Mississippi Department of Corrections. Conditions are set by the sentencing court and may include reporting, substance testing, and community service. Revocation hearings are held in court.',
+        summary:
+          "Mississippi probation is supervised by probation officers under the Mississippi Department of Corrections. Conditions are set by the sentencing court and may include reporting, substance testing, and community service. Revocation hearings are held in court.",
         resources: [
-          { label: 'Mississippi DOC — Probation and Parole', url: 'https://www.mdoc.ms.gov/Community-Corrections/Pages/Community-Corrections.aspx' },
-          { label: 'Probation Rights — Mississippi Legal Services', url: 'https://www.mslegalservices.org' },
-          { label: 'ACLU — Probation and Parole Rights', url: 'https://www.aclu.org/know-your-rights/probation-and-parole' }
+          {
+            label: "Mississippi DOC — Probation and Parole",
+            url: "https://www.mdoc.ms.gov/Community-Corrections/Pages/Community-Corrections.aspx",
+          },
+          {
+            label: "Probation Rights — Mississippi Legal Services",
+            url: "https://www.mslegalservices.org",
+          },
+          {
+            label: "ACLU — Probation and Parole Rights",
+            url: "https://www.aclu.org/know-your-rights/probation-and-parole",
+          },
         ],
-        learnMoreUrl: 'https://www.mdoc.ms.gov/Community-Corrections/Pages/Community-Corrections.aspx'
-      }
+        learnMoreUrl:
+          "https://www.mdoc.ms.gov/Community-Corrections/Pages/Community-Corrections.aspx",
+      },
     },
 
     // ── MISSOURI ─────────────────────────────────────────────────────────────
@@ -4649,68 +5071,143 @@
     // ── OKLAHOMA ────────────────────────────────────────────────────────────
     OK: {
       voting: {
-        summary: 'In Oklahoma, voting rights are automatically restored after you complete your full sentence, including parole and probation. No petition is required. You must re-register to vote. Misdemeanor convictions and pretrial detention do not affect your voting rights.',
+        summary:
+          "In Oklahoma, voting rights are automatically restored after you complete your full sentence, including parole and probation. No petition is required. You must re-register to vote. Misdemeanor convictions and pretrial detention do not affect your voting rights.",
         resources: [
-          { label: 'Voting Rights After a Felony — Oklahoma State Election Board', url: 'https://www.ok.gov/elections/Voter_Info/Voting_Rights_Restoration/index.html' },
-          { label: 'Oklahoma Voting Rights — US Vote Foundation', url: 'https://www.usvotefoundation.org/voting-rights-restoration/oklahoma' },
-          { label: 'DOJ Guide to Oklahoma Voting Rules', url: 'https://www.justice.gov/d9/2022-09/oklahoma.pdf' }
+          {
+            label:
+              "Voting Rights After a Felony — Oklahoma State Election Board",
+            url: "https://www.ok.gov/elections/Voter_Info/Voting_Rights_Restoration/index.html",
+          },
+          {
+            label: "Oklahoma Voting Rights — US Vote Foundation",
+            url: "https://www.usvotefoundation.org/voting-rights-restoration/oklahoma",
+          },
+          {
+            label: "DOJ Guide to Oklahoma Voting Rules",
+            url: "https://www.justice.gov/d9/2022-09/oklahoma.pdf",
+          },
         ],
-        learnMoreUrl: 'https://www.ok.gov/elections/Voter_Info/Voting_Rights_Restoration/index.html'
+        learnMoreUrl:
+          "https://www.ok.gov/elections/Voter_Info/Voting_Rights_Restoration/index.html",
       },
       expungement: {
-        summary: 'Oklahoma enacted a landmark automatic expungement law in 2022 (HB 3316) that clears eligible misdemeanors and non-conviction records without requiring a petition. The state also allows petitions to expunge up to two non-violent felonies. Oklahoma Bureau of Criminal Investigation processes requests.',
+        summary:
+          "Oklahoma enacted a landmark automatic expungement law in 2022 (HB 3316) that clears eligible misdemeanors and non-conviction records without requiring a petition. The state also allows petitions to expunge up to two non-violent felonies. Oklahoma Bureau of Criminal Investigation processes requests.",
         resources: [
-          { label: 'Oklahoma Expungement Guide — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/oklahoma-restoration-of-rights-pardon-expungement-sealing/' },
-          { label: 'Oklahoma Bureau of Criminal Investigation — Expungement', url: 'https://osbi.ok.gov/services/criminal-history/expungement' },
-          { label: 'Oklahoma Expungement Law — Oklahoma Legal Aid Services', url: 'https://www.oklaw.org' }
+          {
+            label:
+              "Oklahoma Expungement Guide — Collateral Consequences Resource Center",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/oklahoma-restoration-of-rights-pardon-expungement-sealing/",
+          },
+          {
+            label: "Oklahoma Bureau of Criminal Investigation — Expungement",
+            url: "https://osbi.ok.gov/services/criminal-history/expungement",
+          },
+          {
+            label: "Oklahoma Expungement Law — Oklahoma Legal Aid Services",
+            url: "https://www.oklaw.org",
+          },
         ],
-        learnMoreUrl: 'https://osbi.ok.gov/services/criminal-history/expungement'
+        learnMoreUrl:
+          "https://osbi.ok.gov/services/criminal-history/expungement",
       },
       housing: {
-        summary: 'Oklahoma has no statewide fair chance housing law. Federal Fair Housing Act protections and HUD guidance on criminal records apply. The Oklahoma Housing Finance Agency and legal aid organizations can assist with housing issues for people in reentry.',
+        summary:
+          "Oklahoma has no statewide fair chance housing law. Federal Fair Housing Act protections and HUD guidance on criminal records apply. The Oklahoma Housing Finance Agency and legal aid organizations can assist with housing issues for people in reentry.",
         resources: [
-          { label: 'Oklahoma Housing Finance Agency', url: 'https://www.ohfa.org' },
-          { label: 'Fair Housing — HUD Oklahoma City Field Office', url: 'https://www.hud.gov/states/oklahoma/renting' },
-          { label: 'Housing Legal Help — Oklahoma Law Help', url: 'https://www.oklaw.org' }
+          {
+            label: "Oklahoma Housing Finance Agency",
+            url: "https://www.ohfa.org",
+          },
+          {
+            label: "Fair Housing — HUD Oklahoma City Field Office",
+            url: "https://www.hud.gov/states/oklahoma/renting",
+          },
+          {
+            label: "Housing Legal Help — Oklahoma Law Help",
+            url: "https://www.oklaw.org",
+          },
         ],
-        learnMoreUrl: 'https://www.hud.gov/states/oklahoma/renting'
+        learnMoreUrl: "https://www.hud.gov/states/oklahoma/renting",
       },
       employment: {
-        summary: 'Oklahoma has a ban-the-box law for state government employment. Federal EEOC protections apply statewide to private employers. The Oklahoma Employment Security Commission provides job training and placement resources for people in reentry.',
+        summary:
+          "Oklahoma has a ban-the-box law for state government employment. Federal EEOC protections apply statewide to private employers. The Oklahoma Employment Security Commission provides job training and placement resources for people in reentry.",
         resources: [
-          { label: 'Oklahoma Employment Security Commission', url: 'https://oklahoma.gov/oesc.html' },
-          { label: 'EEOC — Oklahoma Charge Filing', url: 'https://www.eeoc.gov/field/oklahoma-city' },
-          { label: 'Fair Chance Employment — Oklahoma Law Help', url: 'https://www.oklaw.org' }
+          {
+            label: "Oklahoma Employment Security Commission",
+            url: "https://oklahoma.gov/oesc.html",
+          },
+          {
+            label: "EEOC — Oklahoma Charge Filing",
+            url: "https://www.eeoc.gov/field/oklahoma-city",
+          },
+          {
+            label: "Fair Chance Employment — Oklahoma Law Help",
+            url: "https://www.oklaw.org",
+          },
         ],
-        learnMoreUrl: 'https://oklahoma.gov/oesc.html'
+        learnMoreUrl: "https://oklahoma.gov/oesc.html",
       },
       police: {
-        summary: 'Oklahoma residents are protected by the Fourth and Fifth Amendments. The ACLU of Oklahoma provides know-your-rights resources. You have the right to remain silent, the right to an attorney, and the right to refuse consent to a search in most circumstances.',
+        summary:
+          "Oklahoma residents are protected by the Fourth and Fifth Amendments. The ACLU of Oklahoma provides know-your-rights resources. You have the right to remain silent, the right to an attorney, and the right to refuse consent to a search in most circumstances.",
         resources: [
-          { label: 'Know Your Rights — ACLU of Oklahoma', url: 'https://www.acluok.org' },
-          { label: 'Oklahoma Attorney General — Civil Rights', url: 'https://oklahoma.gov/oag/investigations/civil-rights.html' },
-          { label: 'Police Misconduct Complaint — DOJ Civil Rights Division', url: 'https://www.justice.gov/crt/how-file-complaint' }
+          {
+            label: "Know Your Rights — ACLU of Oklahoma",
+            url: "https://www.acluok.org",
+          },
+          {
+            label: "Oklahoma Attorney General — Civil Rights",
+            url: "https://oklahoma.gov/oag/investigations/civil-rights.html",
+          },
+          {
+            label: "Police Misconduct Complaint — DOJ Civil Rights Division",
+            url: "https://www.justice.gov/crt/how-file-complaint",
+          },
         ],
-        learnMoreUrl: 'https://www.acluok.org'
+        learnMoreUrl: "https://www.acluok.org",
       },
       parole: {
-        summary: 'Oklahoma parole is administered by the Oklahoma Pardon and Parole Board. Conditions vary by case and are set at release. Oklahoma has worked to reduce supervision violations through reentry programming. Contact the DOC for specific supervision conditions and obligations.',
+        summary:
+          "Oklahoma parole is administered by the Oklahoma Pardon and Parole Board. Conditions vary by case and are set at release. Oklahoma has worked to reduce supervision violations through reentry programming. Contact the DOC for specific supervision conditions and obligations.",
         resources: [
-          { label: 'Oklahoma Pardon and Parole Board', url: 'https://oklahoma.gov/ppb.html' },
-          { label: 'Oklahoma DOC — Reentry and Supervision', url: 'https://oklahoma.gov/doc.html' },
-          { label: 'Parole Rights — Oklahoma Law Help', url: 'https://www.oklaw.org' }
+          {
+            label: "Oklahoma Pardon and Parole Board",
+            url: "https://oklahoma.gov/ppb.html",
+          },
+          {
+            label: "Oklahoma DOC — Reentry and Supervision",
+            url: "https://oklahoma.gov/doc.html",
+          },
+          {
+            label: "Parole Rights — Oklahoma Law Help",
+            url: "https://www.oklaw.org",
+          },
         ],
-        learnMoreUrl: 'https://oklahoma.gov/ppb.html'
+        learnMoreUrl: "https://oklahoma.gov/ppb.html",
       },
       probation: {
-        summary: 'Oklahoma probation is supervised by the Oklahoma Department of Corrections. Conditions are set by the court and typically include reporting, substance testing, and employment requirements. Deferred sentence probation is common and may lead to dismissal upon successful completion.',
+        summary:
+          "Oklahoma probation is supervised by the Oklahoma Department of Corrections. Conditions are set by the court and typically include reporting, substance testing, and employment requirements. Deferred sentence probation is common and may lead to dismissal upon successful completion.",
         resources: [
-          { label: 'Oklahoma DOC — Community Supervision', url: 'https://oklahoma.gov/doc/offender-information/community-corrections.html' },
-          { label: 'Probation and Deferred Sentences — Oklahoma Law Help', url: 'https://www.oklaw.org' },
-          { label: 'ACLU — Probation and Parole Rights', url: 'https://www.aclu.org/know-your-rights/probation-and-parole' }
+          {
+            label: "Oklahoma DOC — Community Supervision",
+            url: "https://oklahoma.gov/doc/offender-information/community-corrections.html",
+          },
+          {
+            label: "Probation and Deferred Sentences — Oklahoma Law Help",
+            url: "https://www.oklaw.org",
+          },
+          {
+            label: "ACLU — Probation and Parole Rights",
+            url: "https://www.aclu.org/know-your-rights/probation-and-parole",
+          },
         ],
-        learnMoreUrl: 'https://oklahoma.gov/doc/offender-information/community-corrections.html'
-      }
+        learnMoreUrl:
+          "https://oklahoma.gov/doc/offender-information/community-corrections.html",
+      },
     },
 
     // ── OREGON ───────────────────────────────────────────────────────────────
@@ -5267,134 +5764,284 @@
     // ── SOUTH DAKOTA ────────────────────────────────────────────────────────
     SD: {
       voting: {
-        summary: 'In South Dakota, voting rights are automatically restored for most people after completing their full sentence, including parole and probation. People convicted of certain serious offenses may face additional requirements. You must re-register after restoration.',
+        summary:
+          "In South Dakota, voting rights are automatically restored for most people after completing their full sentence, including parole and probation. People convicted of certain serious offenses may face additional requirements. You must re-register after restoration.",
         resources: [
-          { label: 'South Dakota Voting Rights — Secretary of State', url: 'https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx' },
-          { label: 'South Dakota Voting Rights — US Vote Foundation', url: 'https://www.usvotefoundation.org/voting-rights-restoration/south-dakota' },
-          { label: 'DOJ Guide to South Dakota Voting Rules', url: 'https://www.justice.gov/crt/media/1332106/dl' }
+          {
+            label: "South Dakota Voting Rights — Secretary of State",
+            url: "https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx",
+          },
+          {
+            label: "South Dakota Voting Rights — US Vote Foundation",
+            url: "https://www.usvotefoundation.org/voting-rights-restoration/south-dakota",
+          },
+          {
+            label: "DOJ Guide to South Dakota Voting Rules",
+            url: "https://www.justice.gov/crt/media/1332106/dl",
+          },
         ],
-        learnMoreUrl: 'https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx'
+        learnMoreUrl:
+          "https://sdsos.gov/elections-voting/voting/register-to-vote/default.aspx",
       },
       expungement: {
-        summary: 'South Dakota offers limited expungement relief. Expungement is available primarily for non-conviction records and certain dismissed charges. Court orders must be reported to the Division of Criminal Investigation, which retains a non-public record for law enforcement. Petition the court of conviction.',
+        summary:
+          "South Dakota offers limited expungement relief. Expungement is available primarily for non-conviction records and certain dismissed charges. Court orders must be reported to the Division of Criminal Investigation, which retains a non-public record for law enforcement. Petition the court of conviction.",
         resources: [
-          { label: 'South Dakota Expungement Guide — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/south-dakota-restoration-of-rights-pardon-expungement-sealing/' },
-          { label: 'South Dakota Unified Judicial System — Expungement', url: 'https://ujs.sd.gov' },
-          { label: 'Legal Help — South Dakota Legal Aid', url: 'https://www.southdakotalegalaid.org' }
+          {
+            label:
+              "South Dakota Expungement Guide — Collateral Consequences Resource Center",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/south-dakota-restoration-of-rights-pardon-expungement-sealing/",
+          },
+          {
+            label: "South Dakota Unified Judicial System — Expungement",
+            url: "https://ujs.sd.gov",
+          },
+          {
+            label: "Legal Help — South Dakota Legal Aid",
+            url: "https://www.southdakotalegalaid.org",
+          },
         ],
-        learnMoreUrl: 'https://ccresourcecenter.org/state-restoration-profiles/south-dakota-restoration-of-rights-pardon-expungement-sealing/'
+        learnMoreUrl:
+          "https://ccresourcecenter.org/state-restoration-profiles/south-dakota-restoration-of-rights-pardon-expungement-sealing/",
       },
       housing: {
-        summary: 'South Dakota has no statewide fair chance housing law. Federal Fair Housing Act protections and HUD guidance on criminal records apply. The South Dakota Housing Development Authority provides resources for renters, and legal aid organizations can assist with discrimination complaints.',
+        summary:
+          "South Dakota has no statewide fair chance housing law. Federal Fair Housing Act protections and HUD guidance on criminal records apply. The South Dakota Housing Development Authority provides resources for renters, and legal aid organizations can assist with discrimination complaints.",
         resources: [
-          { label: 'South Dakota Housing Development Authority', url: 'https://www.sdhda.org' },
-          { label: 'Fair Housing — HUD South Dakota', url: 'https://www.hud.gov/states/south_dakota/renting' },
-          { label: 'Housing Help — South Dakota Legal Aid', url: 'https://www.southdakotalegalaid.org' }
+          {
+            label: "South Dakota Housing Development Authority",
+            url: "https://www.sdhda.org",
+          },
+          {
+            label: "Fair Housing — HUD South Dakota",
+            url: "https://www.hud.gov/states/south_dakota/renting",
+          },
+          {
+            label: "Housing Help — South Dakota Legal Aid",
+            url: "https://www.southdakotalegalaid.org",
+          },
         ],
-        learnMoreUrl: 'https://www.hud.gov/states/south_dakota/renting'
+        learnMoreUrl: "https://www.hud.gov/states/south_dakota/renting",
       },
       employment: {
-        summary: 'South Dakota has no statewide ban-the-box law. Federal EEOC protections apply to employers with 15 or more employees statewide. The South Dakota Department of Labor and Regulation provides job placement and reentry employment services.',
+        summary:
+          "South Dakota has no statewide ban-the-box law. Federal EEOC protections apply to employers with 15 or more employees statewide. The South Dakota Department of Labor and Regulation provides job placement and reentry employment services.",
         resources: [
-          { label: 'South Dakota Dept. of Labor — Job Seekers', url: 'https://dlr.sd.gov/ra/individuals/default.aspx' },
-          { label: 'EEOC Employment Discrimination Charges — South Dakota', url: 'https://www.eeoc.gov/field/minneapolis' },
-          { label: 'Employment Rights — South Dakota Legal Aid', url: 'https://www.southdakotalegalaid.org' }
+          {
+            label: "South Dakota Dept. of Labor — Job Seekers",
+            url: "https://dlr.sd.gov/ra/individuals/default.aspx",
+          },
+          {
+            label: "EEOC Employment Discrimination Charges — South Dakota",
+            url: "https://www.eeoc.gov/field/minneapolis",
+          },
+          {
+            label: "Employment Rights — South Dakota Legal Aid",
+            url: "https://www.southdakotalegalaid.org",
+          },
         ],
-        learnMoreUrl: 'https://dlr.sd.gov/ra/individuals/default.aspx'
+        learnMoreUrl: "https://dlr.sd.gov/ra/individuals/default.aspx",
       },
       police: {
-        summary: 'South Dakota residents have full Fourth and Fifth Amendment federal protections during police interactions. You have the right to remain silent and to refuse a warrantless search. The ACLU of South Dakota monitors civil rights issues in the state.',
+        summary:
+          "South Dakota residents have full Fourth and Fifth Amendment federal protections during police interactions. You have the right to remain silent and to refuse a warrantless search. The ACLU of South Dakota monitors civil rights issues in the state.",
         resources: [
-          { label: 'Know Your Rights — ACLU of South Dakota', url: 'https://www.aclsd.org' },
-          { label: 'South Dakota Attorney General — Division of Criminal Investigation', url: 'https://atg.sd.gov/OurOffice/Divisions/DCI/default.aspx' },
-          { label: 'Police Misconduct Complaint — DOJ', url: 'https://www.justice.gov/crt/how-file-complaint' }
+          {
+            label: "Know Your Rights — ACLU of South Dakota",
+            url: "https://www.aclsd.org",
+          },
+          {
+            label:
+              "South Dakota Attorney General — Division of Criminal Investigation",
+            url: "https://atg.sd.gov/OurOffice/Divisions/DCI/default.aspx",
+          },
+          {
+            label: "Police Misconduct Complaint — DOJ",
+            url: "https://www.justice.gov/crt/how-file-complaint",
+          },
         ],
-        learnMoreUrl: 'https://www.aclsd.org'
+        learnMoreUrl: "https://www.aclsd.org",
       },
       parole: {
-        summary: 'South Dakota parole is administered by the Board of Pardons and Paroles. Conditions include reporting, travel restrictions, and other requirements set at release. The Department of Corrections provides transition services. Violations may result in a revocation hearing.',
+        summary:
+          "South Dakota parole is administered by the Board of Pardons and Paroles. Conditions include reporting, travel restrictions, and other requirements set at release. The Department of Corrections provides transition services. Violations may result in a revocation hearing.",
         resources: [
-          { label: 'South Dakota Board of Pardons and Paroles', url: 'https://doc.sd.gov/adult/pardons/' },
-          { label: 'South Dakota DOC — Reentry Services', url: 'https://doc.sd.gov/adult/reentry/' },
-          { label: 'Parole Rights — South Dakota Legal Aid', url: 'https://www.southdakotalegalaid.org' }
+          {
+            label: "South Dakota Board of Pardons and Paroles",
+            url: "https://doc.sd.gov/adult/pardons/",
+          },
+          {
+            label: "South Dakota DOC — Reentry Services",
+            url: "https://doc.sd.gov/adult/reentry/",
+          },
+          {
+            label: "Parole Rights — South Dakota Legal Aid",
+            url: "https://www.southdakotalegalaid.org",
+          },
         ],
-        learnMoreUrl: 'https://doc.sd.gov/adult/pardons/'
+        learnMoreUrl: "https://doc.sd.gov/adult/pardons/",
       },
       probation: {
-        summary: 'South Dakota probation is supervised by the Department of Corrections. Conditions are set by the court. The DOC provides case management, substance abuse programming, and employment referrals to help people complete supervision successfully.',
+        summary:
+          "South Dakota probation is supervised by the Department of Corrections. Conditions are set by the court. The DOC provides case management, substance abuse programming, and employment referrals to help people complete supervision successfully.",
         resources: [
-          { label: 'South Dakota DOC — Community Supervision', url: 'https://doc.sd.gov/adult/supervision/' },
-          { label: 'South Dakota DOC — Reentry Services', url: 'https://doc.sd.gov/adult/reentry/' },
-          { label: 'ACLU — Probation and Parole Rights', url: 'https://www.aclu.org/know-your-rights/probation-and-parole' }
+          {
+            label: "South Dakota DOC — Community Supervision",
+            url: "https://doc.sd.gov/adult/supervision/",
+          },
+          {
+            label: "South Dakota DOC — Reentry Services",
+            url: "https://doc.sd.gov/adult/reentry/",
+          },
+          {
+            label: "ACLU — Probation and Parole Rights",
+            url: "https://www.aclu.org/know-your-rights/probation-and-parole",
+          },
         ],
-        learnMoreUrl: 'https://doc.sd.gov/adult/supervision/'
-      }
+        learnMoreUrl: "https://doc.sd.gov/adult/supervision/",
+      },
     },
     // ── TENNESSEE ───────────────────────────────────────────────────────────
     TN: {
       voting: {
-        summary: 'Tennessee has complex voting rights restoration rules that depend on the specific offense. Some felony convictions result in automatic restoration after sentence completion. Others require a certificate of restoration. People convicted of certain offenses may be permanently barred. Check your specific conviction with Tennessee legal aid.',
+        summary:
+          "Tennessee has complex voting rights restoration rules that depend on the specific offense. Some felony convictions result in automatic restoration after sentence completion. Others require a certificate of restoration. People convicted of certain offenses may be permanently barred. Check your specific conviction with Tennessee legal aid.",
         resources: [
-          { label: 'Tennessee Voting Rights Restoration — Secretary of State', url: 'https://sos.tn.gov/elections/guides/voting-rights-restoration' },
-          { label: 'Tennessee Voting Rights — US Vote Foundation', url: 'https://www.usvotefoundation.org/voting-rights-restoration/tennessee' },
-          { label: 'Voting Rights Help — Tennessee Alliance for Legal Services', url: 'https://www.tals.org' }
+          {
+            label: "Tennessee Voting Rights Restoration — Secretary of State",
+            url: "https://sos.tn.gov/elections/guides/voting-rights-restoration",
+          },
+          {
+            label: "Tennessee Voting Rights — US Vote Foundation",
+            url: "https://www.usvotefoundation.org/voting-rights-restoration/tennessee",
+          },
+          {
+            label: "Voting Rights Help — Tennessee Alliance for Legal Services",
+            url: "https://www.tals.org",
+          },
         ],
-        learnMoreUrl: 'https://sos.tn.gov/elections/guides/voting-rights-restoration'
+        learnMoreUrl:
+          "https://sos.tn.gov/elections/guides/voting-rights-restoration",
       },
       expungement: {
-        summary: 'Tennessee allows expungement of dismissed charges, acquittals, and some misdemeanor convictions. Felony expungement is limited. Court costs and fees must generally be paid. Records for law enforcement purposes are not destroyed. The Administrative Office of Courts provides forms and guidance.',
+        summary:
+          "Tennessee allows expungement of dismissed charges, acquittals, and some misdemeanor convictions. Felony expungement is limited. Court costs and fees must generally be paid. Records for law enforcement purposes are not destroyed. The Administrative Office of Courts provides forms and guidance.",
         resources: [
-          { label: 'Tennessee Expungement — Administrative Office of Courts', url: 'https://www.tncourts.gov/programs/public-access-and-education/expungement' },
-          { label: 'Tennessee Expungement Guide — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/tennessee-restoration-of-rights-pardon-expungement-sealing/' },
-          { label: 'Expungement Help — Tennessee Alliance for Legal Services', url: 'https://www.tals.org' }
+          {
+            label: "Tennessee Expungement — Administrative Office of Courts",
+            url: "https://www.tncourts.gov/programs/public-access-and-education/expungement",
+          },
+          {
+            label:
+              "Tennessee Expungement Guide — Collateral Consequences Resource Center",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/tennessee-restoration-of-rights-pardon-expungement-sealing/",
+          },
+          {
+            label: "Expungement Help — Tennessee Alliance for Legal Services",
+            url: "https://www.tals.org",
+          },
         ],
-        learnMoreUrl: 'https://www.tncourts.gov/programs/public-access-and-education/expungement'
+        learnMoreUrl:
+          "https://www.tncourts.gov/programs/public-access-and-education/expungement",
       },
       housing: {
-        summary: 'Tennessee has no statewide fair chance housing law. Federal Fair Housing Act and HUD guidance on criminal records apply to landlords statewide. The Tennessee Human Rights Commission handles housing discrimination complaints, including those based on criminal history.',
+        summary:
+          "Tennessee has no statewide fair chance housing law. Federal Fair Housing Act and HUD guidance on criminal records apply to landlords statewide. The Tennessee Human Rights Commission handles housing discrimination complaints, including those based on criminal history.",
         resources: [
-          { label: 'Tennessee Human Rights Commission — Fair Housing', url: 'https://www.tn.gov/humanrights/housing/fair-housing.html' },
-          { label: 'Fair Housing — HUD Tennessee', url: 'https://www.hud.gov/states/tennessee/renting' },
-          { label: 'Housing Rights — Tennessee Alliance for Legal Services', url: 'https://www.tals.org' }
+          {
+            label: "Tennessee Human Rights Commission — Fair Housing",
+            url: "https://www.tn.gov/humanrights/housing/fair-housing.html",
+          },
+          {
+            label: "Fair Housing — HUD Tennessee",
+            url: "https://www.hud.gov/states/tennessee/renting",
+          },
+          {
+            label: "Housing Rights — Tennessee Alliance for Legal Services",
+            url: "https://www.tals.org",
+          },
         ],
-        learnMoreUrl: 'https://www.tn.gov/humanrights/housing/fair-housing.html'
+        learnMoreUrl:
+          "https://www.tn.gov/humanrights/housing/fair-housing.html",
       },
       employment: {
-        summary: 'Tennessee enacted a fair chance hiring law for public employment. Federal EEOC protections apply statewide to private employers. Tennessee also has occupational licensing reforms. The Tennessee Department of Labor and Workforce Development provides reentry employment resources.',
+        summary:
+          "Tennessee enacted a fair chance hiring law for public employment. Federal EEOC protections apply statewide to private employers. Tennessee also has occupational licensing reforms. The Tennessee Department of Labor and Workforce Development provides reentry employment resources.",
         resources: [
-          { label: 'Tennessee Dept. of Labor — Workforce Services', url: 'https://www.tn.gov/workforce/employees/career-services/career-services-for-individuals.html' },
-          { label: 'EEOC — Nashville Field Office', url: 'https://www.eeoc.gov/field/nashville' },
-          { label: 'Employment Rights — Tennessee Alliance for Legal Services', url: 'https://www.tals.org' }
+          {
+            label: "Tennessee Dept. of Labor — Workforce Services",
+            url: "https://www.tn.gov/workforce/employees/career-services/career-services-for-individuals.html",
+          },
+          {
+            label: "EEOC — Nashville Field Office",
+            url: "https://www.eeoc.gov/field/nashville",
+          },
+          {
+            label: "Employment Rights — Tennessee Alliance for Legal Services",
+            url: "https://www.tals.org",
+          },
         ],
-        learnMoreUrl: 'https://www.tn.gov/workforce/employees/career-services/career-services-for-individuals.html'
+        learnMoreUrl:
+          "https://www.tn.gov/workforce/employees/career-services/career-services-for-individuals.html",
       },
       police: {
-        summary: 'Tennessee residents have Fourth and Fifth Amendment protections during police interactions. The ACLU of Tennessee provides know-your-rights resources. Tennessee passed police reform legislation in 2021. You have the right to remain silent and to refuse a warrantless search.',
+        summary:
+          "Tennessee residents have Fourth and Fifth Amendment protections during police interactions. The ACLU of Tennessee provides know-your-rights resources. Tennessee passed police reform legislation in 2021. You have the right to remain silent and to refuse a warrantless search.",
         resources: [
-          { label: 'Know Your Rights — ACLU of Tennessee', url: 'https://www.aclu-tn.org' },
-          { label: 'Tennessee Bureau of Investigation — Civil Rights', url: 'https://www.tn.gov/tbi.html' },
-          { label: 'Police Misconduct Complaint — DOJ', url: 'https://www.justice.gov/crt/how-file-complaint' }
+          {
+            label: "Know Your Rights — ACLU of Tennessee",
+            url: "https://www.aclu-tn.org",
+          },
+          {
+            label: "Tennessee Bureau of Investigation — Civil Rights",
+            url: "https://www.tn.gov/tbi.html",
+          },
+          {
+            label: "Police Misconduct Complaint — DOJ",
+            url: "https://www.justice.gov/crt/how-file-complaint",
+          },
         ],
-        learnMoreUrl: 'https://www.aclu-tn.org'
+        learnMoreUrl: "https://www.aclu-tn.org",
       },
       parole: {
-        summary: 'Tennessee parole is administered by the Tennessee Board of Parole. Conditions are set at release and typically include regular reporting, travel restrictions, and employment requirements. The Department of Correction provides transition planning and reentry support services.',
+        summary:
+          "Tennessee parole is administered by the Tennessee Board of Parole. Conditions are set at release and typically include regular reporting, travel restrictions, and employment requirements. The Department of Correction provides transition planning and reentry support services.",
         resources: [
-          { label: 'Tennessee Board of Parole', url: 'https://www.tn.gov/boardofparole.html' },
-          { label: 'Tennessee DOC — Reentry and Transition', url: 'https://www.tn.gov/correction/redirect-agency-programs/reentry.html' },
-          { label: 'Parole Rights — Tennessee Alliance for Legal Services', url: 'https://www.tals.org' }
+          {
+            label: "Tennessee Board of Parole",
+            url: "https://www.tn.gov/boardofparole.html",
+          },
+          {
+            label: "Tennessee DOC — Reentry and Transition",
+            url: "https://www.tn.gov/correction/redirect-agency-programs/reentry.html",
+          },
+          {
+            label: "Parole Rights — Tennessee Alliance for Legal Services",
+            url: "https://www.tals.org",
+          },
         ],
-        learnMoreUrl: 'https://www.tn.gov/boardofparole.html'
+        learnMoreUrl: "https://www.tn.gov/boardofparole.html",
       },
       probation: {
-        summary: 'Tennessee probation is supervised by the Department of Correction and community supervision officers. Conditions are set by the court. Tennessee has an active community corrections program and drug courts. Violations are handled through a formal hearing before the court.',
+        summary:
+          "Tennessee probation is supervised by the Department of Correction and community supervision officers. Conditions are set by the court. Tennessee has an active community corrections program and drug courts. Violations are handled through a formal hearing before the court.",
         resources: [
-          { label: 'Tennessee DOC — Community Supervision', url: 'https://www.tn.gov/correction/redirect-agency-programs/community-supervision.html' },
-          { label: 'Tennessee Community Corrections — DOC', url: 'https://www.tn.gov/correction/redirect-agency-programs/community-corrections.html' },
-          { label: 'ACLU — Probation and Parole Rights', url: 'https://www.aclu.org/know-your-rights/probation-and-parole' }
+          {
+            label: "Tennessee DOC — Community Supervision",
+            url: "https://www.tn.gov/correction/redirect-agency-programs/community-supervision.html",
+          },
+          {
+            label: "Tennessee Community Corrections — DOC",
+            url: "https://www.tn.gov/correction/redirect-agency-programs/community-corrections.html",
+          },
+          {
+            label: "ACLU — Probation and Parole Rights",
+            url: "https://www.aclu.org/know-your-rights/probation-and-parole",
+          },
         ],
-        learnMoreUrl: 'https://www.tn.gov/correction/redirect-agency-programs/community-supervision.html'
-      }
+        learnMoreUrl:
+          "https://www.tn.gov/correction/redirect-agency-programs/community-supervision.html",
+      },
     },
 
     // ── TEXAS ────────────────────────────────────────────────────────────────
@@ -6092,134 +6739,281 @@
     // WEST VIRGINIA
     WV: {
       voting: {
-        summary: 'In West Virginia, voting rights are automatically restored after you complete your full sentence, including parole and probation. You must re-register to vote before casting a ballot again. Misdemeanor convictions and pretrial detention do not affect voting rights.',
+        summary:
+          "In West Virginia, voting rights are automatically restored after you complete your full sentence, including parole and probation. You must re-register to vote before casting a ballot again. Misdemeanor convictions and pretrial detention do not affect voting rights.",
         resources: [
-          { label: 'West Virginia Voter Registration — Secretary of State', url: 'https://sos.wv.gov/elections/Pages/VoterRegistration.aspx' },
-          { label: 'West Virginia Voting Rights — US Vote Foundation', url: 'https://www.usvotefoundation.org/voting-rights-restoration/west-virginia' },
-          { label: 'Voting Rights Help — Legal Aid of West Virginia', url: 'https://legalaidwv.org' }
+          {
+            label: "West Virginia Voter Registration — Secretary of State",
+            url: "https://sos.wv.gov/elections/Pages/VoterRegistration.aspx",
+          },
+          {
+            label: "West Virginia Voting Rights — US Vote Foundation",
+            url: "https://www.usvotefoundation.org/voting-rights-restoration/west-virginia",
+          },
+          {
+            label: "Voting Rights Help — Legal Aid of West Virginia",
+            url: "https://legalaidwv.org",
+          },
         ],
-        learnMoreUrl: 'https://sos.wv.gov/elections/Pages/VoterRegistration.aspx'
+        learnMoreUrl:
+          "https://sos.wv.gov/elections/Pages/VoterRegistration.aspx",
       },
       expungement: {
-        summary: 'West Virginia allows expungement of many misdemeanor convictions after one year and certain nonviolent felony convictions after five years once the full sentence, including supervision, is complete. Petitions are filed in the circuit court where the case was handled. Non-conviction records may also be expunged in qualifying cases.',
+        summary:
+          "West Virginia allows expungement of many misdemeanor convictions after one year and certain nonviolent felony convictions after five years once the full sentence, including supervision, is complete. Petitions are filed in the circuit court where the case was handled. Non-conviction records may also be expunged in qualifying cases.",
         resources: [
-          { label: 'Expungement of Criminal Records — Legal Aid WV', url: 'https://legalaidwv.org/legal-information/expungement-of-criminal-records/' },
-          { label: 'West Virginia Expungement Instructions — WV Courts', url: 'https://www.courtswv.gov/sites/default/pubfilesmnt/2023-06/SCA-C900-InfoforExpungementPetition.pdf' },
-          { label: 'West Virginia Expungement Guide — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/west-virginia-restoration-of-rights-pardon-expungement-sealing/' }
+          {
+            label: "Expungement of Criminal Records — Legal Aid WV",
+            url: "https://legalaidwv.org/legal-information/expungement-of-criminal-records/",
+          },
+          {
+            label: "West Virginia Expungement Instructions — WV Courts",
+            url: "https://www.courtswv.gov/sites/default/pubfilesmnt/2023-06/SCA-C900-InfoforExpungementPetition.pdf",
+          },
+          {
+            label:
+              "West Virginia Expungement Guide — Collateral Consequences Resource Center",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/west-virginia-restoration-of-rights-pardon-expungement-sealing/",
+          },
         ],
-        learnMoreUrl: 'https://legalaidwv.org/legal-information/expungement-of-criminal-records/'
+        learnMoreUrl:
+          "https://legalaidwv.org/legal-information/expungement-of-criminal-records/",
       },
       housing: {
-        summary: 'West Virginia has no statewide fair chance housing law, but federal Fair Housing Act protections and HUD guidance on criminal records still apply. The West Virginia Human Rights Commission investigates housing discrimination complaints, and Legal Aid of West Virginia can help renters understand their rights.',
+        summary:
+          "West Virginia has no statewide fair chance housing law, but federal Fair Housing Act protections and HUD guidance on criminal records still apply. The West Virginia Human Rights Commission investigates housing discrimination complaints, and Legal Aid of West Virginia can help renters understand their rights.",
         resources: [
-          { label: 'West Virginia Human Rights Commission', url: 'https://oig.wv.gov/human-rights-commission' },
-          { label: 'Fair Housing — HUD West Virginia', url: 'https://www.hud.gov/states/west_virginia/renting' },
-          { label: 'Housing Help — Legal Aid of West Virginia', url: 'https://legalaidwv.org' }
+          {
+            label: "West Virginia Human Rights Commission",
+            url: "https://oig.wv.gov/human-rights-commission",
+          },
+          {
+            label: "Fair Housing — HUD West Virginia",
+            url: "https://www.hud.gov/states/west_virginia/renting",
+          },
+          {
+            label: "Housing Help — Legal Aid of West Virginia",
+            url: "https://legalaidwv.org",
+          },
         ],
-        learnMoreUrl: 'https://oig.wv.gov/human-rights-commission'
+        learnMoreUrl: "https://oig.wv.gov/human-rights-commission",
       },
       employment: {
-        summary: 'West Virginia has no statewide ban-the-box law for private employers, but federal EEOC protections still limit discriminatory use of criminal records. WorkForce West Virginia and Jobs & Hope West Virginia provide job search, training, and reentry support for people returning to the workforce.',
+        summary:
+          "West Virginia has no statewide ban-the-box law for private employers, but federal EEOC protections still limit discriminatory use of criminal records. WorkForce West Virginia and Jobs & Hope West Virginia provide job search, training, and reentry support for people returning to the workforce.",
         resources: [
-          { label: 'WorkForce West Virginia', url: 'https://workforcewv.org/' },
-          { label: 'Jobs & Hope West Virginia', url: 'https://jobsandhope.wv.gov/' },
-          { label: 'EEOC — Pittsburgh Area Office', url: 'https://www.eeoc.gov/field/pittsburgh' }
+          { label: "WorkForce West Virginia", url: "https://workforcewv.org/" },
+          {
+            label: "Jobs & Hope West Virginia",
+            url: "https://jobsandhope.wv.gov/",
+          },
+          {
+            label: "EEOC — Pittsburgh Area Office",
+            url: "https://www.eeoc.gov/field/pittsburgh",
+          },
         ],
-        learnMoreUrl: 'https://workforcewv.org/'
+        learnMoreUrl: "https://workforcewv.org/",
       },
       police: {
-        summary: 'West Virginia residents have the same Fourth and Fifth Amendment protections as everyone else during police encounters. You have the right to remain silent, to refuse consent to a warrantless search in most situations, and to ask for a lawyer if you are arrested. ACLU-WV and the Department of Justice provide complaint guidance and civil-rights resources.',
+        summary:
+          "West Virginia residents have the same Fourth and Fifth Amendment protections as everyone else during police encounters. You have the right to remain silent, to refuse consent to a warrantless search in most situations, and to ask for a lawyer if you are arrested. ACLU-WV and the Department of Justice provide complaint guidance and civil-rights resources.",
         resources: [
-          { label: 'Know Your Rights — ACLU of West Virginia', url: 'https://www.acluwv.org/en/know-your-rights' },
-          { label: 'Police Misconduct Complaint — DOJ', url: 'https://www.justice.gov/crt/how-file-complaint' },
-          { label: 'West Virginia Attorney General', url: 'https://ago.wv.gov' }
+          {
+            label: "Know Your Rights — ACLU of West Virginia",
+            url: "https://www.acluwv.org/en/know-your-rights",
+          },
+          {
+            label: "Police Misconduct Complaint — DOJ",
+            url: "https://www.justice.gov/crt/how-file-complaint",
+          },
+          {
+            label: "West Virginia Attorney General",
+            url: "https://ago.wv.gov",
+          },
         ],
-        learnMoreUrl: 'https://www.acluwv.org/en/know-your-rights'
+        learnMoreUrl: "https://www.acluwv.org/en/know-your-rights",
       },
       parole: {
-        summary: 'West Virginia parole is overseen by the West Virginia Parole Board and supervised through the Division of Corrections and Rehabilitation. Conditions are set at release and may include reporting, travel restrictions, treatment, and employment requirements. Violations can lead to revocation proceedings.',
+        summary:
+          "West Virginia parole is overseen by the West Virginia Parole Board and supervised through the Division of Corrections and Rehabilitation. Conditions are set at release and may include reporting, travel restrictions, treatment, and employment requirements. Violations can lead to revocation proceedings.",
         resources: [
-          { label: 'West Virginia Parole Board', url: 'https://paroleboard.wv.gov/Pages/default.aspx' },
-          { label: 'West Virginia DCR — Rehabilitative Services', url: 'https://dcr.wv.gov/rehabilitative_services/pages/default.aspx' },
-          { label: 'Reentry Council of West Virginia', url: 'https://wvreentry.org/' }
+          {
+            label: "West Virginia Parole Board",
+            url: "https://paroleboard.wv.gov/Pages/default.aspx",
+          },
+          {
+            label: "West Virginia DCR — Rehabilitative Services",
+            url: "https://dcr.wv.gov/rehabilitative_services/pages/default.aspx",
+          },
+          {
+            label: "Reentry Council of West Virginia",
+            url: "https://wvreentry.org/",
+          },
         ],
-        learnMoreUrl: 'https://paroleboard.wv.gov/Pages/default.aspx'
+        learnMoreUrl: "https://paroleboard.wv.gov/Pages/default.aspx",
       },
       probation: {
-        summary: 'West Virginia probation is supervised through the Division of Corrections and Rehabilitation under court-ordered conditions. Conditions may include reporting, substance testing, employment requirements, and treatment. Alleged violations are handled through a formal court process.',
+        summary:
+          "West Virginia probation is supervised through the Division of Corrections and Rehabilitation under court-ordered conditions. Conditions may include reporting, substance testing, employment requirements, and treatment. Alleged violations are handled through a formal court process.",
         resources: [
-          { label: 'West Virginia DCR — Rehabilitative Services', url: 'https://dcr.wv.gov/rehabilitative_services/pages/default.aspx' },
-          { label: 'Legal Aid of West Virginia', url: 'https://legalaidwv.org' },
-          { label: 'ACLU — Probation and Parole Rights', url: 'https://www.aclu.org/know-your-rights/probation-and-parole' }
+          {
+            label: "West Virginia DCR — Rehabilitative Services",
+            url: "https://dcr.wv.gov/rehabilitative_services/pages/default.aspx",
+          },
+          {
+            label: "Legal Aid of West Virginia",
+            url: "https://legalaidwv.org",
+          },
+          {
+            label: "ACLU — Probation and Parole Rights",
+            url: "https://www.aclu.org/know-your-rights/probation-and-parole",
+          },
         ],
-        learnMoreUrl: 'https://dcr.wv.gov/rehabilitative_services/pages/default.aspx'
-      }
+        learnMoreUrl:
+          "https://dcr.wv.gov/rehabilitative_services/pages/default.aspx",
+      },
     },
     // WISCONSIN
     WI: {
       voting: {
-        summary: 'In Wisconsin, voting rights are automatically restored after you complete your full sentence, including probation, parole, or extended supervision. You must re-register before voting again. Most people do not need a separate court order once supervision is complete.',
+        summary:
+          "In Wisconsin, voting rights are automatically restored after you complete your full sentence, including probation, parole, or extended supervision. You must re-register before voting again. Most people do not need a separate court order once supervision is complete.",
         resources: [
-          { label: 'Wisconsin Elections Commission — Register to Vote', url: 'https://elections.wi.gov/Register' },
-          { label: 'Wisconsin Rights Restoration — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/wisconsin-restoration-of-rights-pardon-expungement-sealing/' },
-          { label: 'Voting Rights — ACLU of Wisconsin', url: 'https://www.aclu-wi.org/en/issues/voting-rights' }
+          {
+            label: "Wisconsin Elections Commission — Register to Vote",
+            url: "https://elections.wi.gov/Register",
+          },
+          {
+            label:
+              "Wisconsin Rights Restoration — Collateral Consequences Resource Center",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/wisconsin-restoration-of-rights-pardon-expungement-sealing/",
+          },
+          {
+            label: "Voting Rights — ACLU of Wisconsin",
+            url: "https://www.aclu-wi.org/en/issues/voting-rights",
+          },
         ],
-        learnMoreUrl: 'https://elections.wi.gov/Register'
+        learnMoreUrl: "https://elections.wi.gov/Register",
       },
       expungement: {
-        summary: 'Wisconsin expungement is limited and generally must be ordered at sentencing for certain misdemeanors and lower-level felonies committed before age 25. Wisconsin also allows removal of some arrest information and record-cleanup help through courts and legal aid organizations. Record relief options are narrower than in many other states.',
+        summary:
+          "Wisconsin expungement is limited and generally must be ordered at sentencing for certain misdemeanors and lower-level felonies committed before age 25. Wisconsin also allows removal of some arrest information and record-cleanup help through courts and legal aid organizations. Record relief options are narrower than in many other states.",
         resources: [
-          { label: 'Wisconsin Court System — Expunction', url: 'https://www.wicourts.gov/services/public/selfhelp/expunction.htm' },
-          { label: 'Wisconsin Expungement Guide — Collateral Consequences Resource Center', url: 'https://ccresourcecenter.org/state-restoration-profiles/wisconsin-restoration-of-rights-pardon-expungement-sealing/' },
-          { label: 'Legal Tune Up — Record Clearing Help', url: 'https://legaltuneup.org/' }
+          {
+            label: "Wisconsin Court System — Expunction",
+            url: "https://www.wicourts.gov/services/public/selfhelp/expunction.htm",
+          },
+          {
+            label:
+              "Wisconsin Expungement Guide — Collateral Consequences Resource Center",
+            url: "https://ccresourcecenter.org/state-restoration-profiles/wisconsin-restoration-of-rights-pardon-expungement-sealing/",
+          },
+          {
+            label: "Legal Tune Up — Record Clearing Help",
+            url: "https://legaltuneup.org/",
+          },
         ],
-        learnMoreUrl: 'https://www.wicourts.gov/services/public/selfhelp/expunction.htm'
+        learnMoreUrl:
+          "https://www.wicourts.gov/services/public/selfhelp/expunction.htm",
       },
       housing: {
-        summary: 'Wisconsin and federal law prohibit housing discrimination on protected grounds, and criminal record screening can still raise fair housing issues when used inconsistently or discriminatorily. The Wisconsin Equal Rights Division and legal aid organizations can help renters address housing denials and discrimination complaints.',
+        summary:
+          "Wisconsin and federal law prohibit housing discrimination on protected grounds, and criminal record screening can still raise fair housing issues when used inconsistently or discriminatorily. The Wisconsin Equal Rights Division and legal aid organizations can help renters address housing denials and discrimination complaints.",
         resources: [
-          { label: 'Wisconsin Equal Rights Division', url: 'https://dwd.wisconsin.gov/er/' },
-          { label: 'Fair Housing — HUD Wisconsin', url: 'https://www.hud.gov/states/wisconsin/renting' },
-          { label: 'Housing Law — Legal Action of Wisconsin', url: 'https://www.legalaction.org/services/housing-law' }
+          {
+            label: "Wisconsin Equal Rights Division",
+            url: "https://dwd.wisconsin.gov/er/",
+          },
+          {
+            label: "Fair Housing — HUD Wisconsin",
+            url: "https://www.hud.gov/states/wisconsin/renting",
+          },
+          {
+            label: "Housing Law — Legal Action of Wisconsin",
+            url: "https://www.legalaction.org/services/housing-law",
+          },
         ],
-        learnMoreUrl: 'https://dwd.wisconsin.gov/er/'
+        learnMoreUrl: "https://dwd.wisconsin.gov/er/",
       },
       employment: {
-        summary: 'Wisconsin has stronger-than-average employment protections for people with arrest and conviction records. Under the Wisconsin Fair Employment Act, employers generally cannot deny work based on a conviction unless it is substantially related to the job. Wisconsin state employment also follows a ban-the-box approach on initial applications.',
+        summary:
+          "Wisconsin has stronger-than-average employment protections for people with arrest and conviction records. Under the Wisconsin Fair Employment Act, employers generally cannot deny work based on a conviction unless it is substantially related to the job. Wisconsin state employment also follows a ban-the-box approach on initial applications.",
         resources: [
-          { label: 'Wisconsin Arrest and Conviction Record Rights — DWD', url: 'https://dwd.wisconsin.gov/er/civil-rights/arrest-conviction/' },
-          { label: 'Wisconsin DOC — Reentry Unit', url: 'https://doc.wi.gov/Pages/Reentry.aspx' },
-          { label: 'Legal Tune Up — Employment and Record Help', url: 'https://legaltuneup.org/' }
+          {
+            label: "Wisconsin Arrest and Conviction Record Rights — DWD",
+            url: "https://dwd.wisconsin.gov/er/civil-rights/arrest-conviction/",
+          },
+          {
+            label: "Wisconsin DOC — Reentry Unit",
+            url: "https://doc.wi.gov/Pages/Reentry.aspx",
+          },
+          {
+            label: "Legal Tune Up — Employment and Record Help",
+            url: "https://legaltuneup.org/",
+          },
         ],
-        learnMoreUrl: 'https://dwd.wisconsin.gov/er/civil-rights/arrest-conviction/'
+        learnMoreUrl:
+          "https://dwd.wisconsin.gov/er/civil-rights/arrest-conviction/",
       },
       police: {
-        summary: 'Wisconsin residents have full Fourth and Fifth Amendment protections during police encounters. You have the right to remain silent, ask if you are free to leave, and refuse consent to a search in many situations. The ACLU of Wisconsin provides know-your-rights guidance, and the Department of Justice accepts civil-rights complaints.',
+        summary:
+          "Wisconsin residents have full Fourth and Fifth Amendment protections during police encounters. You have the right to remain silent, ask if you are free to leave, and refuse consent to a search in many situations. The ACLU of Wisconsin provides know-your-rights guidance, and the Department of Justice accepts civil-rights complaints.",
         resources: [
-          { label: 'Know Your Rights — ACLU of Wisconsin', url: 'https://www.aclu-wi.org/en/know-your-rights' },
-          { label: 'Wisconsin Department of Justice', url: 'https://www.doj.state.wi.us/' },
-          { label: 'Police Misconduct Complaint — DOJ', url: 'https://www.justice.gov/crt/how-file-complaint' }
+          {
+            label: "Know Your Rights — ACLU of Wisconsin",
+            url: "https://www.aclu-wi.org/en/know-your-rights",
+          },
+          {
+            label: "Wisconsin Department of Justice",
+            url: "https://www.doj.state.wi.us/",
+          },
+          {
+            label: "Police Misconduct Complaint — DOJ",
+            url: "https://www.justice.gov/crt/how-file-complaint",
+          },
         ],
-        learnMoreUrl: 'https://www.aclu-wi.org/en/know-your-rights'
+        learnMoreUrl: "https://www.aclu-wi.org/en/know-your-rights",
       },
       parole: {
-        summary: 'Wisconsin community supervision is managed through the Division of Community Corrections. People on parole or extended supervision must follow release rules, report to supervising agents, and comply with treatment or employment requirements. Violations can result in revocation proceedings and return to custody.',
+        summary:
+          "Wisconsin community supervision is managed through the Division of Community Corrections. People on parole or extended supervision must follow release rules, report to supervising agents, and comply with treatment or employment requirements. Violations can result in revocation proceedings and return to custody.",
         resources: [
-          { label: 'Wisconsin DOC — Division of Community Corrections', url: 'https://doc.wi.gov/Pages/AboutDOC/CommunityCorrections.aspx' },
-          { label: 'Wisconsin DOC — Reentry Unit', url: 'https://doc.wi.gov/Pages/Reentry.aspx' },
-          { label: 'Wisconsin Legislature — Community Supervision Statutes', url: 'https://docs.legis.wisconsin.gov/statutes/statutes/304/078' }
+          {
+            label: "Wisconsin DOC — Division of Community Corrections",
+            url: "https://doc.wi.gov/Pages/AboutDOC/CommunityCorrections.aspx",
+          },
+          {
+            label: "Wisconsin DOC — Reentry Unit",
+            url: "https://doc.wi.gov/Pages/Reentry.aspx",
+          },
+          {
+            label: "Wisconsin Legislature — Community Supervision Statutes",
+            url: "https://docs.legis.wisconsin.gov/statutes/statutes/304/078",
+          },
         ],
-        learnMoreUrl: 'https://doc.wi.gov/Pages/AboutDOC/CommunityCorrections.aspx'
+        learnMoreUrl:
+          "https://doc.wi.gov/Pages/AboutDOC/CommunityCorrections.aspx",
       },
       probation: {
-        summary: 'Wisconsin probation is supervised by community corrections agents under conditions ordered by the sentencing court. Requirements may include reporting, treatment, restitution, and employment obligations. Violations are addressed through revocation procedures and hearings under Wisconsin supervision rules.',
+        summary:
+          "Wisconsin probation is supervised by community corrections agents under conditions ordered by the sentencing court. Requirements may include reporting, treatment, restitution, and employment obligations. Violations are addressed through revocation procedures and hearings under Wisconsin supervision rules.",
         resources: [
-          { label: 'Wisconsin DOC — Division of Community Corrections', url: 'https://doc.wi.gov/Pages/AboutDOC/CommunityCorrections.aspx' },
-          { label: 'Wisconsin DOC — Reentry Unit', url: 'https://doc.wi.gov/Pages/Reentry.aspx' },
-          { label: 'ACLU — Probation and Parole Rights', url: 'https://www.aclu.org/know-your-rights/probation-and-parole' }
+          {
+            label: "Wisconsin DOC — Division of Community Corrections",
+            url: "https://doc.wi.gov/Pages/AboutDOC/CommunityCorrections.aspx",
+          },
+          {
+            label: "Wisconsin DOC — Reentry Unit",
+            url: "https://doc.wi.gov/Pages/Reentry.aspx",
+          },
+          {
+            label: "ACLU — Probation and Parole Rights",
+            url: "https://www.aclu.org/know-your-rights/probation-and-parole",
+          },
         ],
-        learnMoreUrl: 'https://doc.wi.gov/Pages/AboutDOC/CommunityCorrections.aspx'
-      }
+        learnMoreUrl:
+          "https://doc.wi.gov/Pages/AboutDOC/CommunityCorrections.aspx",
+      },
     },
     // ── WYOMING ─────────────────────────────────────────────────────────────
     WY: {
@@ -6476,14 +7270,14 @@
       return {
         code: state.code,
         name: state.name,
-        reviewStatus: 'reviewed',
-        enabled: true
+        reviewStatus: "reviewed",
+        enabled: true,
       };
     }),
     entries: federalEntries.concat(
       allStates.reduce(function (acc, state) {
         return acc.concat(buildStateEntries(state));
-      }, [])
+      }, []),
     ),
     heroCopy: {
       federal: {
