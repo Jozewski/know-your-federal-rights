@@ -326,46 +326,45 @@
         ],
         learnMoreUrl: "https://www.aclualabama.org/",
       },
-    },
-    parole: {
-      summary:
-        "Alabama parole is supervised by the Alabama Board of Pardons and Paroles. Conditions include reporting requirements, travel restrictions, and compliance with release terms.",
-      resources: [
-        {
-          label: "Alabama Board of Pardons and Paroles",
-          url: "https://paroles.alabama.gov/",
-        },
-        {
-          label: "Alabama DOC Reentry Services",
-          url: "https://doc.alabama.gov/RehabReentryLanding.aspx",
-        },
-        {
-          label: "Alabama Legal Help",
-          url: "https://www.alabamalegalhelp.org/",
-        },
-      ],
-      learnMoreUrl: "https://paroles.alabama.gov/",
-    },
-    probation: {
-      summary:
-        "Probation supervision in Alabama is managed through the Department of Corrections and local courts.",
-      resources: [
-        {
-          label: "Alabama DOC Probation & Parole",
-          url: "https://doc.alabama.gov/CommCorrections.aspx",
-        },
-        {
-          label: "Alabama Legal Help",
-          url: "https://www.alabamalegalhelp.org/",
-        },
-
-        {
-          label: "ACLU Know Your Rights",
-          url: "https://www.aclu.org/know-your-rights",
-        },
-      ],
-      learnMoreUrl:
-        "https://johntottenlaw.com/know-your-rights-while-out-on-probation-in-alabama/",
+      parole: {
+        summary:
+          "Alabama parole is supervised by the Alabama Board of Pardons and Paroles. Conditions include reporting requirements, travel restrictions, and compliance with release terms.",
+        resources: [
+          {
+            label: "Alabama Board of Pardons and Paroles",
+            url: "https://paroles.alabama.gov/",
+          },
+          {
+            label: "Alabama DOC Reentry Services",
+            url: "https://doc.alabama.gov/RehabReentryLanding.aspx",
+          },
+          {
+            label: "Alabama Legal Help",
+            url: "https://www.alabamalegalhelp.org/",
+          },
+        ],
+        learnMoreUrl: "https://paroles.alabama.gov/",
+      },
+      probation: {
+        summary:
+          "Probation supervision in Alabama is managed through the Department of Corrections and local courts.",
+        resources: [
+          {
+            label: "Alabama DOC Probation & Parole",
+            url: "https://doc.alabama.gov/CommCorrections.aspx",
+          },
+          {
+            label: "Alabama Legal Help",
+            url: "https://www.alabamalegalhelp.org/",
+          },
+          {
+            label: "ACLU Know Your Rights",
+            url: "https://www.aclu.org/know-your-rights",
+          },
+        ],
+        learnMoreUrl:
+          "https://johntottenlaw.com/know-your-rights-while-out-on-probation-in-alabama/",
+      },
     },
     // ── ALASKA ───────────────────────────────────────────────────────────────
     AK: {
@@ -448,41 +447,41 @@
         ],
         learnMoreUrl: "https://www.acluak.org/",
       },
-    },
-    parole: {
-      summary:
-        "Alaska parole is administered by the Alaska Board of Parole and Department of Corrections.",
-      resources: [
-        {
-          label: "Alaska Board of Parole",
-          url: "https://doc.alaska.gov/parole-board/",
-        },
-        {
-          label: "Alaska DOC Reentry",
-          url: "https://doc.alaska.gov/reentry-programs/",
-        },
-        { label: "Alaska Legal Services", url: "https://alaskalawhelp.org/" },
-      ],
-      learnMoreUrl: "https://doc.alaska.gov/parole-board/",
-    },
-    probation: {
-      summary:
-        "Alaska probation supervision is managed through the Alaska Department of Corrections.",
-      resources: [
-        {
-          label: "Alaska DOC Probation & Parole",
-          url: "https://doc.alaska.gov/probation-parole/",
-        },
-        {
-          label: "Alaska DOC Reentry Services",
-          url: "https://doc.alaska.gov/reentry-programs/",
-        },
-        {
-          label: "ACLU Probation & Parole Rights",
-          url: "https://www.aclu.org/know-your-rights/probation-parole-and-pardon",
-        },
-      ],
-      learnMoreUrl: "https://doc.alaska.gov/probation-parole/",
+      parole: {
+        summary:
+          "Alaska parole is administered by the Alaska Board of Parole and Department of Corrections.",
+        resources: [
+          {
+            label: "Alaska Board of Parole",
+            url: "https://doc.alaska.gov/parole-board/",
+          },
+          {
+            label: "Alaska DOC Reentry",
+            url: "https://doc.alaska.gov/reentry-programs/",
+          },
+          { label: "Alaska Legal Services", url: "https://alaskalawhelp.org/" },
+        ],
+        learnMoreUrl: "https://doc.alaska.gov/parole-board/",
+      },
+      probation: {
+        summary:
+          "Alaska probation supervision is managed through the Alaska Department of Corrections.",
+        resources: [
+          {
+            label: "Alaska DOC Probation & Parole",
+            url: "https://doc.alaska.gov/probation-parole/",
+          },
+          {
+            label: "Alaska DOC Reentry Services",
+            url: "https://doc.alaska.gov/reentry-programs/",
+          },
+          {
+            label: "ACLU Probation & Parole Rights",
+            url: "https://www.aclu.org/know-your-rights/probation-parole-and-pardon",
+          },
+        ],
+        learnMoreUrl: "https://doc.alaska.gov/probation-parole/",
+      },
     },
     // ── ARIZONA ──────────────────────────────────────────────────────────────
     AZ: {
